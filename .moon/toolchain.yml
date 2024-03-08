@@ -1,0 +1,14 @@
+node:
+  packageManager: pnpm
+  addEnginesConstraint: true
+  dedupeOnLockfileChange: true
+  dependencyVersionFormat: workspace
+  inferTasksFromScripts: false
+  syncProjectWorkspaceDependencies: true
+  syncVersionManagerConfig: nodenv
+
+typescript: 
+  createMissingConfig: true
+  routeOutDirToCache: true
+  syncProjectReferences: true
+  syncProjectReferencesToPaths: true

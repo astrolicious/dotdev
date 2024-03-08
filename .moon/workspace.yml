@@ -1,0 +1,24 @@
+projects:
+  site: 'apps/site'
+
+codeowners:
+  syncOnRun: true
+  orderBy: project-name
+  globalPaths:
+    '*': ['@alexanderniebuhr']
+
+vcs:
+  manager: git
+  provider: github
+  defaultBranch: 'main'
+  remoteCandidates:
+    - "origin"
+    - "upstream"
+
+runner:
+  inheritColorsForPipedTasks: true
+
+experiments:
+  taskOutputBoundaries: true
+
+telemetry: true
