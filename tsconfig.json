@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "./.config/tsconfig.json",
+  "files": [],
+  "references": [
+    {
+      "path": "apps/site"
+    }
+  ]
+}

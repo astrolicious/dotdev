@@ -1,0 +1,58 @@
+type: application
+language: typescript
+stack: frontend
+
+fileGroups:
+  sources:
+    - "public/**/*"
+    - "src/**/*"
+    - "astro.config.ts"
+  tests:
+    - "tests/**/*"
+
+tasks:
+  astro:
+    command: "astro"
+    local: true
+
+  check:
+    command: "astro check"
+    inputs:
+      - "@group(sources)"
+
+  imports:
+    command: "biome check --apply --formatter-enabled=false --linter-enabled=false ./"
+    inputs:
+      - "@group(sources)"
+
+  format:
+    deps:
+      - "~:imports"
+    command: "biome format --write ./"
+    inputs:
+      - "@group(sources)"
+  
+  lint:
+    deps:
+      - "~:format"
+    command: "biome lint --apply ./"
+    inputs:
+      - "@group(sources)"
+
+  build:
+    deps:
+      - "~:lint"
+      - "~:check"
+    command: "astro build"
+    inputs:
+      - "@group(sources)"
+    outputs: 
+      - "dist"
+
+  dev:
+    command: "astro dev"
+    local: true
+    options:
+      persistent: true
+      runInCI: false
+      cache: false
