@@ -15,12 +15,13 @@ const { Content } = await entry!.render();
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" href="/favicon.png" sizes="48x48" >
-    <link rel="apple-touch-icon" sizes="60x60" href="/favicon.png">
+    <link rel="icon" href="/favicon.png" sizes="48x48" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon.png" />
     <title>Astrolicious</title>
   </head>
   <body>
-    {/*
+    {
+      /*
     <header class="bg-white">
       <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
@@ -58,7 +59,8 @@ const { Content } = await entry!.render();
         </div>
       </div>
     </header>
-     */}
+     */
+    }
     <main>
       <div class="prose text-center mx-auto my-16">
         <Content />
@@ -152,5 +154,10 @@ const { Content } = await entry!.render();
         </ul>
       </div>
     </footer>
+    <script
+      is:inline
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "658d42429b8945a6aad6301f0faa66cd"}'></script>
   </body>
 </html>
