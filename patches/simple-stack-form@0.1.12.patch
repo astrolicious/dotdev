@@ -1,0 +1,89 @@
+diff --git a/dist/index.d.ts b/dist/index.d.ts
+index 11dafe4b34a5ea73d9e677b545ce9b18749d4d45..a34bde38feab6da4f927c919d7814bf0def0839d 100644
+--- a/dist/index.d.ts
++++ b/dist/index.d.ts
+@@ -1,3 +1,6 @@
+ import type { AstroIntegration } from "astro";
+-export default function integration(): AstroIntegration;
++export type Options = {
++    injectMiddleware?: true | false;
++};
++export default function integration(opts?: Options): AstroIntegration;
+ //# sourceMappingURL=index.d.ts.map
+\ No newline at end of file
+diff --git a/dist/index.d.ts.map b/dist/index.d.ts.map
+index 166f4c5dcea4dc0b336e8abd32e2218904feb016..842cfc389dc2449d532b9bd394242a9dca2b3af1 100644
+--- a/dist/index.d.ts.map
++++ b/dist/index.d.ts.map
+@@ -1 +1 @@
+-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,gBAAgB,EAAE,MAAM,OAAO,CAAC;AAK9C,MAAM,CAAC,OAAO,UAAU,WAAW,IAAI,gBAAgB,CAgCtD"}
+\ No newline at end of file
++{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,gBAAgB,EAAE,MAAM,OAAO,CAAC;AAK9C,MAAM,MAAM,OAAO,GAAG;IACrB,gBAAgB,CAAC,EAAE,IAAI,GAAG,KAAK,CAAC;CAChC,CAAC;AAEF,MAAM,CAAC,OAAO,UAAU,WAAW,CAAC,IAAI,CAAC,EAAE,OAAO,GAAG,gBAAgB,CAmCpE"}
+\ No newline at end of file
+diff --git a/dist/index.js b/dist/index.js
+index 0520c1cc8d9bfe4622b907069f389cc79a82638a..614aa26ad5e36a8ea19df24305f53bf024fde639 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -1,14 +1,17 @@
+ const VIRTUAL_MOD_ID = "simple:form";
+ const RESOLVED_VIRTUAL_MOD_ID = "\0" + VIRTUAL_MOD_ID;
+-export default function integration() {
++export default function integration(opts) {
+     return {
+         name: "simple-form",
+         hooks: {
+             "astro:config:setup"({ addMiddleware, updateConfig }) {
+-                addMiddleware({
+-                    entrypoint: "simple-stack-form/middleware",
+-                    order: "pre",
+-                });
++                const shouldInjectMiddleware = opts?.injectMiddleware ?? true;
++                if (shouldInjectMiddleware) {
++                    addMiddleware({
++                        entrypoint: "simple-stack-form/middleware",
++                        order: "pre",
++                    });
++                }
+                 updateConfig({
+                     vite: {
+                         plugins: [
+diff --git a/dist/index.js.map b/dist/index.js.map
+index f870629c74acc52b1934b25e31e206d1fb3d205d..43d82d62e92fbe3bd6e56e4d6bddc47de53ba850 100644
+--- a/dist/index.js.map
++++ b/dist/index.js.map
+@@ -1 +1 @@
+-{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":"AAEA,MAAM,cAAc,GAAG,aAAa,CAAC;AACrC,MAAM,uBAAuB,GAAG,IAAI,GAAG,cAAc,CAAC;AAEtD,MAAM,CAAC,OAAO,UAAU,WAAW;IAClC,OAAO;QACN,IAAI,EAAE,aAAa;QACnB,KAAK,EAAE;YACN,oBAAoB,CAAC,EAAE,aAAa,EAAE,YAAY,EAAE;gBACnD,aAAa,CAAC;oBACb,UAAU,EAAE,8BAA8B;oBAC1C,KAAK,EAAE,KAAK;iBACZ,CAAC,CAAC;gBAEH,YAAY,CAAC;oBACZ,IAAI,EAAE;wBACL,OAAO,EAAE;4BACR;gCACC,IAAI,EAAE,aAAa;gCACnB,SAAS,CAAC,EAAE;oCACX,IAAI,EAAE,KAAK,cAAc,EAAE,CAAC;wCAC3B,OAAO,uBAAuB,CAAC;oCAChC,CAAC;gCACF,CAAC;gCACD,IAAI,CAAC,EAAE;oCACN,IAAI,EAAE,KAAK,uBAAuB,EAAE,CAAC;wCACpC,OAAO,2CAA2C,CAAC;oCACpD,CAAC;gCACF,CAAC;6BACD;yBACD;qBACD;iBACD,CAAC,CAAC;YACJ,CAAC;SACD;KACD,CAAC;AACH,CAAC"}
+\ No newline at end of file
++{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":"AAEA,MAAM,cAAc,GAAG,aAAa,CAAC;AACrC,MAAM,uBAAuB,GAAG,IAAI,GAAG,cAAc,CAAC;AAMtD,MAAM,CAAC,OAAO,UAAU,WAAW,CAAC,IAAc;IACjD,OAAO;QACN,IAAI,EAAE,aAAa;QACnB,KAAK,EAAE;YACN,oBAAoB,CAAC,EAAE,aAAa,EAAE,YAAY,EAAE;gBACnD,MAAM,sBAAsB,GAAY,IAAI,EAAE,gBAAgB,IAAI,IAAI,CAAC;gBACvE,IAAI,sBAAsB,EAAE,CAAC;oBAC5B,aAAa,CAAC;wBACb,UAAU,EAAE,8BAA8B;wBAC1C,KAAK,EAAE,KAAK;qBACZ,CAAC,CAAC;gBACJ,CAAC;gBAED,YAAY,CAAC;oBACZ,IAAI,EAAE;wBACL,OAAO,EAAE;4BACR;gCACC,IAAI,EAAE,aAAa;gCACnB,SAAS,CAAC,EAAE;oCACX,IAAI,EAAE,KAAK,cAAc,EAAE,CAAC;wCAC3B,OAAO,uBAAuB,CAAC;oCAChC,CAAC;gCACF,CAAC;gCACD,IAAI,CAAC,EAAE;oCACN,IAAI,EAAE,KAAK,uBAAuB,EAAE,CAAC;wCACpC,OAAO,2CAA2C,CAAC;oCACpD,CAAC;gCACF,CAAC;6BACD;yBACD;qBACD;iBACD,CAAC,CAAC;YACJ,CAAC;SACD;KACD,CAAC;AACH,CAAC"}
+diff --git a/src/index.ts b/src/index.ts
+index 191e0c8231e55fc31d7669851e04345674d27dde..3dcb4e82ca01bb3b6c791d2b2d0cd0311a629627 100644
+--- a/src/index.ts
++++ b/src/index.ts
+@@ -3,15 +3,22 @@ import type { AstroIntegration } from "astro";
+ const VIRTUAL_MOD_ID = "simple:form";
+ const RESOLVED_VIRTUAL_MOD_ID = "\0" + VIRTUAL_MOD_ID;
+ 
+-export default function integration(): AstroIntegration {
++export type Options = {
++	injectMiddleware?: true | false;
++};
++
++export default function integration(opts?: Options): AstroIntegration {
+ 	return {
+ 		name: "simple-form",
+ 		hooks: {
+ 			"astro:config:setup"({ addMiddleware, updateConfig }) {
+-				addMiddleware({
+-					entrypoint: "simple-stack-form/middleware",
+-					order: "pre",
+-				});
++				const shouldInjectMiddleware: boolean = opts?.injectMiddleware ?? true;
++				if (shouldInjectMiddleware) {
++					addMiddleware({
++						entrypoint: "simple-stack-form/middleware",
++						order: "pre",
++					});
++				}
+ 
+ 				updateConfig({
+ 					vite: {

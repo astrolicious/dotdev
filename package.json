@@ -21,8 +21,13 @@
     }
   ],
   "devDependencies": {
-    "@biomejs/biome": "1.6.0",
+    "@biomejs/biome": "1.6.1",
     "@types/node": "20.11.25",
     "typescript": "5.4.2"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "simple-stack-form@0.1.12": "patches/simple-stack-form@0.1.12.patch"
+    }
   }
 }

@@ -1,8 +1,10 @@
 import { defineConfig } from 'astro/config';
 
 import cloudflare from '@astrojs/cloudflare';
+import db from '@astrojs/db';
 import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
+import simpleStackForm from 'simple-stack-form';
 
 export default defineConfig({
 	build: {
@@ -28,9 +30,13 @@ export default defineConfig({
 			applyBaseStyles: false,
 			nesting: true,
 		}),
+		db(),
 		starlight({
 			title: 'Astrolicious Docs',
 			pagefind: false,
+		}),
+		simpleStackForm({
+			injectMiddleware: false,
 		}),
 	],
 	output: 'server',
@@ -39,7 +45,7 @@ export default defineConfig({
 	}),
 	vite: {
 		ssr: {
-			external: ['node:url', 'node:child_process'],
+			external: ['node:url', 'node:child_process', 'node:path'],
 		},
 		build: {
 			minify: false,

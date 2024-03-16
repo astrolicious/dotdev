@@ -43,7 +43,7 @@ tasks:
     deps:
       - "~:lint"
       - "~:check"
-    command: "astro build"
+    command: "astro build --remote"
     inputs:
       - "@group(sources)"
     outputs: 

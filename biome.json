@@ -7,7 +7,10 @@
     "defaultBranch": "main"
   },
   "files": {
-    "ignoreUnknown": true
+    "ignoreUnknown": true,
+    "ignore": [
+      "submit.astro"
+    ]
   },
   "formatter": {
     "lineWidth": 100
