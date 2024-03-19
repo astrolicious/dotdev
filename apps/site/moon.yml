@@ -15,7 +15,14 @@ tasks:
     command: "astro"
     local: true
 
+  sync:
+    command: "astro sync"
+    inputs:
+      - "@group(sources)"
+
   check:
+    deps:
+      - "~:sync"
     command: "astro check"
     inputs:
       - "@group(sources)"
