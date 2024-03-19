@@ -1,4 +1,4 @@
-name: preview [apps/site]
+name: preview [cloudflare]
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  docs:
+  site:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
@@ -18,7 +18,7 @@ jobs:
         with:
           auto-install: true
       - run: |
-          moon --color --log trace ci site:build
+          moon --color --log info ci site:build
         env:
           ASTRO_STUDIO_APP_TOKEN: ${{ secrets.ASTRO_STUDIO_APP_TOKEN }}
           # MOONBASE_SECRET_KEY: ${{ secrets.MOONBASE_SECRET_KEY }}
