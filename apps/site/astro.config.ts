@@ -27,17 +27,19 @@ export default defineConfig({
 		directRenderScript: true,
 	},
 	integrations: [
-		tailwind({
-			applyBaseStyles: false,
-			nesting: true,
-		}),
 		db(),
-		starlight({
-			title: 'Astrolicious Docs',
-			pagefind: false,
-		}),
 		simpleStackForm({
 			injectMiddleware: false,
+		}),
+		starlight({
+			title: 'Astrolicious',
+			customCss: ['./src/styles/starlight.css'],
+			components: {
+				Header: './src/components/StarlightHeader.astro',
+			},
+		}),
+		tailwind({
+			applyBaseStyles: false,
 		}),
 		icon({
 			include: {

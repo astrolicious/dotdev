@@ -1,13 +1,13 @@
 ---
-import { Icon } from "astro-icon/components";
+import { Icon } from 'astro-icon/components';
 
 export interface Props {
-  activeTab: "blog" | "docs";
-  as?: "header" | "div";
+	activeTab: 'blog' | 'docs';
+	as?: 'header' | 'div';
 }
 
 const { activeTab } = Astro.props;
-const Element = Astro.props.as || "header";
+const Element = Astro.props.as || 'header';
 ---
 
 <Element class="flex flex-col py-2 px-4 rounded-lg bg-slate-50 m-4 gap-2">

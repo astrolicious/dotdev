@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import Card from "../../components/Card.astro";
+import Wrapper from "../../layouts/Wrapper.astro";
+
+const publishedPosts = await getCollection("blog", ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+});
+---
+
+<Wrapper title="Astrolicious > Blog" activeTab="blog">
+  <ul class="flex flex-col gap-6">
+    {
+      publishedPosts.map((post) => {
+        return (
+          <li>
+            <Card
+              title={post.data.title}
+              link={`/blog/${post.slug}`}
+              author={{ name: "Alex" }}
+            />
+          </li>
+        );
+      })
+    }
+  </ul>
+</Wrapper>
