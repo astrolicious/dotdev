@@ -24,7 +24,7 @@ export default defineConfig({
 	experimental: {
 		clientPrerender: true,
 		globalRoutePriority: true,
-		optimizeHoistedScript: true,
+		directRenderScript: true,
 	},
 	integrations: [
 		tailwind({
