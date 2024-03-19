@@ -1,10 +1,10 @@
 ---
-import { getCollection } from "astro:content";
-import Card from "../../components/Card.astro";
-import Wrapper from "../../layouts/Wrapper.astro";
+import { getCollection } from 'astro:content';
+import Card from '../../components/Card.astro';
+import Wrapper from '../../layouts/Wrapper.astro';
 
-const publishedPosts = await getCollection("blog", ({ data }) => {
-  return import.meta.env.PROD ? data.draft !== true : true;
+const publishedPosts = await getCollection('blog', ({ data }) => {
+	return import.meta.env.PROD ? data.draft !== true : true;
 });
 ---
 
