@@ -1,0 +1,29 @@
+---
+import "../styles/global.css";
+
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+export interface Props {
+  title: string;
+  activeTab?: "blog" | "docs";
+}
+
+const { title, activeTab } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="dark:bg-gray-700">
+    <Header activeTab={activeTab} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

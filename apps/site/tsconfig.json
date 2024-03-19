@@ -1,6 +1,6 @@
 {
   "extends": "../../.config/tsconfig.json",
-  "include": ["src/**/*", "**/*.ts"],
+  "include": ["."],
   "references": [],
   "compilerOptions": {
     "outDir": "../../.moon/cache/types/apps/site",
