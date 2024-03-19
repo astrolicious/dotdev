@@ -26,6 +26,7 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
       - uses: moonrepo/setup-toolchain@abc36a5d744a0b6dff6fd87201c49917c145deb9 # v0.3.1
         id: build
         with:

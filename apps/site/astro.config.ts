@@ -34,6 +34,7 @@ export default defineConfig({
 		starlight({
 			title: 'Astrolicious',
 			customCss: ['./src/styles/starlight.css'],
+			favicon: '/favicon.png',
 			components: {
 				Header: './src/components/StarlightHeader.astro',
 			},
