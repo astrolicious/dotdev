@@ -3,7 +3,10 @@ import { docsSchema } from '@astrojs/starlight/schema';
 
 const blogCollection = defineCollection({
 	type: 'content',
-	schema: z.object({}),
+	schema: z.object({
+		title: z.string(),
+		draft: z.boolean(),
+	}),
 });
 
 // biome-ignore lint/suspicious/noExplicitAny: <explanation>

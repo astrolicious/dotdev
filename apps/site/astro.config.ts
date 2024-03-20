@@ -4,6 +4,7 @@ import cloudflare from '@astrojs/cloudflare';
 import db from '@astrojs/db';
 import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
+import icon from 'astro-icon';
 import simpleStackForm from 'simple-stack-form';
 
 export default defineConfig({
@@ -23,20 +24,29 @@ export default defineConfig({
 	experimental: {
 		clientPrerender: true,
 		globalRoutePriority: true,
-		optimizeHoistedScript: true,
+		directRenderScript: false,
 	},
 	integrations: [
-		tailwind({
-			applyBaseStyles: false,
-			nesting: true,
-		}),
 		db(),
-		starlight({
-			title: 'Astrolicious Docs',
-			pagefind: false,
-		}),
 		simpleStackForm({
 			injectMiddleware: false,
+		}),
+		starlight({
+			title: 'Astrolicious',
+			customCss: ['./src/styles/starlight.css'],
+			favicon: '/favicon.png',
+			components: {
+				Header: './src/components/StarlightHeader.astro',
+			},
+		}),
+		tailwind({
+			applyBaseStyles: false,
+		}),
+		icon({
+			include: {
+				ri: ['github-line', 'twitter-x-line', 'discord-line'],
+				ph: ['dot-duotone'],
+			},
 		}),
 	],
 	output: 'server',
