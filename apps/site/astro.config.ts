@@ -24,7 +24,7 @@ export default defineConfig({
 	experimental: {
 		clientPrerender: true,
 		globalRoutePriority: true,
-		directRenderScript: true,
+		directRenderScript: false,
 	},
 	integrations: [
 		db(),

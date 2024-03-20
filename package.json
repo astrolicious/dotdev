@@ -5,8 +5,8 @@
   "scripts": {
     "moon": "moon",
     "sync": "pnpm run \"/^.+:sync:.+/\"",
-    "moon:sync:codeowners": "moon sync codeowners --clean",
-    "moon:sync:hooks": "moon sync hooks --clean"
+    "moon:sync:codeowners": "moon sync codeowners",
+    "moon:sync:hooks": "moon sync hooks"
   },
   "license": "MIT",
   "packageManager": "pnpm@8.15.4",

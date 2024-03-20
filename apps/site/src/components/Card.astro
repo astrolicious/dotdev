@@ -1,11 +1,11 @@
 ---
 export interface Props {
-	title: string;
-	link: string;
-	author: {
-		name: string;
-		imageUrl?: string;
-	};
+  title: string;
+  link: string;
+  author: {
+    name: string;
+    imageUrl?: string;
+  };
 }
 
 const { author, title, link } = Astro.props;
@@ -13,27 +13,27 @@ const { author, title, link } = Astro.props;
 
 <a
   href={link}
-  class="flex flex-col md:flex-row md:max-w-3xl items-center bg-white border border-gray-200 rounded-lg hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 pt-4 pb-7 gap-4 mx-auto"
+  class="flex flex-col md:flex-row md:max-w-3xl items-center bg-white border border-gray-200 rounded-lg hover:bg-gray-100 px-4 pt-4 pb-7 gap-4 mx-auto"
 >
   <div class="flex flex-col gap-2 justify-between leading-normal">
-    <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+    <h2 class="text-2xl font-bold tracking-tight text-gray-900">
       {title}
     </h2>
-    <p class="font-normal text-gray-700 dark:text-gray-400">
+    <p class="font-normal text-gray-700">
       Here are the biggest enterprise technology acquisitions of 2021 so far, in
       reverse chronological order.
     </p>
-    <p class="font-normal text-gray-700 dark:text-gray-400">Yesterday</p>
+    <p class="font-normal text-gray-700">Yesterday</p>
   </div>
   <div class="flex items-center gap-4">
     <img
-      class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+      class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300"
       src={author.imageUrl ?? "/favicon.png"}
       alt={`bordered image of the author ${author.name}`}
     />
-    <div class="font-medium dark:text-white">
+    <div class="font-medium">
       <div>{author.name}</div>
-      <div class="text-sm text-gray-500 dark:text-gray-400">Tagline</div>
+      <div class="text-sm text-gray-500">Tagline</div>
     </div>
   </div>
 </a>
