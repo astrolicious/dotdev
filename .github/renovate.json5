@@ -22,5 +22,7 @@
       "matchCurrentVersion": "!/^0/",
       "automerge": true
     }
-  ]
+  ],
+  // delete once we have tests
+  "ignoreTests": true
 }
