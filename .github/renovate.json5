@@ -3,5 +3,8 @@
   "extends": [
     "config:best-practices"
   ],
-  "dependencyDashboard": true
+  "dependencyDashboard": true,
+  "npm": {
+    "minimumReleaseAge": "3 days"
+  }
 }
