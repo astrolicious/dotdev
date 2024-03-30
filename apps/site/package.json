@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@astrojs/check": "0.5.9",
-    "@astrojs/cloudflare": "0.0.0-cf-10-20240319170339",
+    "@astrojs/cloudflare": "10.0.1",
     "@astrojs/db": "0.8.8",
     "@astrojs/starlight": "0.21.1",
     "@astrojs/starlight-tailwind": "2.0.1",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@types/sanitize-html": "2.11.0",
-    "wrangler": "3.34.2"
+    "wrangler": "3.41.0"
   },
   "scripts": {
     "astro": "astro"
