@@ -44,7 +44,7 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const script = require('./.github/scripts/create-deployment.cjs')
+            const { default: script } = await import('${{ github.workspace }}/.github/scripts/create-deployment.js')
             await script({github, context, core})
       - uses: cloudflare/wrangler-action@7c01cc48d88a1f83b4716e0557c168854a9dcdb8 # v3.4.1
         id: wrangler
@@ -62,5 +62,5 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const script = require('./.github/scripts/update-deployment.cjs')
+            const { default: script } = await import('${{ github.workspace }}/.github/scripts/update-deployment.js')
             await script({github, context, core})

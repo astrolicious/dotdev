@@ -1,13 +1,9 @@
 // @ts-check
 
 /**
- *
- * @param {Object} obj - An object.
- * @param {import("@octokit/rest").Octokit} obj.github
- * @param {import("@actions/github").context} obj.context
- * @param {import("@actions/core")} obj.core
+ * @param {import('github-script').AsyncFunctionArguments} AsyncFunctionArguments
  */
-async function script({ github, context, core }) {
+export default async ({ github, context, core }) => {
 	const githubBranch = process.env.GITHUB_HEAD_REF || process.env.GITHUB_REF_NAME;
 	const productionEnvironment = githubBranch === 'main';
 	const environmentName = `[site] (${productionEnvironment ? 'Production' : githubBranch})`;
@@ -23,6 +19,4 @@ async function script({ github, context, core }) {
 		state: 'success',
 		auto_inactive: false,
 	});
-}
-
-module.exports = script;
+};
