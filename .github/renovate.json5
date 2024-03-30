@@ -6,5 +6,9 @@
   "dependencyDashboard": true,
   "npm": {
     "minimumReleaseAge": "3 days"
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
   }
 }
