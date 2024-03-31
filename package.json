@@ -21,10 +21,10 @@
     }
   ],
   "devDependencies": {
-    "@biomejs/biome": "1.6.1",
-    "@types/github-script": "github:actions/github-script",
+    "@biomejs/biome": "1.6.3",
     "@types/node": "20.11.30",
-    "typescript": "5.4.2"
+    "typescript": "5.4.3",
+    "@types/github-script": "github:actions/github-script"
   },
   "pnpm": {
     "patchedDependencies": {
