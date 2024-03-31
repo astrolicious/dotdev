@@ -23,7 +23,7 @@
       "automerge": true
     },
     {
-      "matchUpdateTypes": ["packageManager", "engines"],
+      "matchDepTypes": ["packageManager", "engines"],
       "enabled": false
     }
   ],
