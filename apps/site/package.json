@@ -6,7 +6,7 @@
   "dependencies": {
     "astro": "4.4.15",
     "@astrojs/check": "0.5.10",
-    "@astrojs/cloudflare": "0.0.0-cf-10-20240316080829",
+    "@astrojs/cloudflare": "9.2.1",
     "@astrojs/starlight": "0.21.2",
     "@astrojs/tailwind": "5.1.0",
     "@astrojs/db": "0.8.6",
