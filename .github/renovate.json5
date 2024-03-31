@@ -24,5 +24,8 @@
     }
   ],
   // delete once we have tests
-  "ignoreTests": true
+  "ignoreTests": true,
+  "nodeenv": {
+    "enabled": false
+  }
 }
