@@ -20,14 +20,14 @@ importers:
         specifier: 20.11.30
         version: 20.11.30
       typescript:
-        specifier: 5.4.2
-        version: 5.4.2
+        specifier: 5.4.3
+        version: 5.4.3
 
   apps/site:
     dependencies:
       '@astrojs/check':
         specifier: 0.5.6
-        version: 0.5.6(typescript@5.4.2)
+        version: 0.5.6(typescript@5.4.3)
       '@astrojs/cloudflare':
         specifier: 0.0.0-cf-10-20240316080829
         version: 0.0.0-cf-10-20240316080829(astro@4.4.15)
@@ -48,7 +48,7 @@ importers:
         version: 0.5.10(tailwindcss@3.4.3)
       astro:
         specifier: 4.4.15
-        version: 4.4.15(@types/node@20.11.30)(typescript@5.4.2)
+        version: 4.4.15(@types/node@20.11.30)(typescript@5.4.3)
       astro-icon:
         specifier: 1.1.0
         version: 1.1.0
@@ -98,17 +98,17 @@ packages:
     resolution: {integrity: sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==}
     dev: false
 
-  /@astrojs/check@0.5.6(typescript@5.4.2):
+  /@astrojs/check@0.5.6(typescript@5.4.3):
     resolution: {integrity: sha512-i7j5ogoSg/Bu2NV5zVvwCo9R4kGWXWsJDejxpCu9F7iNNlR333u8EwpP4bpeKASDtjOA1rXKo9ogUTEVlIAHqA==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
     dependencies:
-      '@astrojs/language-server': 2.7.6(typescript@5.4.2)
+      '@astrojs/language-server': 2.7.6(typescript@5.4.3)
       chokidar: 3.6.0
       fast-glob: 3.3.2
       kleur: 4.1.5
-      typescript: 5.4.2
+      typescript: 5.4.3
       yargs: 17.7.2
     transitivePeerDependencies:
       - prettier
@@ -123,7 +123,7 @@ packages:
       '@astrojs/underscore-redirects': 0.3.3
       '@cloudflare/workers-types': 4.20240222.0
       '@iarna/toml': 2.2.5
-      astro: 4.4.15(@types/node@20.11.30)(typescript@5.4.2)
+      astro: 4.4.15(@types/node@20.11.30)(typescript@5.4.3)
       dotenv: 16.4.5
       esbuild: 0.19.12
       find-up: 6.3.0
@@ -186,7 +186,7 @@ packages:
     resolution: {integrity: sha512-06DD2ZnItMwUnH81LBLco3tWjcZ1lGU9rLCCBaeUCGYe9cI0wKyY2W3kDyoW1I6GmcWgt1fu+D1CTvz+FIKf8A==}
     dev: false
 
-  /@astrojs/language-server@2.7.6(typescript@5.4.2):
+  /@astrojs/language-server@2.7.6(typescript@5.4.3):
     resolution: {integrity: sha512-NhMSmMAuKBMXnvpfn9eYPR7R6zOasAjRb+ta8L+rCHHuKzUc0lBgAF5M6rx01FJqlpGqeqao13eYt4287Ze49g==}
     hasBin: true
     peerDependencies:
@@ -200,7 +200,7 @@ packages:
     dependencies:
       '@astrojs/compiler': 2.7.0
       '@jridgewell/sourcemap-codec': 1.4.15
-      '@volar/kit': 2.0.4(typescript@5.4.2)
+      '@volar/kit': 2.0.4(typescript@5.4.3)
       '@volar/language-core': 2.0.4
       '@volar/language-server': 2.0.4
       '@volar/language-service': 2.0.4
@@ -248,7 +248,7 @@ packages:
       '@astrojs/markdown-remark': 4.2.1
       '@mdx-js/mdx': 3.0.1
       acorn: 8.11.3
-      astro: 4.4.15(@types/node@20.11.30)(typescript@5.4.2)
+      astro: 4.4.15(@types/node@20.11.30)(typescript@5.4.3)
       es-module-lexer: 1.4.1
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -289,7 +289,7 @@ packages:
       '@pagefind/default-ui': 1.0.4
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.3
-      astro: 4.4.15(@types/node@20.11.30)(typescript@5.4.2)
+      astro: 4.4.15(@types/node@20.11.30)(typescript@5.4.3)
       astro-expressive-code: 0.33.4(astro@4.4.15)
       bcp-47: 2.1.0
       hast-util-from-html: 2.0.1
@@ -315,7 +315,7 @@ packages:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.4.15(@types/node@20.11.30)(typescript@5.4.2)
+      astro: 4.4.15(@types/node@20.11.30)(typescript@5.4.3)
       autoprefixer: 10.4.18(postcss@8.4.35)
       postcss: 8.4.35
       postcss-load-config: 4.0.2(postcss@8.4.35)
@@ -1780,7 +1780,7 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: false
 
-  /@volar/kit@2.0.4(typescript@5.4.2):
+  /@volar/kit@2.0.4(typescript@5.4.3):
     resolution: {integrity: sha512-USRx/o0jKz7o8+lEKWMxWqbqvC46XFrf3IE6CZBYzRo9kM7RERQLwUYaoT2bOcHt5DQWublpnTgdgHMm37Gysg==}
     peerDependencies:
       typescript: '*'
@@ -1788,7 +1788,7 @@ packages:
       '@volar/language-service': 2.0.4
       '@volar/typescript': 2.0.4
       typesafe-path: 0.2.2
-      typescript: 5.4.2
+      typescript: 5.4.3
       vscode-languageserver-textdocument: 1.0.11
       vscode-uri: 3.0.8
     dev: false
@@ -1964,7 +1964,7 @@ packages:
     peerDependencies:
       astro: ^3.3.0 || ^4.0.0-beta
     dependencies:
-      astro: 4.4.15(@types/node@20.11.30)(typescript@5.4.2)
+      astro: 4.4.15(@types/node@20.11.30)(typescript@5.4.3)
       hast-util-to-html: 8.0.4
       remark-expressive-code: 0.33.4
     dev: false
@@ -1979,7 +1979,7 @@ packages:
       - supports-color
     dev: false
 
-  /astro@4.4.15(@types/node@20.11.30)(typescript@5.4.2):
+  /astro@4.4.15(@types/node@20.11.30)(typescript@5.4.3):
     resolution: {integrity: sha512-RTiAnlO8hDp6GqMVvaeJxyuCJhHNEho09lHshMNQBqgRabYPOJGW0HZZrbLRGNOqN9I14ivhZIunYGgAaGQpWw==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -2040,7 +2040,7 @@ packages:
       shikiji-core: 0.9.19
       string-width: 7.1.0
       strip-ansi: 7.1.0
-      tsconfck: 3.0.2(typescript@5.4.2)
+      tsconfck: 3.0.2(typescript@5.4.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
       vite: 5.1.5(@types/node@20.11.30)
@@ -5559,7 +5559,7 @@ packages:
       zod: ^3.22.4
     dependencies:
       '@clack/prompts': 0.7.0
-      astro: 4.4.15(@types/node@20.11.30)(typescript@5.4.2)
+      astro: 4.4.15(@types/node@20.11.30)(typescript@5.4.3)
       fs-extra: 11.2.0
       just-map-values: 3.2.0
       kleur: 4.1.5
@@ -5920,7 +5920,7 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: false
 
-  /tsconfck@3.0.2(typescript@5.4.2):
+  /tsconfck@3.0.2(typescript@5.4.3):
     resolution: {integrity: sha512-6lWtFjwuhS3XI4HsX4Zg0izOI3FU/AI9EGVlPEUMDIhvLPMD4wkiof0WCoDgW7qY+Dy198g4d9miAqUHWHFH6Q==}
     engines: {node: ^18 || >=20}
     hasBin: true
@@ -5930,7 +5930,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      typescript: 5.4.2
+      typescript: 5.4.3
     dev: false
 
   /tslib@2.6.2:
@@ -5959,8 +5959,8 @@ packages:
       semver: 7.6.0
     dev: false
 
-  /typescript@5.4.2:
-    resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
+  /typescript@5.4.3:
+    resolution: {integrity: sha512-KrPd3PKaCLr78MalgiwJnA25Nm8HAmdwN3mYUYZgG/wizIo9EainNVQI9/yDavtVFRN2h3k8uf3GLHuhDMgEHg==}
     engines: {node: '>=14.17'}
     hasBin: true
 
