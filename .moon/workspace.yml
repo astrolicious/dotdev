@@ -1,11 +1,11 @@
 projects:
   site: 'apps/site'
 
-codeowners:
-  syncOnRun: true
-  orderBy: project-name
-  globalPaths:
-    '*': ['@alexanderniebuhr']
+# codeowners:
+#   syncOnRun: true
+#   orderBy: project-name
+#   globalPaths:
+#     '*': ['@alexanderniebuhr']
 
 vcs:
   manager: git

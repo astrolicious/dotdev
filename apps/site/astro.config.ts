@@ -52,6 +52,11 @@ export default defineConfig({
 	output: 'server',
 	adapter: cloudflare({
 		imageService: 'passthrough',
+		routes: {
+			extend: {
+				exclude: [{ pattern: '/pagefind/*' }],
+			},
+		},
 	}),
 	vite: {
 		ssr: {
