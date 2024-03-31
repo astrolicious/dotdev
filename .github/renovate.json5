@@ -35,4 +35,6 @@
   "nodenv": {
     "enabled": false
   },
+  // delete later
+  "prHourlyLimit": 0
 }
