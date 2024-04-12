@@ -19,7 +19,8 @@ export default {
 				},
 			},
 			fontFamily: {
-				sans: ['"Dosis Variable"'],
+				sans: ['"Atkinson Hyperlegible"'],
+				heading: ['"Dosis Variable"'],
 			},
 		},
 	},

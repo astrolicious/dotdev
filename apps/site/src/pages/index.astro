@@ -8,12 +8,16 @@ const links = [
     text: "Home",
   },
   {
+    href: "/projects",
+    text: "Projects",
+  },
+  {
     href: "/docs",
-    text: "Docs",
+    text: "Documentation",
   },
   {
     href: "/blog",
-    text: "Blog",
+    text: "Articles",
   },
 ];
 
@@ -38,12 +42,10 @@ const socialLinks = [
 
 <Layout title="Astrolicious">
   <div class="bg-primary-600 text-primary-50">
-    <div class="max-w-7xl p-2 mx-auto font-bold tracking-wider">
-      Discover our brand new website!
-    </div>
+    <div class="max-w-7xl p-2 mx-auto">Discover our brand new website!</div>
   </div>
   <header
-    class="bg-white/75 backdrop-blur-sm sticky top-0 z-20 border-b border-b-gray-200"
+    class="bg-white sticky top-0 z-20 border-b border-b-gray-200 font-heading"
   >
     <div
       class="p-2 max-w-7xl mx-auto flex justify-center relative items-center h-16"
@@ -83,29 +85,50 @@ const socialLinks = [
       </div>
     </div>
   </header>
-  <h1 class="font-extrabold uppercase text-6xl">Astrolicious</h1>
-  <p class="text-5xl">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-    praesentium eveniet voluptatibus quod perspiciatis sint, repellendus omnis
-    dicta quidem harum tempore accusantium eius, est corporis? Corrupti non, ex
-    labore consectetur consequatur illo eos praesentium nesciunt quia quis
-    iusto? Amet quisquam aspernatur libero expedita labore a vel mollitia aut
-    quis exercitationem veniam consectetur, delectus velit dolorem nemo
-    perferendis obcaecati sapiente cum suscipit porro ea! Ipsum voluptate
-    assumenda voluptas veniam libero dolor natus doloribus, eum suscipit dicta
-    ab quis deleniti, porro iure commodi? Obcaecati perferendis quos iure eaque
-    debitis optio, culpa vero exercitationem officiis. Voluptates asperiores,
-    alias assumenda, consequatur, corporis vero ipsa excepturi esse soluta
-    adipisci similique illo repudiandae. Quasi animi excepturi optio
-    perspiciatis, amet cum facere et odio id unde at eaque maxime assumenda fuga
-    delectus tenetur ab cupiditate aperiam sed harum ipsa eveniet. Libero
-    voluptatum sit quos accusantium, distinctio veniam cumque aliquam? Pariatur
-    porro quia blanditiis quisquam assumenda, recusandae laboriosam quo hic
-    commodi dolorem iure tenetur eos rem temporibus accusantium. Blanditiis
-    nesciunt excepturi distinctio nemo. Tenetur, molestias explicabo veniam
-    doloribus repellendus non nam molestiae? Ratione corporis modi possimus
-    accusamus dignissimos placeat temporibus nisi delectus non, at voluptatum
-    est nostrum molestias labore blanditiis nesciunt aperiam veritatis
-    cupiditate quo beatae asperiores! Laudantium.
-  </p>
+  <section class="bg-gradient-to-tr from-primary-700 to-primary-600">
+    <div
+      class="max-w-7xl px-2 mx-auto py-28 grid grid-cols-3 gap-4 items-center"
+    >
+      <div class="col-span-2">
+        <h1
+          class="font-extrabold uppercase text-6xl text-white max-w-2xl font-heading"
+        >
+          An Astro focused community
+        </h1>
+        <p class="text-xl text-primary-200 mt-4">
+          Integrations, components, websites, events and more!
+        </p>
+        <a
+          href="/projects"
+          class="bg-white shadow-xl shadow-primary-500 px-6 py-3 inline-block mt-12 font-heading uppercase text-primary-950 font-extrabold rounded-lg hover:bg-primary-100 hover:shadow-lg hover:shadow-primary-500 transition-all"
+        >
+          Explore projects
+        </a>
+      </div>
+      <div>Random project picker</div>
+    </div>
+  </section>
 </Layout>
+<p class="text-5xl">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur praesentium
+  eveniet voluptatibus quod perspiciatis sint, repellendus omnis dicta quidem
+  harum tempore accusantium eius, est corporis? Corrupti non, ex labore
+  consectetur consequatur illo eos praesentium nesciunt quia quis iusto? Amet
+  quisquam aspernatur libero expedita labore a vel mollitia aut quis
+  exercitationem veniam consectetur, delectus velit dolorem nemo perferendis
+  obcaecati sapiente cum suscipit porro ea! Ipsum voluptate assumenda voluptas
+  veniam libero dolor natus doloribus, eum suscipit dicta ab quis deleniti,
+  porro iure commodi? Obcaecati perferendis quos iure eaque debitis optio, culpa
+  vero exercitationem officiis. Voluptates asperiores, alias assumenda,
+  consequatur, corporis vero ipsa excepturi esse soluta adipisci similique illo
+  repudiandae. Quasi animi excepturi optio perspiciatis, amet cum facere et odio
+  id unde at eaque maxime assumenda fuga delectus tenetur ab cupiditate aperiam
+  sed harum ipsa eveniet. Libero voluptatum sit quos accusantium, distinctio
+  veniam cumque aliquam? Pariatur porro quia blanditiis quisquam assumenda,
+  recusandae laboriosam quo hic commodi dolorem iure tenetur eos rem temporibus
+  accusantium. Blanditiis nesciunt excepturi distinctio nemo. Tenetur, molestias
+  explicabo veniam doloribus repellendus non nam molestiae? Ratione corporis
+  modi possimus accusamus dignissimos placeat temporibus nisi delectus non, at
+  voluptatum est nostrum molestias labore blanditiis nesciunt aperiam veritatis
+  cupiditate quo beatae asperiores! Laudantium.
+</p>
