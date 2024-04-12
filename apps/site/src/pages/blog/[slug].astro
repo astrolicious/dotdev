@@ -1,13 +1,31 @@
 ---
-import '../../styles/global.css';
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Layout from "~/layouts/Layout.astro";
 
-import { getEntry } from 'astro:content';
+export const prerender = true;
 
-const { slug } = Astro.params;
-const entry = await getEntry('blog', slug as string);
+export const getStaticPaths = (async () => {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: {
+      slug: post.slug,
+    },
+    props: {
+      post,
+    },
+  }));
+}) satisfies GetStaticPaths;
 
-// biome-ignore lint/style/noNonNullAssertion: <explanation>
-const { Content } = await entry!.render();
+const { post } = Astro.props;
+const { Content } = await post.render();
 ---
 
-<Content />
+<Layout title={post.data.title}>
+  <div class="max-w-7xl p-2 mx-auto">
+    <div class="prose my-8">
+      <h1>{post.data.title}</h1>
+      <Content />
+    </div>
+  </div>
+</Layout>

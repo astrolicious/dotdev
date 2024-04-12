@@ -1,92 +1,8 @@
 ---
 import Layout from "~/layouts/Layout.astro";
-import { Icon } from "astro-icon/components";
-
-const links = [
-  {
-    href: "/",
-    text: "Home",
-  },
-  {
-    href: "/projects",
-    text: "Projects",
-  },
-  {
-    href: "/docs",
-    text: "Documentation",
-  },
-  {
-    href: "/blog",
-    text: "Articles",
-  },
-];
-
-const socialLinks = [
-  {
-    href: "/",
-    text: "Twitter (X)",
-    icon: "ri:twitter-x-fill",
-  },
-  {
-    href: "/docs",
-    text: "GitHub",
-    icon: "ri:github-fill",
-  },
-  {
-    href: "/blog",
-    text: "Discord",
-    icon: "ri:discord-fill",
-  },
-];
-
-const year = new Date().getFullYear();
 ---
 
 <Layout title="Astrolicious">
-  <div class="bg-primary-600 text-primary-50">
-    <div class="max-w-7xl p-2 mx-auto">Discover our brand new website!</div>
-  </div>
-  <header
-    class="bg-white sticky top-0 z-20 border-b border-b-gray-200 font-heading"
-  >
-    <div
-      class="p-2 max-w-7xl mx-auto flex justify-center relative items-center h-16"
-    >
-      <div class="absolute left-2">
-        <div class="font-extrabold uppercase text-2xl text-primary-950">
-          <span class="text-primary-600">Astro</span>licious
-        </div>
-      </div>
-      <div class="flex items-center justify-center">
-        {
-          links.map(({ href, text }) => (
-            <a
-              {href}
-              class="py-1.5 px-3 font-extrabold uppercase text-lg rounded-md hover:bg-primary-200 transition-colors text-primary-950"
-            >
-              {text}
-            </a>
-          ))
-        }
-      </div>
-      <div class="absolute right-2">
-        <div class="flex items-center justify-center gap-1">
-          {
-            socialLinks.map(({ href, text, icon }) => (
-              <a
-                {href}
-                target="_blank"
-                class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
-              >
-                <Icon name={icon} class="size-5" />
-                <span class="sr-only">{text}</span>
-              </a>
-            ))
-          }
-        </div>
-      </div>
-    </div>
-  </header>
   <section class="bg-gradient-to-tr from-primary-700 to-primary-600">
     <div
       class="max-w-7xl px-2 mx-auto py-28 grid grid-cols-3 gap-4 items-center"
@@ -100,23 +16,22 @@ const year = new Date().getFullYear();
         <p class="text-xl text-primary-200 mt-4">
           Integrations, components, websites, events and more!
         </p>
-        <a
-          href="/projects"
-          class="bg-white shadow-xl shadow-primary-500 px-6 py-3 inline-block mt-12 font-heading uppercase text-primary-950 font-extrabold rounded-lg hover:bg-primary-100 hover:shadow-lg hover:shadow-primary-500 transition-all"
-        >
-          Explore projects
-        </a>
+        <div class="mt-12 inline-flex items-center gap-4">
+          <a
+            href="/projects"
+            class="bg-white shadow-xl shadow-primary-500 px-6 py-3 block font-heading uppercase text-primary-950 font-extrabold rounded-lg hover:bg-primary-100 hover:shadow-lg hover:shadow-primary-500 transition-all"
+          >
+            Explore projects
+          </a>
+          <a
+            href="/submit"
+            class="bg-white shadow-xl shadow-primary-500 px-6 py-3 block font-heading uppercase text-primary-950 font-extrabold rounded-lg hover:bg-primary-100 hover:shadow-lg hover:shadow-primary-500 transition-all"
+          >
+            Submit a project
+          </a>
+        </div>
       </div>
       <div>Random project picker</div>
     </div>
   </section>
-  <footer class="border-t border-t-gray-200 mt-auto">
-    <div class="max-w-7xl mx-auto p-2">
-      <p>&copy; <span id="footer-year">{year}</span> - TODO: licenses</p>
-    </div>
-  </footer>
-
-  <script is:inline>
-    document.getElementById("footer-year").innerText = new Date().getFullYear();
-  </script>
 </Layout>

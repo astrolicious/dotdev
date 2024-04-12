@@ -36,7 +36,8 @@ export default defineConfig({
 			customCss: ['./src/styles/starlight.css'],
 			favicon: '/favicon.png',
 			components: {
-				Header: './src/components/StarlightHeader.astro',
+				Header: './src/components/starlight/StarlightHeader.astro',
+				Sidebar: './src/components/starlight/StarlightSidebar.astro',
 			},
 		}),
 		tailwind({
@@ -44,7 +45,14 @@ export default defineConfig({
 		}),
 		icon({
 			include: {
-				ri: ['github-line', 'twitter-x-line', 'discord-line','github-fill', 'twitter-x-fill', 'discord-fill'],
+				ri: [
+					'github-line',
+					'twitter-x-line',
+					'discord-line',
+					'github-fill',
+					'twitter-x-fill',
+					'discord-fill',
+				],
 				ph: ['dot-duotone'],
 			},
 		}),

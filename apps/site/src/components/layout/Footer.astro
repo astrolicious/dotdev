@@ -1,0 +1,13 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-t-gray-200 mt-auto">
+  <div class="max-w-7xl mx-auto p-2">
+    <p>&copy; <span id="footer-year">{year}</span> - TODO: licenses</p>
+  </div>
+</footer>
+
+<script is:inline>
+  document.getElementById("footer-year").innerText = new Date().getFullYear();
+</script>

@@ -7,8 +7,6 @@
 :root {
   --sl-nav-pad-y: 0px;
   --sl-nav-pad-x: 0px;
-  --sl-nav-height: 124px;
-  --sl-color-bg-nav: #FFFFFF !important;
 }
 
 @layer base {

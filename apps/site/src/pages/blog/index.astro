@@ -1,15 +1,15 @@
 ---
-import { getCollection } from 'astro:content';
-import Card from '../../components/Card.astro';
-import Wrapper from '../../layouts/Wrapper.astro';
+import { getCollection } from "astro:content";
+import Card from "~/components/Card.astro";
+import Layout from "~/layouts/Layout.astro";
 
-const publishedPosts = await getCollection('blog', ({ data }) => {
-	return import.meta.env.PROD ? data.draft !== true : true;
+const publishedPosts = await getCollection("blog", ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
 });
 ---
 
-<Wrapper title="Astrolicious > Blog" activeTab="blog">
-  <ul class="flex flex-col gap-6">
+<Layout title="Articles">
+  <ul class="flex flex-col gap-6 mt-4">
     {
       publishedPosts.map((post) => {
         return (
@@ -24,4 +24,4 @@ const publishedPosts = await getCollection('blog', ({ data }) => {
       })
     }
   </ul>
-</Wrapper>
+</Layout>
