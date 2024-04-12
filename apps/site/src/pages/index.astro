@@ -1,7 +1,111 @@
 ---
-import '../styles/global.css';
+import Layout from "~/layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
 
-import Wrapper from '../layouts/Wrapper.astro';
+const links = [
+  {
+    href: "/",
+    text: "Home",
+  },
+  {
+    href: "/docs",
+    text: "Docs",
+  },
+  {
+    href: "/blog",
+    text: "Blog",
+  },
+];
+
+const socialLinks = [
+  {
+    href: "/",
+    text: "Twitter (X)",
+    icon: "ri:twitter-x-fill",
+  },
+  {
+    href: "/docs",
+    text: "GitHub",
+    icon: "ri:github-fill",
+  },
+  {
+    href: "/blog",
+    text: "Discord",
+    icon: "ri:discord-fill",
+  },
+];
 ---
 
-<Wrapper title="Astrolicious">Astrolicious</Wrapper>
+<Layout title="Astrolicious">
+  <div class="bg-primary-600 text-primary-50">
+    <div class="max-w-7xl p-2 mx-auto font-bold tracking-wider">
+      Discover our brand new website!
+    </div>
+  </div>
+  <header
+    class="bg-white/75 backdrop-blur-sm sticky top-0 z-20 border-b border-b-gray-200"
+  >
+    <div
+      class="p-2 max-w-7xl mx-auto flex justify-center relative items-center h-16"
+    >
+      <div class="absolute left-2">
+        <div class="font-extrabold uppercase text-2xl text-primary-950">
+          <span class="text-primary-600">Astro</span>licious
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        {
+          links.map(({ href, text }) => (
+            <a
+              {href}
+              class="py-1.5 px-3 font-extrabold uppercase text-lg rounded-md hover:bg-primary-200 transition-colors text-primary-950"
+            >
+              {text}
+            </a>
+          ))
+        }
+      </div>
+      <div class="absolute right-2">
+        <div class="flex items-center justify-center gap-1">
+          {
+            socialLinks.map(({ href, text, icon }) => (
+              <a
+                {href}
+                target="_blank"
+                class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
+              >
+                <Icon name={icon} class="size-5" />
+                <span class="sr-only">{text}</span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </header>
+  <h1 class="font-extrabold uppercase text-6xl">Astrolicious</h1>
+  <p class="text-5xl">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+    praesentium eveniet voluptatibus quod perspiciatis sint, repellendus omnis
+    dicta quidem harum tempore accusantium eius, est corporis? Corrupti non, ex
+    labore consectetur consequatur illo eos praesentium nesciunt quia quis
+    iusto? Amet quisquam aspernatur libero expedita labore a vel mollitia aut
+    quis exercitationem veniam consectetur, delectus velit dolorem nemo
+    perferendis obcaecati sapiente cum suscipit porro ea! Ipsum voluptate
+    assumenda voluptas veniam libero dolor natus doloribus, eum suscipit dicta
+    ab quis deleniti, porro iure commodi? Obcaecati perferendis quos iure eaque
+    debitis optio, culpa vero exercitationem officiis. Voluptates asperiores,
+    alias assumenda, consequatur, corporis vero ipsa excepturi esse soluta
+    adipisci similique illo repudiandae. Quasi animi excepturi optio
+    perspiciatis, amet cum facere et odio id unde at eaque maxime assumenda fuga
+    delectus tenetur ab cupiditate aperiam sed harum ipsa eveniet. Libero
+    voluptatum sit quos accusantium, distinctio veniam cumque aliquam? Pariatur
+    porro quia blanditiis quisquam assumenda, recusandae laboriosam quo hic
+    commodi dolorem iure tenetur eos rem temporibus accusantium. Blanditiis
+    nesciunt excepturi distinctio nemo. Tenetur, molestias explicabo veniam
+    doloribus repellendus non nam molestiae? Ratione corporis modi possimus
+    accusamus dignissimos placeat temporibus nisi delectus non, at voluptatum
+    est nostrum molestias labore blanditiis nesciunt aperiam veritatis
+    cupiditate quo beatae asperiores! Laudantium.
+  </p>
+</Layout>

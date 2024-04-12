@@ -44,7 +44,7 @@ export default defineConfig({
 		}),
 		icon({
 			include: {
-				ri: ['github-line', 'twitter-x-line', 'discord-line'],
+				ri: ['github-line', 'twitter-x-line', 'discord-line','github-fill', 'twitter-x-fill', 'discord-fill'],
 				ph: ['dot-duotone'],
 			},
 		}),

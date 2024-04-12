@@ -4,26 +4,27 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "astro": "4.5.6",
     "@astrojs/check": "0.5.10",
     "@astrojs/cloudflare": "10.0.1",
-    "@astrojs/starlight": "0.21.2",
-    "@astrojs/tailwind": "5.1.0",
     "@astrojs/db": "0.8.8",
-    "astro-icon": "1.1.0",
-    "tailwindcss": "3.4.3",
-    "@tailwindcss/typography": "0.5.12",
-    "@tailwindcss/forms": "0.5.7",
-    "zod": "3.22.4",
-    "simple-stack-form": "0.1.12",
-    "sanitize-html": "2.13.0",
+    "@astrojs/starlight": "0.21.2",
     "@astrojs/starlight-tailwind": "2.0.1",
+    "@astrojs/tailwind": "5.1.0",
+    "@fontsource-variable/dosis": "^5.0.19",
     "@iconify-json/ph": "1.1.11",
-    "@iconify-json/ri": "1.1.20"
+    "@iconify-json/ri": "1.1.20",
+    "@tailwindcss/forms": "0.5.7",
+    "@tailwindcss/typography": "0.5.12",
+    "astro": "4.5.6",
+    "astro-icon": "1.1.0",
+    "sanitize-html": "2.13.0",
+    "simple-stack-form": "0.1.12",
+    "tailwindcss": "3.4.3",
+    "zod": "3.22.4"
   },
   "devDependencies": {
-    "wrangler": "3.41.0",
-    "@types/sanitize-html": "2.11.0"
+    "@types/sanitize-html": "2.11.0",
+    "wrangler": "3.41.0"
   },
   "scripts": {
     "astro": "astro"

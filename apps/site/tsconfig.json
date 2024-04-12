@@ -3,7 +3,10 @@
   "references": [],
   "compilerOptions": {
     "outDir": "../../.moon/cache/types/apps/site",
-    "paths": {},
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    },
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",

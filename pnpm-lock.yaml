@@ -16,6 +16,9 @@ importers:
       '@biomejs/biome':
         specifier: 1.6.3
         version: 1.6.3
+      '@moonrepo/cli':
+        specifier: ^1.23.4
+        version: 1.23.4
       '@types/github-script':
         specifier: github:actions/github-script
         version: github.com/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea
@@ -46,6 +49,9 @@ importers:
       '@astrojs/tailwind':
         specifier: 5.1.0
         version: 5.1.0(astro@4.5.6)(tailwindcss@3.4.3)
+      '@fontsource-variable/dosis':
+        specifier: ^5.0.19
+        version: 5.0.19
       '@iconify-json/ph':
         specifier: 1.1.11
         version: 1.1.11
@@ -177,7 +183,7 @@ packages:
       '@cloudflare/workers-types': 4.20240320.1
       astro: 4.5.6(@types/node@20.11.30)(typescript@5.4.3)
       esbuild: 0.19.12
-      miniflare: 3.20240320.0
+      miniflare: 3.20240320.1
       tiny-glob: 0.2.9
       wrangler: 3.41.0(@cloudflare/workers-types@4.20240320.1)
     transitivePeerDependencies:
@@ -1273,6 +1279,10 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
+  /@fontsource-variable/dosis@5.0.19:
+    resolution: {integrity: sha512-G3thvwe7MOePRyz4+wr5o0serCCS+jPEUv/Yrj16Wl2j4/PBXLGvjg1MvgsZmciokhUhn97KgtvWM7abNSPAgA==}
+    dev: false
+
   /@iconify-json/ph@1.1.11:
     resolution: {integrity: sha512-izLvLZrU7WM03zNwNWNrAySv3i45hM3D3K6USjCGBSQMUG0HB8zxwrMf4O0leDrganmuQBH7Z0DWTgyH1ET/fg==}
     dependencies:
@@ -1502,6 +1512,78 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: false
+
+  /@moonrepo/cli@1.23.4:
+    resolution: {integrity: sha512-BbLyLXAA6A9U9cwxXQhf5PiOIWY/kHoORAKT0YvXTvuzhBZq9vuRRpVnMdBLGYCMzAb4tDry0X+HtAF65QcOxQ==}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      detect-libc: 2.0.3
+    optionalDependencies:
+      '@moonrepo/core-linux-arm64-gnu': 1.23.4
+      '@moonrepo/core-linux-arm64-musl': 1.23.4
+      '@moonrepo/core-linux-x64-gnu': 1.23.4
+      '@moonrepo/core-linux-x64-musl': 1.23.4
+      '@moonrepo/core-macos-arm64': 1.23.4
+      '@moonrepo/core-macos-x64': 1.23.4
+      '@moonrepo/core-windows-x64-msvc': 1.23.4
+    dev: true
+
+  /@moonrepo/core-linux-arm64-gnu@1.23.4:
+    resolution: {integrity: sha512-zN3+4xSeH+9kaMyu5XrHSA5JRn/i8NZ6IU2rkXZj8Ouh52e16OW9vhoBU1+mDnt7IytCEy36lVREiRWYMzsdZw==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@moonrepo/core-linux-arm64-musl@1.23.4:
+    resolution: {integrity: sha512-f43Xk+Q74dVwDcQCEO8QIYdjCnjKCv33K8ViiY8ZZ9ed+qWVxncVTRUVqxyxasx2LZHC1aSPdUF+TBwFAUROlw==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@moonrepo/core-linux-x64-gnu@1.23.4:
+    resolution: {integrity: sha512-RXyztIUDh3bWLSb8LfaE4okqJHeGx2XR4tJn1DyW0eQJs91cDfAjiyUUfgkypxOXH8/T+ib3x2vi978P2zGFog==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@moonrepo/core-linux-x64-musl@1.23.4:
+    resolution: {integrity: sha512-S+XoiSPsZBCoiw9ZkXoQ56IlALiH6+goMgBjkX6zehuGPyNKl29pBQwt2kLcW0AUtYZBjGc0tpVKw55Ac7Yq2Q==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@moonrepo/core-macos-arm64@1.23.4:
+    resolution: {integrity: sha512-2VAgtPcuRJeS9bqCJBd+rj1Q7eR8omwDVEUIV4TbLLoqfCpqIvhuian1i5I9dz/cRyKFsYimvRDM51UZJ/Mflw==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@moonrepo/core-macos-x64@1.23.4:
+    resolution: {integrity: sha512-0PeUOqCm2wdA66Av6usxZmrh6CcvV/5fbQQjxj3KiMLLjk8iSVgQxHEqpZOg1KKwy5xC4ONxVDlm3b7WB/AyPQ==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@moonrepo/core-windows-x64-msvc@1.23.4:
+    resolution: {integrity: sha512-AY8VycN3AMoAbySIksJ4e+ZmlAhw+EmqQyCN+UeE+qfAnAuahOxb1SO8AdabjJbuyMxGdCFDHHEUDZHgufTTvw==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /@neon-rs/load@0.0.4:
     resolution: {integrity: sha512-kTPhdZyTQxB+2wpiRcFWrDcejc4JI6tkPuS7UZCG4l6Zvc5kU/gGQ/ozvHTh1XR5tS+UlfAfGuPajjzQjCiHCw==}
@@ -2842,8 +2924,6 @@ packages:
     resolution: {integrity: sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw==}
     engines: {node: '>=8'}
     requiresBuild: true
-    dev: false
-    optional: true
 
   /deterministic-object-hash@2.0.2:
     resolution: {integrity: sha512-KxektNH63SrbfUyDiwXqRb1rLwKt33AmMv+5Nhsw1kqZ13SJBRTgZHtGbE+hH3a1mVW1cz+4pqSWVPAtLVXTzQ==}
@@ -4767,29 +4847,6 @@ packages:
   /mini-svg-data-uri@1.4.4:
     resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
     hasBin: true
-    dev: false
-
-  /miniflare@3.20240320.0:
-    resolution: {integrity: sha512-4M2QRxs+J5sUsybBzKT++tlbrjjjGZdtWxKmj2sqLsT26dGaKDz7DxjAeF5XIhKa5cADcffygjxx4EvfWocMmw==}
-    engines: {node: '>=16.13'}
-    hasBin: true
-    dependencies:
-      '@cspotcode/source-map-support': 0.8.1
-      acorn: 8.11.3
-      acorn-walk: 8.3.2
-      capnp-ts: 0.7.0
-      exit-hook: 2.2.1
-      glob-to-regexp: 0.4.1
-      stoppable: 1.1.0
-      undici: 5.28.3
-      workerd: 1.20240320.1
-      ws: 8.16.0
-      youch: 3.3.3
-      zod: 3.22.4
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
     dev: false
 
   /miniflare@3.20240320.1:
