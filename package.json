@@ -9,7 +9,7 @@
     "moon:sync:hooks": "moon sync hooks"
   },
   "license": "MIT",
-  "packageManager": "pnpm@8.15.4",
+  "packageManager": "pnpm@8.15.5",
   "engines": {
     "node": "20.11.1"
   },
