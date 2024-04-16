@@ -4,6 +4,8 @@ import { createForm, validateForm } from "simple:form";
 import z from "zod";
 import Layout from "~/layouts/Layout.astro";
 
+export const prerender = false;
+
 const submissionForm = createForm({
   integrationURL: z.string().min(1),
   authorURL: z.string().min(1),

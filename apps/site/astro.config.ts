@@ -52,12 +52,13 @@ export default defineConfig({
 					'github-fill',
 					'twitter-x-fill',
 					'discord-fill',
+					'global-fill',
 				],
 				ph: ['dot-duotone'],
 			},
 		}),
 	],
-	output: 'server',
+	output: 'hybrid',
 	adapter: cloudflare({
 		imageService: 'passthrough',
 		routes: {
