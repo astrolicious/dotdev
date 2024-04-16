@@ -1,27 +1,23 @@
 ---
 import { getCollection } from "astro:content";
-import Card from "~/components/Card.astro";
+import ArticleCard from "~/components/ArticleCard.astro";
 import Layout from "~/layouts/Layout.astro";
 
-const publishedPosts = await getCollection("blog", ({ data }) => {
+const title = "Articles";
+const articles = await getCollection("blog", ({ data }) => {
   return import.meta.env.PROD ? data.draft !== true : true;
 });
 ---
 
-<Layout title="Articles">
-  <ul class="flex flex-col gap-6 mt-4">
-    {
-      publishedPosts.map((post) => {
-        return (
-          <li>
-            <Card
-              title={post.data.title}
-              link={`/blog/${post.slug}`}
-              author={{ name: "Alex" }}
-            />
-          </li>
-        );
-      })
-    }
-  </ul>
+<Layout {title}>
+  <div class="max-w-7xl mx-auto px-2 py-12">
+    <h1
+      class="font-extrabold uppercase text-5xl sm:text-6xl text-primary-950 max-w-2xl font-heading"
+    >
+      {title}
+    </h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-8">
+      {articles.map((article) => <ArticleCard {article} />)}
+    </div>
+  </div>
 </Layout>
