@@ -1,9 +1,15 @@
 ---
 import Layout from "~/layouts/Layout.astro";
+
+const title = "Submission received, thank you!";
 ---
 
-<Layout title="Submission confirmation">
-  <h1 class="text-center mt-14 font-heading uppercase font-extrabold text-2xl">
-    Submission received!
-  </h1>
+<Layout {title}>
+  <div class="max-w-7xl mx-auto px-2 py-12">
+    <h1
+      class="font-extrabold uppercase text-5xl sm:text-6xl text-primary-950 max-w-2xl font-heading"
+    >
+      {title}
+    </h1>
+  </div>
 </Layout>
