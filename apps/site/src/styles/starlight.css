@@ -7,6 +7,13 @@
 :root {
   --sl-nav-pad-y: 0px;
   --sl-nav-pad-x: 0px;
+  --sl-nav-height: 144px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --sl-nav-height: 104px;
+  }
 }
 
 @layer base {
