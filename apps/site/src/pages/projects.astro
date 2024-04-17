@@ -1,12 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import ArticleCard from '~/components/ArticleCard.astro';
+import ProjectCard from '~/components/ProjectCard.astro';
 import Layout from '~/layouts/Layout.astro';
 
-const title = 'Articles';
-const articles = await getCollection('blog', ({ data }) => {
-	return import.meta.env.PROD ? data.draft !== true : true;
-});
+const title = 'Projects';
+const projects = await getCollection('projects');
 ---
 
 <Layout {title}>
@@ -16,8 +14,8 @@ const articles = await getCollection('blog', ({ data }) => {
     >
       {title}
     </h1>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-8">
-      {articles.map((article) => <ArticleCard {article} />)}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-8">
+      {projects.map((project) => <ProjectCard {project} />)}
     </div>
   </div>
 </Layout>

@@ -1,7 +1,62 @@
 ---
-import '../styles/global.css';
+import { getCollection } from 'astro:content';
+import ProjectCard from '~/components/ProjectCard.astro';
+import Layout from '~/layouts/Layout.astro';
 
-import Wrapper from '../layouts/Wrapper.astro';
+const projects = await getCollection('projects');
 ---
 
-<Wrapper title="Astrolicious">Astrolicious</Wrapper>
+<Layout title="Astrolicious">
+  <section class="bg-gradient-to-tr from-primary-700 to-primary-600">
+    <div
+      class="max-w-7xl px-2 mx-auto py-28 grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-12 lg:items-center"
+    >
+      <div>
+        <h1
+          class="font-extrabold uppercase text-5xl sm:text-6xl text-white max-w-2xl font-heading"
+        >
+          An Astro focused community
+        </h1>
+        <p class="text-xl text-primary-200 mt-4">
+          Integrations, components, websites, events and more!
+        </p>
+        <div class="mt-12 inline-flex items-center gap-4">
+          <a
+            href="/projects"
+            class="bg-white shadow-xl shadow-primary-500 px-6 py-3 block font-heading uppercase text-primary-950 font-extrabold rounded-lg hover:bg-primary-100 hover:shadow-lg hover:shadow-primary-500 transition-all"
+          >
+            Explore projects
+          </a>
+          <a
+            href="/submit"
+            class="bg-white shadow-xl shadow-primary-500 px-6 py-3 block font-heading uppercase text-primary-950 font-extrabold rounded-lg hover:bg-primary-100 hover:shadow-lg hover:shadow-primary-500 transition-all"
+          >
+            Submit a project
+          </a>
+        </div>
+      </div>
+      <div class="max-w-md lg:mx-auto">
+        <p class="text-xl text-primary-200 text-center mb-2">
+          A random project, refresh to view another!
+        </p>
+        <div class="contents" id="random-project-picker">
+          {projects.map((project) => <ProjectCard {project} class="hidden" />)}
+        </div>
+      </div>
+    </div>
+  </section>
+  <script is:inline define:vars={{ amount: projects.length }}>
+    /**
+     * @param {number} min
+     * @param {number} max
+     */
+    function randomInteger(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    const index = randomInteger(0, amount - 1);
+
+    const picker = document.getElementById("random-project-picker");
+    picker.children[index].classList.remove("hidden");
+  </script>
+</Layout>

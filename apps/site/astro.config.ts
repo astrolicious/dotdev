@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 
+import { resolve } from 'node:path';
 import cloudflare from '@astrojs/cloudflare';
 import db from '@astrojs/db';
 import starlight from '@astrojs/starlight';
@@ -36,7 +37,9 @@ export default defineConfig({
 			customCss: ['./src/styles/starlight.css'],
 			favicon: '/favicon.png',
 			components: {
-				Header: './src/components/StarlightHeader.astro',
+				Header: './src/components/starlight/StarlightHeader.astro',
+				Sidebar: './src/components/starlight/StarlightSidebar.astro',
+				Footer: './src/components/starlight/StarlightFooter.astro',
 			},
 		}),
 		tailwind({
@@ -44,12 +47,12 @@ export default defineConfig({
 		}),
 		icon({
 			include: {
-				ri: ['github-line', 'twitter-x-line', 'discord-line'],
+				ri: ['github-fill', 'twitter-x-fill', 'discord-fill', 'global-fill'],
 				ph: ['dot-duotone'],
 			},
 		}),
 	],
-	output: 'server',
+	output: 'hybrid',
 	adapter: cloudflare({
 		imageService: 'passthrough',
 		routes: {
@@ -59,6 +62,11 @@ export default defineConfig({
 		},
 	}),
 	vite: {
+		resolve: {
+			alias: {
+				'~': resolve(import.meta.dirname, './src'),
+			},
+		},
 		ssr: {
 			external: ['node:url', 'node:child_process', 'node:path'],
 		},

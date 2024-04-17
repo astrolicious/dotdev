@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	article: CollectionEntry<'blog'>;
+	class?: string;
+}
+
+const { article, class: className } = Astro.props;
+const { title, publishDate, author } = article.data;
+const { Content } = await article.render();
+---
+
+<div
+  class:list={[
+    "bg-white p-4 rounded-2xl border border-gray-200 shadow-sm relative",
+    className,
+  ]}
+>
+  <p class="inline-block text-sm text-gray-600">
+    {
+      new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
+        publishDate
+      )
+    } - {author.name}
+  </p>
+  <h2
+    class="font-extrabold uppercase text-2xl text-primary-950 max-w-2xl font-heading"
+  >
+    <a href={`/blog/${article.slug}`}>
+      {title}
+      <span class="absolute inset-0"></span>
+    </a>
+  </h2>
+  <div class="mt-3 text-gray-700 line-clamp-3">
+    <Content />
+  </div>
+</div>

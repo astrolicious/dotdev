@@ -8,9 +8,7 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "ignore": [
-      "submit.astro"
-    ]
+    "ignore": ["submit.astro"]
   },
   "formatter": {
     "lineWidth": 100
