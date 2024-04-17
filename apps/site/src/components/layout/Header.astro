@@ -1,6 +1,11 @@
 ---
 import { Icon } from "astro-icon/components";
 import Logo from "./Logo.astro";
+import type { HTMLTag } from "astro/types";
+
+interface Props {
+  tag?: HTMLTag;
+}
 
 const links = [
   {
@@ -38,11 +43,11 @@ const socialLinks = [
     icon: "ri:discord-fill",
   },
 ];
+
+const Tag = Astro.props.tag ?? "header";
 ---
 
-<header
-  class="bg-white sticky top-0 z-20 border-b border-b-gray-200 font-heading"
->
+<Tag class="bg-white sticky top-0 z-20 border-b border-b-gray-200 font-heading">
   <div
     class="p-2 max-w-7xl mx-auto flex justify-center relative items-center h-16"
   >
@@ -100,4 +105,4 @@ const socialLinks = [
       ))
     }
   </div>
-</header>
+</Tag>
