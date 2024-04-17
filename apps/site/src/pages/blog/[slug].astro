@@ -1,19 +1,19 @@
 ---
-import type { GetStaticPaths } from "astro";
-import { getCollection } from "astro:content";
-import CreativeCommons from "~/components/CreativeCommons.astro";
-import Layout from "~/layouts/Layout.astro";
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import CreativeCommons from '~/components/CreativeCommons.astro';
+import Layout from '~/layouts/Layout.astro';
 
 export const getStaticPaths = (async () => {
-  const articles = await getCollection("blog");
-  return articles.map((article) => ({
-    params: {
-      slug: article.slug,
-    },
-    props: {
-      article,
-    },
-  }));
+	const articles = await getCollection('blog');
+	return articles.map((article) => ({
+		params: {
+			slug: article.slug,
+		},
+		props: {
+			article,
+		},
+	}));
 }) satisfies GetStaticPaths;
 
 const { article } = Astro.props;

@@ -38,7 +38,7 @@ export default defineConfig({
 			components: {
 				Header: './src/components/starlight/StarlightHeader.astro',
 				Sidebar: './src/components/starlight/StarlightSidebar.astro',
-				Footer: './src/components/starlight/StarlightFooter.astro'
+				Footer: './src/components/starlight/StarlightFooter.astro',
 			},
 		}),
 		tailwind({
@@ -46,12 +46,7 @@ export default defineConfig({
 		}),
 		icon({
 			include: {
-				ri: [
-					'github-fill',
-					'twitter-x-fill',
-					'discord-fill',
-					'global-fill',
-				],
+				ri: ['github-fill', 'twitter-x-fill', 'discord-fill', 'global-fill'],
 				ph: ['dot-duotone'],
 			},
 		}),

@@ -1,11 +1,11 @@
 ---
-import { getCollection } from "astro:content";
-import ArticleCard from "~/components/ArticleCard.astro";
-import Layout from "~/layouts/Layout.astro";
+import { getCollection } from 'astro:content';
+import ArticleCard from '~/components/ArticleCard.astro';
+import Layout from '~/layouts/Layout.astro';
 
-const title = "Articles";
-const articles = await getCollection("blog", ({ data }) => {
-  return import.meta.env.PROD ? data.draft !== true : true;
+const title = 'Articles';
+const articles = await getCollection('blog', ({ data }) => {
+	return import.meta.env.PROD ? data.draft !== true : true;
 });
 ---
 

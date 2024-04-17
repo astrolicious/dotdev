@@ -1,10 +1,10 @@
 ---
-import type { CollectionEntry } from "astro:content";
-import { Icon } from "astro-icon/components";
+import type { CollectionEntry } from 'astro:content';
+import { Icon } from 'astro-icon/components';
 
 interface Props {
-  project: CollectionEntry<"projects">;
-  class?: string;
+	project: CollectionEntry<'projects'>;
+	class?: string;
 }
 
 const { project, class: className } = Astro.props;
