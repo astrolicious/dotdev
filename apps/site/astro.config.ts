@@ -64,7 +64,7 @@ export default defineConfig({
 	vite: {
 		resolve: {
 			alias: {
-				'~': resolve(new URL('.', import.meta.url).pathname, './src'),
+				'~': resolve(import.meta.dirname, './src'),
 			},
 		},
 		ssr: {
