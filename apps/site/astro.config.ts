@@ -6,7 +6,6 @@ import db from '@astrojs/db';
 import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
 import icon from 'astro-icon';
-import simpleStackForm from 'simple-stack-form';
 
 export default defineConfig({
 	build: {
@@ -25,13 +24,10 @@ export default defineConfig({
 	experimental: {
 		clientPrerender: true,
 		globalRoutePriority: true,
-		directRenderScript: false,
+		directRenderScript: true,
 	},
 	integrations: [
 		db(),
-		simpleStackForm({
-			injectMiddleware: false,
-		}),
 		starlight({
 			title: 'Astrolicious',
 			customCss: ['./src/styles/starlight.css'],

@@ -4,16 +4,17 @@
   "type": "module",
   "scripts": {
     "moon": "moon",
-    "dev": "moon run :dev",
+    "dev": "moon :dev",
     "sync": "pnpm run \"/^.+:sync:.+/\"",
     "moon:sync:codeowners": "moon sync codeowners",
     "moon:sync:hooks": "moon sync hooks",
-    "lint:fix": "biome check --apply ."
+    "moon:sync:projects": "moon sync projects",
+    "lint:fix": "moon :lint"
   },
   "license": "MIT",
   "packageManager": "pnpm@8.15.5",
   "engines": {
-    "node": "20.11.1"
+    "node": "20.12.0"
   },
   "contributors": [
     {
@@ -28,10 +29,5 @@
     "@types/github-script": "github:actions/github-script",
     "@types/node": "20.11.30",
     "typescript": "5.4.5"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "simple-stack-form@0.1.12": "patches/simple-stack-form@0.1.12.patch"
-    }
   }
 }
