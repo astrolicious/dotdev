@@ -1,23 +1,24 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
+import CreativeCommons from "~/components/CreativeCommons.astro";
 import Layout from "~/layouts/Layout.astro";
 
 export const getStaticPaths = (async () => {
-  const posts = await getCollection("blog");
-  return posts.map((post) => ({
+  const articles = await getCollection("blog");
+  return articles.map((article) => ({
     params: {
-      slug: post.slug,
+      slug: article.slug,
     },
     props: {
-      post,
+      article,
     },
   }));
 }) satisfies GetStaticPaths;
 
-const { post } = Astro.props;
-const { title, publishDate } = post.data;
-const { Content } = await post.render();
+const { article } = Astro.props;
+const { title, publishDate } = article.data;
+const { Content } = await article.render();
 ---
 
 <Layout {title}>
@@ -36,6 +37,9 @@ const { Content } = await post.render();
         {title}
       </h1>
       <Content />
+      <blockquote>
+        <CreativeCommons {article} />
+      </blockquote>
     </div>
   </div>
 </Layout>

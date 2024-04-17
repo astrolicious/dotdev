@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { article, class: className } = Astro.props;
-const { title, publishDate } = article.data;
+const { title, publishDate, author } = article.data;
 const { Content } = await article.render();
 ---
 
@@ -22,7 +22,7 @@ const { Content } = await article.render();
       new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
         publishDate
       )
-    }
+    } - {author.name}
   </p>
   <h2
     class="font-extrabold uppercase text-2xl text-primary-950 max-w-2xl font-heading"

@@ -7,6 +7,10 @@ const blogCollection = defineCollection({
 		title: z.string(),
 		draft: z.boolean(),
 		publishDate: z.union([z.number(), z.string(), z.date()]).pipe(z.coerce.date()),
+		author: z.object({
+			name: z.string(),
+			url: z.string().url(),
+		}),
 	}),
 });
 
