@@ -52,9 +52,9 @@ importers:
       '@fontsource-variable/dosis':
         specifier: 5.0.19
         version: 5.0.19
-      '@fontsource/atkinson-hyperlegible':
-        specifier: 5.0.19
-        version: 5.0.19
+      '@fontsource-variable/inter':
+        specifier: 5.0.17
+        version: 5.0.17
       '@iconify-json/ph':
         specifier: 1.1.11
         version: 1.1.11
@@ -1497,8 +1497,8 @@ packages:
     resolution: {integrity: sha512-G3thvwe7MOePRyz4+wr5o0serCCS+jPEUv/Yrj16Wl2j4/PBXLGvjg1MvgsZmciokhUhn97KgtvWM7abNSPAgA==}
     dev: false
 
-  /@fontsource/atkinson-hyperlegible@5.0.19:
-    resolution: {integrity: sha512-dnhQiFATy7n12Nq1fq8yhuzbae4WJSFKaKesJLTNKyiz6w+DI7RbcB3D1hwU+tBax4Dxlhg0tkY1LS4AzRRqxw==}
+  /@fontsource-variable/inter@5.0.17:
+    resolution: {integrity: sha512-sa80nNnqF8kzhBvqusWiL9vlPMVpdmOwMmDBup46Jggsr1VBqo+YuzwB36Ls+X6uHJtb8Yv3ALBHL/zGmT862A==}
     dev: false
 
   /@iconify-json/ph@1.1.11:

@@ -16,8 +16,19 @@
   }
 }
 
-@layer base {
+.sidebar-content .group-label > span {
+  font-family: "Dosis Variable";
+  font-weight: 900;
+  text-transform: uppercase;
+}
 
+.right-sidebar-panel h2 {
+  font-family: "Dosis Variable";
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@layer base {
   /*
   1. Use a consistent sensible line-height in all browsers.
   2. Prevent adjustments of font size after orientation changes in iOS.
@@ -38,7 +49,8 @@
     -o-tab-size: 4;
     tab-size: 4;
     /* 3 */
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     /* 4 */
     font-feature-settings: normal;
     /* 5 */
@@ -96,5 +108,11 @@
     /* 1 */
     vertical-align: middle;
     /* 2 */
+  }
+
+  h1 {
+    font-family: "Dosis Variable";
+    font-weight: 900;
+    text-transform: uppercase;
   }
 }

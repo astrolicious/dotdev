@@ -37,6 +37,7 @@ export default defineConfig({
 			customCss: ['./src/styles/starlight.css'],
 			favicon: '/favicon.png',
 			components: {
+				Head: './src/components/starlight/StarlightHead.astro',
 				Header: './src/components/starlight/StarlightHeader.astro',
 				Sidebar: './src/components/starlight/StarlightSidebar.astro',
 				Footer: './src/components/starlight/StarlightFooter.astro',

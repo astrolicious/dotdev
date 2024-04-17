@@ -1,9 +1,7 @@
 ---
-import '@fontsource-variable/dosis';
-import '@fontsource/atkinson-hyperlegible/400.css';
-import '@fontsource/atkinson-hyperlegible/700.css';
 import Analytics from '~/components/layout/Analytics.astro';
 import Banner from '~/components/layout/Banner.astro';
+import Fonts from '~/components/layout/Fonts.astro';
 import Footer from '~/components/layout/Footer.astro';
 import Header from '~/components/layout/Header.astro';
 import '~/styles/global.css';
@@ -22,6 +20,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <Fonts />
   </head>
   <body class="flex min-h-full flex-col bg-white antialiased">
     <Banner />
