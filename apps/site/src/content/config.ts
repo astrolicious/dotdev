@@ -6,13 +6,13 @@ const blogCollection = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		draft: z.boolean(),
-		publishDate: z.coerce.date(),
+		publishDate: z.union([z.number(), z.string(), z.date()]).pipe(z.coerce.date()),
 	}),
 });
 
 const docsCollection = defineCollection({
 	type: 'content',
-	// biome-ignore lint/suspicious/noExplicitAny: type to deep for some reason
+	// biome-ignore lint/suspicious/noExplicitAny: https://github.com/withastro/starlight/issues/1612
 	schema: docsSchema() as any,
 });
 
