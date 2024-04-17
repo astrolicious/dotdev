@@ -19,7 +19,7 @@ export default {
 				},
 			},
 			fontFamily: {
-				sans: ['"Atkinson Hyperlegible"'],
+				sans: ['"Inter Variable"'],
 				heading: ['"Dosis Variable"'],
 			},
 		},

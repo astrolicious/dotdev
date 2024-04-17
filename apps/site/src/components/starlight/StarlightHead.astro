@@ -1,0 +1,23 @@
+---
+import type { Props } from "@astrojs/starlight/props";
+
+import Head from "@astrojs/starlight/components/Head.astro";
+
+import dosisWoff2 from "@fontsource-variable/dosis/files/dosis-latin-wght-normal.woff2?url";
+import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2";
+---
+
+<Head {...Astro.props} />
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href={dosisWoff2}
+  crossorigin
+/><link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href={interWoff2}
+  crossorigin
+/>
