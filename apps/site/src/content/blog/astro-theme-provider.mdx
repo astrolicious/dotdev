@@ -1,28 +1,20 @@
 # Introducing: Astro Theme Provider
 
-
 Astro Theme Provider is a tool that allows you to author themes for Astro like a normal project and export your work as an integration for others to use. 
 
 ## Problems with current theme practices
 
-In Astro, normally a theme is a full project published as a template that users can clone and customize. Project templates are a common pattern and have lots of use cases, but they also have downsides that theme authors may not always be aware of:
+In Astro, typically a theme is a full project published as a template that users can clone and customize. Project templates are a common pattern and have lots of use cases, but they also have downsides that theme authors may not always be aware of. 
 
-- **Hard to upgrade**: Merging improvements from a project template can be difficult if not impossible after customizing your local copy.
-- **Incompatible with existing projects**: Project templates cannot be easily added to an existing Astro project. Adding a template to an existing project requires manuallly splicing code from the template into the project.
-- **Not beginner-friendly**: The main demographic for theme users are people who are new to Astro and web development in general. Cloning and editing a project template as a beginner can be challenging. Project templates often times use lots of different technologies and can be bloated with files beginners may not need to see or touch.
-- **Inconsistent**: There is no standard for authoring templates, most templates use different combinations of patterns and structures. For example, many templates have a config file for customization, but the location of the file and its options vary depending on the template. Learning how to use a template while also learning how to use Astro can be confusing.
+One of the most significant downsides to project templates is that they are not beginner-friendly. The main demographic for theme users are people who are new to Astro and web development in general. Cloning and editing a project template as a beginner can be challenging. Project templates often times use lots of different technologies and can be bloated with files beginners may never need to edit. Also, there are no official conventions for authoring templates. Most templates use different combinations of patterns and structures. For example, many templates have a config file for customization, but the location of the file and its options vary depending on the template. Learning how to use a template while also learning how to use Astro can be confusing.
+
+Project templates also have some more practical downsides. Merging improvements from a template can be difficult if not impossible after customizing your local copy. Also, templates cannot be easily added to existing Astro projects. Adding a template to an existing project requires manually splicing code from a template into a project.
 
 ## A better way to create themes
 
-The first step to making themes more user-friendly is shifting away from project templates and towards Astro integrations. Using an integration has many different advantages over a traditional template, for example:
+A better way to create more user-friendly themes is shifting away from project templates and towards Astro integrations. Using an integration to author a theme has many different advantages over a traditional template. One of the largest advantages is that they can be published and consumed as NPM packages. This allows users to add themes to existing projects and upgrade them at any time.
 
-* Publish and use themes as a NPM package
-* Update a theme by updating its package
-* Install themes using a single command \`astro add theme\`
-* Add themes to existing projects
-* Configure a theme by passing arguments
-
-Although theme integrations are more user-friendly than project templates, it comes at the cost of being harder to create. They require a lot of boilerplate and a lower level knowledge of Astro and Vite making it inaccessible for a lot of developers.
+Although theme integrations can be more user-friendly than project templates, they come at the cost of being harder to create. They require a lot of boilerplate and a lower level knowledge of Astro and Vite making it inaccessible for a lot of developers.
 
 Astro Theme Provider solves this by making it easier for theme authors to create theme integrations without having to write any integration code. Themes can be authored similar to a normal Astro project and be exported for others to use with a single function call.
 
@@ -40,11 +32,12 @@ package/
 ```
 
 ```ts
-// /package/index.ts
+// package/index.ts
 import { z } from 'astro/zod'; 
 import defineTheme from 'astro-theme-provider';
 
 export default defineTheme({
+    name: "my-theme",
     schema: z.object({
         title: z.string()
     })
@@ -67,7 +60,6 @@ export default defineConfig({
     ],
 });
 ```
-
 
 ## Real world example
 
