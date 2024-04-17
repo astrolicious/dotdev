@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 
+import { resolve } from 'node:path';
 import cloudflare from '@astrojs/cloudflare';
 import db from '@astrojs/db';
 import starlight from '@astrojs/starlight';
@@ -61,6 +62,11 @@ export default defineConfig({
 		},
 	}),
 	vite: {
+		resolve: {
+			alias: {
+				'~': resolve(new URL('.', import.meta.url).pathname, './src'),
+			},
+		},
 		ssr: {
 			external: ['node:url', 'node:child_process', 'node:path'],
 		},

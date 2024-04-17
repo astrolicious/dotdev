@@ -3,7 +3,6 @@
   "references": [],
   "compilerOptions": {
     "outDir": "../../.moon/cache/types/apps/site",
-    "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
     },
