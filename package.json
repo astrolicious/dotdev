@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "moon": "moon",
-    "dev": "pnpm moon run :dev",
+    "dev": "moon run :dev",
     "sync": "pnpm run \"/^.+:sync:.+/\"",
     "moon:sync:codeowners": "moon sync codeowners",
     "moon:sync:hooks": "moon sync hooks",
