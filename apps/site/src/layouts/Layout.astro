@@ -22,7 +22,6 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <Analytics />
   </head>
   <body class="flex min-h-full flex-col bg-white antialiased">
     <Banner />
@@ -31,5 +30,6 @@ const { title } = Astro.props;
       <slot />
     </main>
     <Footer />
+    <Analytics />
   </body>
 </html>
