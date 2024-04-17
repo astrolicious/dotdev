@@ -1,4 +1,4 @@
-import { colors, fontFamily } from "./tailwind.config"
+import { colors, fontFamily } from './tailwind.config';
 
 /** @type {import('tailwindcss').Config} */
 export default {
