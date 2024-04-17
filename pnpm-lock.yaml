@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  simple-stack-form@0.1.12:
-    hash: cn7vnq4dczt4wv3uwh6rd73g7q
-    path: patches/simple-stack-form@0.1.12.patch
-
 importers:
 
   .:
@@ -78,7 +73,7 @@ importers:
         version: 2.13.0
       simple-stack-form:
         specifier: 0.1.12
-        version: 0.1.12(patch_hash=cn7vnq4dczt4wv3uwh6rd73g7q)(astro@4.6.1)(zod@3.22.4)
+        version: 0.1.12(astro@4.6.1)(zod@3.22.4)
       tailwindcss:
         specifier: 3.4.3
         version: 3.4.3
@@ -6080,7 +6075,7 @@ packages:
     dev: false
     optional: true
 
-  /simple-stack-form@0.1.12(patch_hash=cn7vnq4dczt4wv3uwh6rd73g7q)(astro@4.6.1)(zod@3.22.4):
+  /simple-stack-form@0.1.12(astro@4.6.1)(zod@3.22.4):
     resolution: {integrity: sha512-cqxiA0/91WddM9Jya8Es1wfDurBfm8pUOmgMb08OB32wpmQLz2JQpjcarFNYkj5ZXfmE3qkGqakvx+6TCwxqUQ==}
     hasBin: true
     peerDependencies:
@@ -6094,7 +6089,6 @@ packages:
       kleur: 4.1.5
       zod: 3.22.4
     dev: false
-    patched: true
 
   /simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}

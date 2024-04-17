@@ -1,6 +1,6 @@
 ---
 import { Submission, db } from 'astro:db';
-import { createForm, validateForm } from 'simple:form';
+import { createForm, validateForm } from 'simple-stack-form/module';
 import z from 'zod';
 import Layout from '~/layouts/Layout.astro';
 
@@ -21,12 +21,11 @@ if (Astro.request.method === 'POST') {
 			validator: submissionForm.validator,
 		});
 		if (parsed.data) {
-			// @ts-ignore - TODO: fix this
 			await db.insert(Submission).values({
 				integration_url: parsed.data.integrationURL,
 				author_url: parsed.data.authorURL,
 				is_author: parsed.data.isAuthor,
-				message: parsed.data.message,
+				message: parsed.data.message ?? null,
 			});
 			return Astro.redirect('/submit/success');
 		}
