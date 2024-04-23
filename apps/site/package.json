@@ -16,12 +16,12 @@
     "@iconify-json/ri": "1.1.20",
     "@tailwindcss/forms": "0.5.7",
     "@tailwindcss/typography": "0.5.12",
-    "astro": "^4.6.1",
+    "astro": "4.6.1",
     "astro-icon": "1.1.0",
     "sanitize-html": "2.13.0",
     "simple-stack-form": "0.1.12",
     "tailwindcss": "3.4.3",
-    "zod": "3.22.4"
+    "zod": "3.22.5"
   },
   "devDependencies": {
     "@types/sanitize-html": "2.11.0",
