@@ -1,13 +1,13 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-	article: CollectionEntry<'blog'>;
-	class?: string;
+  article: CollectionEntry<"blog">;
+  class?: string;
 }
 
 const { article, class: className } = Astro.props;
-const { title, publishDate, author } = article.data;
+const { title, publishDate, authors } = article.data;
 const { Content } = await article.render();
 ---
 
@@ -22,7 +22,7 @@ const { Content } = await article.render();
       new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
         publishDate
       )
-    } - {author.name}
+    } - {authors.map((author) => author.name).join(", ")}
   </p>
   <h2
     class="font-extrabold uppercase text-2xl text-primary-950 max-w-2xl font-heading"

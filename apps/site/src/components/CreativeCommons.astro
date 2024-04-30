@@ -1,18 +1,18 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-	article: CollectionEntry<'blog'>;
+  article: CollectionEntry<"blog">;
 }
 
-const { title, author } = Astro.props.article.data;
+const { title, authors } = Astro.props.article.data;
 ---
 
 <a href={Astro.url}>
   {title}
 </a>
 <span> © 2024 by </span>
-<a href={author.url}>{author.name}</a>
+{authors.map((author) => <a href={author.url}>{author.name}, </a>)}
 <span>is licensed under</span>
 <a href="https://creativecommons.org/licenses/by-nc/4.0/legalcode.txt">
   CC BY-NC 4.0

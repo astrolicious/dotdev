@@ -1,43 +1,43 @@
 ---
-import { Submission, db } from 'astro:db';
-import { createForm, validateForm } from 'simple-stack-form/module';
-import z from 'zod';
-import Layout from '~/layouts/Layout.astro';
+import { Submission, db } from "astro:db";
+import { createForm, validateForm } from "simple-stack-form/module";
+import z from "zod";
+import Layout from "~/layouts/Layout.astro";
 
 export const prerender = false;
 
 const submissionForm = createForm({
-	integrationURL: z.string().min(1),
-	authorURL: z.string().min(1),
-	isAuthor: z.boolean(),
-	message: z.string().optional(),
+  integrationURL: z.string().min(1),
+  authorURL: z.string().min(1),
+  isAuthor: z.boolean(),
+  message: z.string().optional(),
 });
 
-if (Astro.request.method === 'POST') {
-	try {
-		const formData = await Astro.request.formData();
-		const parsed = await validateForm({
-			formData,
-			validator: submissionForm.validator,
-		});
-		if (parsed.data) {
-			await db.insert(Submission).values({
-				integration_url: parsed.data.integrationURL,
-				author_url: parsed.data.authorURL,
-				is_author: parsed.data.isAuthor,
-				message: parsed.data.message ?? null,
-			});
-			return Astro.redirect('/submit/success');
-		}
-		console.warn(parsed.fieldErrors);
-	} catch (error) {
-		if (error instanceof Error) {
-			console.error(error.message);
-		}
-	}
+if (Astro.request.method === "POST") {
+  try {
+    const formData = await Astro.request.formData();
+    const parsed = await validateForm({
+      formData,
+      validator: submissionForm.validator,
+    });
+    if (parsed.data) {
+      await db.insert(Submission).values({
+        integration_url: parsed.data.integrationURL,
+        author_url: parsed.data.authorURL,
+        is_author: parsed.data.isAuthor,
+        message: parsed.data.message ?? null,
+      });
+      return Astro.redirect("/submit/success");
+    }
+    console.warn(parsed.fieldErrors);
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
 }
 
-const title = 'Submit a project for Astrolicous';
+const title = "Submit a project for Astrolicous";
 ---
 
 <Layout {title}>
