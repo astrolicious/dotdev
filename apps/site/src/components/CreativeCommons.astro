@@ -1,8 +1,8 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-  article: CollectionEntry<"blog">;
+	article: CollectionEntry<'blog'>;
 }
 
 const { title, authors } = Astro.props.article.data;
