@@ -27,18 +27,20 @@ Although theme integrations can be more user-friendly than project templates, th
 
 Astro Theme Provider solves this by making it easier for theme authors to create theme integrations without having to write any integration code. Themes can be authored similar to a normal Astro project and be exported for others to use with a single function call.
 
-```
-package/
-├── public
-├── src/
-│   ├── assets
-│   ├── components
-│   ├── css
-│   ├── layouts
-│   └── pages
-├── index.ts
-└── package.json
-```
+<FileTree>
+
+- package/
+  - public/
+  - src/
+    - assets/
+    - components/
+    - css/
+    - layouts/
+    - pages/
+  - index.ts
+  - package.json
+
+</FileTree>
 
 ```ts title="package/index.ts"
 import { z } from 'astro/zod'; 
