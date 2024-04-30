@@ -1,10 +1,11 @@
 import { defineConfig } from 'astro/config';
 
+import { resolve } from 'node:path';
 import cloudflare from '@astrojs/cloudflare';
 import db from '@astrojs/db';
 import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
-import simpleStackForm from 'simple-stack-form';
+import icon from 'astro-icon';
 
 export default defineConfig({
 	build: {
@@ -23,29 +24,48 @@ export default defineConfig({
 	experimental: {
 		clientPrerender: true,
 		globalRoutePriority: true,
-		optimizeHoistedScript: true,
+		directRenderScript: true,
 	},
 	integrations: [
-		tailwind({
-			applyBaseStyles: false,
-			nesting: true,
-		}),
 		db(),
 		starlight({
-			title: 'Astrolicious Docs',
-			pagefind: false,
+			title: 'Astrolicious',
+			customCss: ['./src/styles/starlight.css'],
+			favicon: '/favicon.png',
+			components: {
+				Head: './src/components/starlight/StarlightHead.astro',
+				Header: './src/components/starlight/StarlightHeader.astro',
+				Sidebar: './src/components/starlight/StarlightSidebar.astro',
+				Footer: './src/components/starlight/StarlightFooter.astro',
+			},
 		}),
-		simpleStackForm({
-			injectMiddleware: false,
+		tailwind({
+			applyBaseStyles: false,
+		}),
+		icon({
+			include: {
+				ri: ['github-fill', 'twitter-x-fill', 'discord-fill', 'global-fill'],
+				ph: ['dot-duotone'],
+			},
 		}),
 	],
-	output: 'server',
+	output: 'hybrid',
 	adapter: cloudflare({
 		imageService: 'passthrough',
+		routes: {
+			extend: {
+				exclude: [{ pattern: '/pagefind/*' }],
+			},
+		},
 	}),
 	vite: {
+		resolve: {
+			alias: {
+				'~': resolve(import.meta.dirname, './src'),
+			},
+		},
 		ssr: {
-			external: ['node:url', 'node:child_process', 'node:path'],
+			external: ['node:url', 'node:child_process', 'node:path', 'node:fs'],
 		},
 		build: {
 			minify: false,
