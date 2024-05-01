@@ -36,11 +36,11 @@ importers:
         specifier: 0.8.8
         version: 0.8.8
       '@astrojs/starlight':
-        specifier: 0.21.2
-        version: 0.21.2(astro@4.6.1)
+        specifier: 0.21.5
+        version: 0.21.5(astro@4.6.1)
       '@astrojs/starlight-tailwind':
         specifier: 2.0.2
-        version: 2.0.2(@astrojs/starlight@0.21.2)(@astrojs/tailwind@5.1.0)(tailwindcss@3.4.3)
+        version: 2.0.2(@astrojs/starlight@0.21.5)(@astrojs/tailwind@5.1.0)(tailwindcss@3.4.3)
       '@astrojs/tailwind':
         specifier: 5.1.0
         version: 5.1.0(astro@4.6.1)(tailwindcss@3.4.3)
@@ -362,20 +362,20 @@ packages:
       zod: 3.22.5
     dev: false
 
-  /@astrojs/starlight-tailwind@2.0.2(@astrojs/starlight@0.21.2)(@astrojs/tailwind@5.1.0)(tailwindcss@3.4.3):
+  /@astrojs/starlight-tailwind@2.0.2(@astrojs/starlight@0.21.5)(@astrojs/tailwind@5.1.0)(tailwindcss@3.4.3):
     resolution: {integrity: sha512-XJccwk6VLeQZuGQwoiLZLNAPCn2fQobtl10Ra2c2yDLjdYEActcqy0eidZbouAwGlbS9I0iJogeGjHQJ2Casjg==}
     peerDependencies:
       '@astrojs/starlight': '>=0.9.0'
       '@astrojs/tailwind': ^5.0.0
       tailwindcss: ^3.3.3
     dependencies:
-      '@astrojs/starlight': 0.21.2(astro@4.6.1)
+      '@astrojs/starlight': 0.21.5(astro@4.6.1)
       '@astrojs/tailwind': 5.1.0(astro@4.6.1)(tailwindcss@3.4.3)
       tailwindcss: 3.4.3
     dev: false
 
-  /@astrojs/starlight@0.21.2(astro@4.6.1):
-    resolution: {integrity: sha512-ziDfrbhBjw/+HwMITk6yz7SbkQKQJZY9GlaPHntSPq4kYs+b2ru3toIxj2l3T9LUFtUpNWHkj+C1wJTmfLZfaw==}
+  /@astrojs/starlight@0.21.5(astro@4.6.1):
+    resolution: {integrity: sha512-cvftxu7DM4C25KGSxqyIk81DiQGX0zx9s5sfmprd1kKQK1h/MQXaRVDCpJrK4SjrgWtpG1UoKLJZBgD5w4k9kw==}
     peerDependencies:
       astro: ^4.2.7
     dependencies:
@@ -397,7 +397,6 @@ packages:
       rehype: 13.0.1
       remark-directive: 3.0.0
       unified: 11.0.4
-      unist-util-remove: 4.0.0
       unist-util-visit: 5.0.0
       vfile: 6.0.1
     transitivePeerDependencies:
@@ -6583,14 +6582,6 @@ packages:
     dependencies:
       '@types/unist': 3.0.2
       unist-util-visit: 5.0.0
-    dev: false
-
-  /unist-util-remove@4.0.0:
-    resolution: {integrity: sha512-b4gokeGId57UVRX/eVKej5gXqGlc9+trkORhFJpu9raqZkZhU0zm8Doi05+HaiBsMEIJowL+2WtQ5ItjsngPXg==}
-    dependencies:
-      '@types/unist': 3.0.2
-      unist-util-is: 6.0.0
-      unist-util-visit-parents: 6.0.1
     dev: false
 
   /unist-util-stringify-position@3.0.3:
