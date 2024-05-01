@@ -9,11 +9,23 @@ on:
       - opened
       - synchronize
       - reopened
-
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      checks: read
+      contents: read
+      deployments: write
+      issues: write
+      discussions: read
+      packages: read
+      pages: read
+      pull-requests: write
+      repository-projects: read
+      security-events: read
+      statuses: read
     outputs:
       skip: ${{ steps.moon-build.outputs.skip }}
     steps:
@@ -84,8 +96,21 @@ jobs:
   deploy-preview:
     needs: build
     if: ${{ github.ref != 'refs/heads/main' && needs.build.outputs.skip != 'true' }}
-    name: Deploy / Preview
+    name: Deploy - Preview
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      checks: read
+      contents: read
+      deployments: write
+      issues: write
+      discussions: read
+      packages: read
+      pages: read
+      pull-requests: write
+      repository-projects: read
+      security-events: read
+      statuses: read
     steps:
       - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
         with:
@@ -155,8 +180,21 @@ jobs:
   deploy-production:
     if: ${{ github.ref == 'refs/heads/main' && needs.build.outputs.skip != 'true' }}
     needs: build
-    name: Deploy / Production
+    name: Deploy - Production
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      checks: read
+      contents: read
+      deployments: write
+      issues: write
+      discussions: read
+      packages: read
+      pages: read
+      pull-requests: write
+      repository-projects: read
+      security-events: read
+      statuses: read
     steps:
       - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
         with:
