@@ -76,3 +76,12 @@ jobs:
           script: |
             const { default: script } = await import('${{ github.workspace }}/.github/scripts/update-deployment.js')
             await script({github, context, core})
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+  deploy:
+    needs: build
+    name: Deploy / Preview
+    runs-on: ubuntu-latest
