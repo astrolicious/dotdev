@@ -31,27 +31,21 @@ jobs:
           auto-install: true
       - id: build
         run: |
-          # Run the command and redirect output to both stdout and a temporary file
           temp_file=$(mktemp)
           moon --color --log info ci site:build | tee "$temp_file"
 
-          # Check if the output contains the specific string using grep on the temporary file
           if grep -q "No targets to run based on touched files" "$temp_file"; then
-            echo "No targets to run."
-            # Suppose we determine to skip based on some condition
-            echo "::set-output name=skip::true"
+            echo "skip=true" >> $GITHUB_OUTPUT
           else
-            echo "There are targets to run."
-            # Suppose we determine to skip based on some condition
-            echo "::set-output name=skip::false"
+            echo "skip=false" >> $GITHUB_OUTPUT
           fi
 
-          # Clean up the temporary file
           rm "$temp_file"
         env:
           ASTRO_STUDIO_APP_TOKEN: ${{ secrets.ASTRO_STUDIO_APP_TOKEN }}
           # MOONBASE_SECRET_KEY: ${{ secrets.MOONBASE_SECRET_KEY }}
       - uses: moonrepo/run-report-action@a92e881fd7c6bd680f64bfa1219ac7ddf3c3d009 # v1.6.1
+        if: ${{ steps.build.outputs.skip != 'true' }}
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
