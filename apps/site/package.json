@@ -6,7 +6,7 @@
   "dependencies": {
     "@astrojs/check": "0.5.10",
     "@astrojs/cloudflare": "10.1.0",
-    "@astrojs/db": "0.8.8",
+    "@astrojs/db": "0.10.6",
     "@astrojs/starlight": "0.21.2",
     "@astrojs/starlight-tailwind": "2.0.2",
     "@astrojs/tailwind": "5.1.0",
