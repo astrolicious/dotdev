@@ -43,7 +43,7 @@ jobs:
         if: ${{ steps.moon-build.outputs.skip != 'true' }}
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/upload-artifact@v4.3.3
+      - uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
         if: ${{ steps.moon-build.outputs.skip != 'true' }}
         id: artifact-upload
         with:
@@ -97,7 +97,7 @@ jobs:
           script: |
             const { default: script } = await import('${{ github.workspace }}/.github/scripts/create-deployment.js')
             await script({github, context, core})
-      - uses: actions/download-artifact@v4.1.7
+      - uses: actions/download-artifact@65a9edc5881444af0b9093a5e628f2fe47ea3b2e # v4.1.7
         with:
           # Name of the artifact to download.
           # If unspecified, all artifacts for the run are downloaded.
@@ -168,7 +168,7 @@ jobs:
           script: |
             const { default: script } = await import('${{ github.workspace }}/.github/scripts/create-deployment.js')
             await script({github, context, core})
-      - uses: actions/download-artifact@v4.1.7
+      - uses: actions/download-artifact@65a9edc5881444af0b9093a5e628f2fe47ea3b2e # v4.1.7
         with:
           # Name of the artifact to download.
           # If unspecified, all artifacts for the run are downloaded.
