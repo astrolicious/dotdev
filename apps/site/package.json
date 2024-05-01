@@ -21,7 +21,7 @@
     "sanitize-html": "2.13.0",
     "simple-stack-form": "0.1.12",
     "tailwindcss": "3.4.3",
-    "zod": "3.23.4"
+    "zod": "3.23.5"
   },
   "devDependencies": {
     "@types/sanitize-html": "2.11.0",
