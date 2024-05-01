@@ -2,12 +2,9 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:best-practices"],
   "dependencyDashboard": true,
-  "npm": {
-    "minimumReleaseAge": "3 days"
-  },
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": true,
+    "automerge": false,
     "automergeType": "branch"
   },
   "packageRules": [
@@ -22,15 +19,17 @@
       "matchCurrentVersion": "!/^0/",
       "automerge": true,
       "automergeType": "branch"
-    },
+    }
+  ],
+  "customManagers": [
     {
-      "matchDepTypes": ["packageManager", "engines"],
-      "enabled": false
+      "customType": "regex",
+      "fileMatch": ["^.prototools$"],
+      "matchStrings": [
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?=\\s\"(?<currentValue>.*)\"\\s"
+      ]
     }
   ],
   "ignoreTests": true,
-  "nodenv": {
-    "enabled": false
-  },
   "prHourlyLimit": 0
 }
