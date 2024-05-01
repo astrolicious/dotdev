@@ -161,7 +161,7 @@ jobs:
           # If github-token is specified, this is the run that artifacts will be downloaded from.
           # Optional. Default is ${{ github.run_id }}
           # run-id:
-      - uses: cloudflare/wrangler-action@7c01cc48d88a1f83b4716e0557c168854a9dcdb8 # v3.4.1
+      - uses: cloudflare/wrangler-action@a84dcc6dd36c8769fbff7e622308c8050fc41f4f # v3.5.0
         id: wrangler
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -248,7 +248,7 @@ jobs:
           # If github-token is specified, this is the run that artifacts will be downloaded from.
           # Optional. Default is ${{ github.run_id }}
           # run-id:
-      - uses: cloudflare/wrangler-action@7c01cc48d88a1f83b4716e0557c168854a9dcdb8 # v3.4.1
+      - uses: cloudflare/wrangler-action@a84dcc6dd36c8769fbff7e622308c8050fc41f4f # v3.5.0
         id: wrangler
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
