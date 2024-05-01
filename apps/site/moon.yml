@@ -6,6 +6,7 @@ fileGroups:
   sources:
     - "public/**/*"
     - "src/**/*"
+    - "package.json"
     - "astro.config.ts"
   tests:
     - "tests/**/*"
