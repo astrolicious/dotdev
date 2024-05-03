@@ -31,19 +31,19 @@ importers:
         version: 0.5.10(typescript@5.4.5)
       '@astrojs/cloudflare':
         specifier: 10.2.4
-        version: 10.2.4(astro@4.6.1)
+        version: 10.2.4(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))
       '@astrojs/db':
         specifier: 0.8.8
-        version: 0.8.8
+        version: 0.8.8(@cloudflare/workers-types@4.20240320.1)
       '@astrojs/starlight':
         specifier: 0.21.5
-        version: 0.21.5(astro@4.6.1)
+        version: 0.21.5(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))
       '@astrojs/starlight-tailwind':
         specifier: 2.0.2
-        version: 2.0.2(@astrojs/starlight@0.21.5)(@astrojs/tailwind@5.1.0)(tailwindcss@3.4.3)
+        version: 2.0.2(@astrojs/starlight@0.21.5(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))(tailwindcss@3.4.3))(tailwindcss@3.4.3)
       '@astrojs/tailwind':
         specifier: 5.1.0
-        version: 5.1.0(astro@4.6.1)(tailwindcss@3.4.3)
+        version: 5.1.0(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))(tailwindcss@3.4.3)
       '@fontsource-variable/dosis':
         specifier: 5.0.20
         version: 5.0.20
@@ -73,13 +73,13 @@ importers:
         version: 2.13.0
       simple-stack-form:
         specifier: 0.1.12
-        version: 0.1.12(astro@4.6.1)(zod@3.23.5)
+        version: 0.1.12(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))(zod@3.23.6)
       tailwindcss:
         specifier: 3.4.3
         version: 3.4.3
       zod:
-        specifier: 3.23.5
-        version: 3.23.5
+        specifier: 3.23.6
+        version: 3.23.6
     devDependencies:
       '@types/sanitize-html':
         specifier: 2.11.0
@@ -2039,7 +2039,6 @@ packages:
 
   github-script@https://codeload.github.com/actions/github-script/tar.gz/60a0d83039c74a4aee543508d2ffcb1c3799cdea:
     resolution: {tarball: https://codeload.github.com/actions/github-script/tar.gz/60a0d83039c74a4aee543508d2ffcb1c3799cdea}
-    name: github-script
     version: 7.0.1
     engines: {node: '>=20.0.0 <21.0.0'}
 
@@ -3695,8 +3694,8 @@ packages:
     peerDependencies:
       zod: ^3.22.4
 
-  zod@3.23.5:
-    resolution: {integrity: sha512-fkwiq0VIQTksNNA131rDOsVJcns0pfVUjHzLrNBiF/O/Xxb5lQyEXkhZWcJ7npWsYlvs+h0jFWXXy4X46Em1JA==}
+  zod@3.23.6:
+    resolution: {integrity: sha512-RTHJlZhsRbuA8Hmp/iNL7jnfc4nZishjsanDAfEY1QpDQZCahUp3xDzl+zfweE9BklxMUcgBgS1b7Lvie/ZVwA==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -3757,7 +3756,7 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@10.2.4(astro@4.6.1)':
+  '@astrojs/cloudflare@10.2.4(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))':
     dependencies:
       '@astrojs/internal-helpers': 0.3.0
       '@astrojs/underscore-redirects': 0.3.3
@@ -3776,12 +3775,12 @@ snapshots:
 
   '@astrojs/compiler@2.7.1': {}
 
-  '@astrojs/db@0.8.8':
+  '@astrojs/db@0.8.8(@cloudflare/workers-types@4.20240320.1)':
     dependencies:
       '@libsql/client': 0.5.6
       async-listen: 3.0.1
       deep-diff: 1.0.2
-      drizzle-orm: 0.29.5(@libsql/client@0.5.6)
+      drizzle-orm: 0.29.5(@cloudflare/workers-types@4.20240320.1)(@libsql/client@0.5.6)
       kleur: 4.1.5
       nanoid: 5.0.6
       open: 10.1.0
@@ -3789,7 +3788,7 @@ snapshots:
       prompts: 2.4.2
       strip-ansi: 7.1.0
       yargs-parser: 21.1.1
-      zod: 3.23.5
+      zod: 3.23.6
     transitivePeerDependencies:
       - '@aws-sdk/client-rds-data'
       - '@cloudflare/workers-types'
@@ -3883,7 +3882,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@2.1.1(astro@4.6.1)':
+  '@astrojs/mdx@2.1.1(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))':
     dependencies:
       '@astrojs/markdown-remark': 4.2.1
       '@mdx-js/mdx': 3.0.1
@@ -3911,23 +3910,23 @@ snapshots:
   '@astrojs/sitemap@3.1.1':
     dependencies:
       sitemap: 7.1.1
-      zod: 3.23.5
+      zod: 3.23.6
 
-  '@astrojs/starlight-tailwind@2.0.2(@astrojs/starlight@0.21.5)(@astrojs/tailwind@5.1.0)(tailwindcss@3.4.3)':
+  '@astrojs/starlight-tailwind@2.0.2(@astrojs/starlight@0.21.5(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))(tailwindcss@3.4.3))(tailwindcss@3.4.3)':
     dependencies:
-      '@astrojs/starlight': 0.21.5(astro@4.6.1)
-      '@astrojs/tailwind': 5.1.0(astro@4.6.1)(tailwindcss@3.4.3)
+      '@astrojs/starlight': 0.21.5(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))
+      '@astrojs/tailwind': 5.1.0(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))(tailwindcss@3.4.3)
       tailwindcss: 3.4.3
 
-  '@astrojs/starlight@0.21.5(astro@4.6.1)':
+  '@astrojs/starlight@0.21.5(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))':
     dependencies:
-      '@astrojs/mdx': 2.1.1(astro@4.6.1)
+      '@astrojs/mdx': 2.1.1(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))
       '@astrojs/sitemap': 3.1.1
       '@pagefind/default-ui': 1.0.4
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.3
       astro: 4.6.1(@types/node@20.12.8)(typescript@5.4.5)
-      astro-expressive-code: 0.33.4(astro@4.6.1)
+      astro-expressive-code: 0.33.4(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))
       bcp-47: 2.1.0
       hast-util-from-html: 2.0.1
       hast-util-select: 6.0.2
@@ -3944,7 +3943,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/tailwind@5.1.0(astro@4.6.1)(tailwindcss@3.4.3)':
+  '@astrojs/tailwind@5.1.0(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))(tailwindcss@3.4.3)':
     dependencies:
       astro: 4.6.1(@types/node@20.12.8)(typescript@5.4.5)
       autoprefixer: 10.4.18(postcss@8.4.38)
@@ -5002,7 +5001,7 @@ snapshots:
 
   astring@1.8.6: {}
 
-  astro-expressive-code@0.33.4(astro@4.6.1):
+  astro-expressive-code@0.33.4(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5)):
     dependencies:
       astro: 4.6.1(@types/node@20.12.8)(typescript@5.4.5)
       hast-util-to-html: 8.0.4
@@ -5075,11 +5074,11 @@ snapshots:
       unist-util-visit: 5.0.0
       vfile: 6.0.1
       vite: 5.2.9(@types/node@20.12.8)
-      vitefu: 0.2.5(vite@5.2.9)
+      vitefu: 0.2.5(vite@5.2.9(@types/node@20.12.8))
       which-pm: 2.1.1
       yargs-parser: 21.1.1
-      zod: 3.23.5
-      zod-to-json-schema: 3.22.4(zod@3.23.5)
+      zod: 3.23.6
+      zod-to-json-schema: 3.22.4(zod@3.23.6)
     optionalDependencies:
       sharp: 0.32.6
     transitivePeerDependencies:
@@ -5463,8 +5462,9 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
-  drizzle-orm@0.29.5(@libsql/client@0.5.6):
-    dependencies:
+  drizzle-orm@0.29.5(@cloudflare/workers-types@4.20240320.1)(@libsql/client@0.5.6):
+    optionalDependencies:
+      '@cloudflare/workers-types': 4.20240320.1
       '@libsql/client': 0.5.6
 
   dset@3.1.3: {}
@@ -6754,7 +6754,7 @@ snapshots:
       workerd: 1.20240320.1
       ws: 8.16.0
       youch: 3.3.3
-      zod: 3.23.5
+      zod: 3.23.6
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -7025,8 +7025,9 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.4.38):
     dependencies:
       lilconfig: 3.1.1
-      postcss: 8.4.38
       yaml: 2.4.1
+    optionalDependencies:
+      postcss: 8.4.38
 
   postcss-nested@6.0.1(postcss@8.4.38):
     dependencies:
@@ -7360,14 +7361,14 @@ snapshots:
       simple-concat: 1.0.1
     optional: true
 
-  simple-stack-form@0.1.12(astro@4.6.1)(zod@3.23.5):
+  simple-stack-form@0.1.12(astro@4.6.1(@types/node@20.12.8)(typescript@5.4.5))(zod@3.23.6):
     dependencies:
       '@clack/prompts': 0.7.0
       astro: 4.6.1(@types/node@20.12.8)(typescript@5.4.5)
       fs-extra: 11.2.0
       just-map-values: 3.2.0
       kleur: 4.1.5
-      zod: 3.23.5
+      zod: 3.23.6
 
   simple-swizzle@0.2.2:
     dependencies:
@@ -7596,7 +7597,7 @@ snapshots:
   ts-interface-checker@0.1.13: {}
 
   tsconfck@3.0.3(typescript@5.4.5):
-    dependencies:
+    optionalDependencies:
       typescript: 5.4.5
 
   tslib@2.6.2: {}
@@ -7766,54 +7767,59 @@ snapshots:
 
   vite@5.2.9(@types/node@20.12.8):
     dependencies:
-      '@types/node': 20.12.8
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.13.0
     optionalDependencies:
+      '@types/node': 20.12.8
       fsevents: 2.3.3
 
-  vitefu@0.2.5(vite@5.2.9):
-    dependencies:
+  vitefu@0.2.5(vite@5.2.9(@types/node@20.12.8)):
+    optionalDependencies:
       vite: 5.2.9(@types/node@20.12.8)
 
   volar-service-css@0.0.34(@volar/language-service@2.1.6):
     dependencies:
-      '@volar/language-service': 2.1.6
       vscode-css-languageservice: 6.2.12
       vscode-languageserver-textdocument: 1.0.11
       vscode-uri: 3.0.8
+    optionalDependencies:
+      '@volar/language-service': 2.1.6
 
   volar-service-emmet@0.0.34(@volar/language-service@2.1.6):
     dependencies:
-      '@volar/language-service': 2.1.6
       '@vscode/emmet-helper': 2.9.2
       vscode-html-languageservice: 5.1.2
+    optionalDependencies:
+      '@volar/language-service': 2.1.6
 
   volar-service-html@0.0.34(@volar/language-service@2.1.6):
     dependencies:
-      '@volar/language-service': 2.1.6
       vscode-html-languageservice: 5.1.2
       vscode-languageserver-textdocument: 1.0.11
       vscode-uri: 3.0.8
+    optionalDependencies:
+      '@volar/language-service': 2.1.6
 
   volar-service-prettier@0.0.34(@volar/language-service@2.1.6):
     dependencies:
-      '@volar/language-service': 2.1.6
       vscode-uri: 3.0.8
+    optionalDependencies:
+      '@volar/language-service': 2.1.6
 
   volar-service-typescript-twoslash-queries@0.0.34(@volar/language-service@2.1.6):
-    dependencies:
+    optionalDependencies:
       '@volar/language-service': 2.1.6
 
   volar-service-typescript@0.0.34(@volar/language-service@2.1.6):
     dependencies:
-      '@volar/language-service': 2.1.6
       path-browserify: 1.0.1
       semver: 7.6.0
       typescript-auto-import-cache: 0.3.2
       vscode-languageserver-textdocument: 1.0.11
       vscode-nls: 5.2.0
+    optionalDependencies:
+      '@volar/language-service': 2.1.6
 
   vscode-css-languageservice@6.2.12:
     dependencies:
@@ -7892,7 +7898,6 @@ snapshots:
   wrangler@3.41.0(@cloudflare/workers-types@4.20240320.1):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.1
-      '@cloudflare/workers-types': 4.20240320.1
       '@esbuild-plugins/node-globals-polyfill': 0.2.3(esbuild@0.17.19)
       '@esbuild-plugins/node-modules-polyfill': 0.2.2(esbuild@0.17.19)
       blake3-wasm: 2.1.5
@@ -7907,6 +7912,7 @@ snapshots:
       source-map: 0.6.1
       xxhash-wasm: 1.0.2
     optionalDependencies:
+      '@cloudflare/workers-types': 4.20240320.1
       fsevents: 2.3.3
     transitivePeerDependencies:
       - bufferutil
@@ -7966,10 +7972,10 @@ snapshots:
       mustache: 4.2.0
       stacktracey: 2.1.8
 
-  zod-to-json-schema@3.22.4(zod@3.23.5):
+  zod-to-json-schema@3.22.4(zod@3.23.6):
     dependencies:
-      zod: 3.23.5
+      zod: 3.23.6
 
-  zod@3.23.5: {}
+  zod@3.23.6: {}
 
   zwitch@2.0.4: {}
