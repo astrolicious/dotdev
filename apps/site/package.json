@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@astrojs/check": "0.5.10",
-    "@astrojs/cloudflare": "10.2.4",
+    "@astrojs/cloudflare": "10.2.5",
     "@astrojs/db": "0.8.8",
     "@astrojs/starlight": "0.21.5",
     "@astrojs/starlight-tailwind": "2.0.2",
