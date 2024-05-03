@@ -7,7 +7,7 @@
     "@astrojs/check": "0.5.10",
     "@astrojs/cloudflare": "10.2.5",
     "@astrojs/db": "0.8.8",
-    "@astrojs/starlight": "0.21.5",
+    "@astrojs/starlight": "0.22.1",
     "@astrojs/starlight-tailwind": "2.0.2",
     "@astrojs/tailwind": "5.1.0",
     "@fontsource-variable/dosis": "5.0.20",
