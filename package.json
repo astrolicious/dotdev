@@ -14,7 +14,7 @@
   "license": "MIT",
   "packageManager": "pnpm@9.1.0",
   "engines": {
-    "node": "20.12.2"
+    "node": "20.13.0"
   },
   "contributors": [
     {
