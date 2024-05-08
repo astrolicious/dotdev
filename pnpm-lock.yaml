@@ -73,13 +73,13 @@ importers:
         version: 2.13.0
       simple-stack-form:
         specifier: 0.1.12
-        version: 0.1.12(astro@4.7.1(@types/node@20.12.11)(typescript@5.4.5))(zod@3.23.7)
+        version: 0.1.12(astro@4.7.1(@types/node@20.12.11)(typescript@5.4.5))(zod@3.23.8)
       tailwindcss:
         specifier: 3.4.3
         version: 3.4.3
       zod:
-        specifier: 3.23.7
-        version: 3.23.7
+        specifier: 3.23.8
+        version: 3.23.8
     devDependencies:
       '@types/sanitize-html':
         specifier: 2.11.0
@@ -3631,8 +3631,8 @@ packages:
     peerDependencies:
       zod: ^3.23.3
 
-  zod@3.23.7:
-    resolution: {integrity: sha512-NBeIoqbtOiUMomACV/y+V3Qfs9+Okr18vR5c/5pHClPpufWOrsx8TENboDPe265lFdfewX2yBtNTLPvnmCxwog==}
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -3727,7 +3727,7 @@ snapshots:
       prompts: 2.4.2
       strip-ansi: 7.1.0
       yargs-parser: 21.1.1
-      zod: 3.23.7
+      zod: 3.23.8
     transitivePeerDependencies:
       - '@aws-sdk/client-rds-data'
       - '@cloudflare/workers-types'
@@ -3833,7 +3833,7 @@ snapshots:
     dependencies:
       sitemap: 7.1.1
       stream-replace-string: 2.0.0
-      zod: 3.23.7
+      zod: 3.23.8
 
   '@astrojs/starlight-tailwind@2.0.2(@astrojs/starlight@0.22.2(astro@4.7.1(@types/node@20.12.11)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.7.1(@types/node@20.12.11)(typescript@5.4.5))(tailwindcss@3.4.3))(tailwindcss@3.4.3)':
     dependencies:
@@ -5087,8 +5087,8 @@ snapshots:
       vitefu: 0.2.5(vite@5.2.11(@types/node@20.12.11))
       which-pm: 2.1.1
       yargs-parser: 21.1.1
-      zod: 3.23.7
-      zod-to-json-schema: 3.23.0(zod@3.23.7)
+      zod: 3.23.8
+      zod-to-json-schema: 3.23.0(zod@3.23.8)
     optionalDependencies:
       sharp: 0.33.3
     transitivePeerDependencies:
@@ -6608,7 +6608,7 @@ snapshots:
       workerd: 1.20240419.0
       ws: 8.17.0
       youch: 3.3.3
-      zod: 3.23.7
+      zod: 3.23.8
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -7161,14 +7161,14 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
-  simple-stack-form@0.1.12(astro@4.7.1(@types/node@20.12.11)(typescript@5.4.5))(zod@3.23.7):
+  simple-stack-form@0.1.12(astro@4.7.1(@types/node@20.12.11)(typescript@5.4.5))(zod@3.23.8):
     dependencies:
       '@clack/prompts': 0.7.0
       astro: 4.7.1(@types/node@20.12.11)(typescript@5.4.5)
       fs-extra: 11.2.0
       just-map-values: 3.2.0
       kleur: 4.1.5
-      zod: 3.23.7
+      zod: 3.23.8
 
   simple-swizzle@0.2.2:
     dependencies:
@@ -7695,10 +7695,10 @@ snapshots:
       mustache: 4.2.0
       stacktracey: 2.1.8
 
-  zod-to-json-schema@3.23.0(zod@3.23.7):
+  zod-to-json-schema@3.23.0(zod@3.23.8):
     dependencies:
-      zod: 3.23.7
+      zod: 3.23.8
 
-  zod@3.23.7: {}
+  zod@3.23.8: {}
 
   zwitch@2.0.4: {}
