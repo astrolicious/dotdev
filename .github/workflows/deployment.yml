@@ -166,6 +166,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # renovate: datasource=npm depName=wrangler
           wranglerVersion: "3.34.2"
           workingDirectory: "apps/site"
           packageManager: pnpm
@@ -253,6 +254,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # renovate: datasource=npm depName=wrangler
           wranglerVersion: "3.34.2"
           workingDirectory: "apps/site"
           packageManager: pnpm

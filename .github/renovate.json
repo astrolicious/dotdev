@@ -32,6 +32,13 @@
       "matchStrings": [
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?=\\s\"(?<currentValue>.*)\"\\s"
       ]
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["deployment.yml$"],
+      "matchStrings": [
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?=\\s\"(?<currentValue>.*)\"\\s"
+      ]
     }
   ],
   "ignoreTests": true,
