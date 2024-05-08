@@ -8,6 +8,7 @@ fileGroups:
     - "src/**/*"
     - "package.json"
     - "astro.config.ts"
+    - "wrangler.toml"
   tests:
     - "tests/**/*"
 
