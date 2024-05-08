@@ -35,7 +35,10 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["deployment.yml$"],
+      "fileMatch": [
+        "(^|/)(workflow-templates|\\.(?:github|gitea|forgejo)/(?:workflows|actions))/.+\\.ya?ml$",
+        "(^|/)action\\.ya?ml$"
+      ],
       "matchStrings": [
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?=\\s\"(?<currentValue>.*)\"\\s"
       ]
