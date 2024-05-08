@@ -3,10 +3,10 @@ pages_build_output_dir = "./dist"
 send_metrics = true
 
 [vars]
-API_KEY = "123456789"
+API_KEY = "0123456789"
 
 [env.preview.vars]
-API_KEY = "123456789"
+API_KEY = "ß123456789"
 
 [env.production.vars]
-API_KEY = "123456789"
+API_KEY = "0123456789"
