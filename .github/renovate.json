@@ -40,7 +40,7 @@
         "(^|/)action\\.ya?ml$"
       ],
       "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?=\\s\"(?<currentValue>.*)\"\\s"
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?:\\s\"(?<currentValue>.*)\"\\s"
       ]
     }
   ],
