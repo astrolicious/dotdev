@@ -31,13 +31,43 @@ export default defineConfig({
 		starlight({
 			title: 'Astrolicious',
 			customCss: ['./src/styles/starlight.css'],
-			favicon: '/favicon.png',
+			favicon: '/favicon.svg',
 			components: {
 				Head: './src/components/starlight/StarlightHead.astro',
 				Header: './src/components/starlight/StarlightHeader.astro',
 				Sidebar: './src/components/starlight/StarlightSidebar.astro',
 				Footer: './src/components/starlight/StarlightFooter.astro',
 			},
+			sidebar: [
+				// A link to the Ganymede moon page.
+				{ label: 'Welcome', link: '/docs' },
+				{
+					label: 'Governance',
+					link: '/docs/governance',
+				},
+				{
+					label: 'Documentation',
+					badge: {
+						text: 'Coming Soon',
+					},
+					link: '/docs#',
+					attrs: {
+						style: 'opacity:0.75',
+					},
+				},
+				{
+					label: 'Guidebook',
+					autogenerate: { directory: 'docs/guidebook' },
+				},
+				{
+					label: 'Workflows',
+					autogenerate: { directory: 'docs/workflows' },
+				},
+				{
+					label: 'Brand',
+					link: '/docs/brand',
+				},
+			],
 		}),
 		tailwind({
 			applyBaseStyles: false,
