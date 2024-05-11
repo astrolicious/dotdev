@@ -30,8 +30,8 @@ importers:
         specifier: 0.6.0
         version: 0.6.0(typescript@5.4.5)
       '@astrojs/cloudflare':
-        specifier: 10.2.5
-        version: 10.2.5(astro@4.8.2(@types/node@20.12.11)(typescript@5.4.5))
+        specifier: 10.2.6
+        version: 10.2.6(astro@4.8.2(@types/node@20.12.11)(typescript@5.4.5))
       '@astrojs/db':
         specifier: 0.11.1
         version: 0.11.1(@cloudflare/workers-types@4.20240502.0)
@@ -128,8 +128,8 @@ packages:
     peerDependencies:
       typescript: ^5.0.0
 
-  '@astrojs/cloudflare@10.2.5':
-    resolution: {integrity: sha512-5tKPU5m/zYwz2CU9vCSKo4tgWsdD7xwpUlDkVbKPwgSkfVB6ZuXb8ffLYnahtUc1Gvh7HgaBSaagPVHGCp73WQ==}
+  '@astrojs/cloudflare@10.2.6':
+    resolution: {integrity: sha512-pgAT9+D866T/ER/L1+t2HvTtJzWhnZF7h7g2ur2ssv3AriJsXrS+Pny6ZTLYY11tuCx7GNxjY4H0jz1AOxuLig==}
     peerDependencies:
       astro: ^4.2.0
 
@@ -2806,11 +2806,6 @@ packages:
     resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
     hasBin: true
 
-  miniflare@3.20240419.0:
-    resolution: {integrity: sha512-fIev1PP4H+fQp5FtvzHqRY2v5s+jxh/a0xAhvM5fBNXvxWX7Zod1OatXfXwYbse3hqO3KeVMhb0osVtrW0NwJg==}
-    engines: {node: '>=16.13'}
-    hasBin: true
-
   miniflare@3.20240419.1:
     resolution: {integrity: sha512-Q9n0W07uUD/u0c/b03E4iogeXOAMjZnE3P7B5Yi8sPaZAx6TYWwjurGBja+Pg2yILN2iMaliEobfVyAKss33cA==}
     engines: {node: '>=16.13'}
@@ -3852,7 +3847,7 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@10.2.5(astro@4.8.2(@types/node@20.12.11)(typescript@5.4.5))':
+  '@astrojs/cloudflare@10.2.6(astro@4.8.2(@types/node@20.12.11)(typescript@5.4.5))':
     dependencies:
       '@astrojs/internal-helpers': 0.3.0
       '@astrojs/underscore-redirects': 0.3.3
@@ -3861,7 +3856,7 @@ snapshots:
       esbuild: 0.19.12
       estree-walker: 3.0.3
       magic-string: 0.30.10
-      miniflare: 3.20240419.0
+      miniflare: 3.20240419.1
       tiny-glob: 0.2.9
       wrangler: 3.55.0(@cloudflare/workers-types@4.20240502.0)
     transitivePeerDependencies:
@@ -6850,25 +6845,6 @@ snapshots:
   mimic-fn@4.0.0: {}
 
   mini-svg-data-uri@1.4.4: {}
-
-  miniflare@3.20240419.0:
-    dependencies:
-      '@cspotcode/source-map-support': 0.8.1
-      acorn: 8.11.3
-      acorn-walk: 8.3.2
-      capnp-ts: 0.7.0
-      exit-hook: 2.2.1
-      glob-to-regexp: 0.4.1
-      stoppable: 1.1.0
-      undici: 5.28.4
-      workerd: 1.20240419.0
-      ws: 8.17.0
-      youch: 3.3.3
-      zod: 3.23.8
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
 
   miniflare@3.20240419.1:
     dependencies:
