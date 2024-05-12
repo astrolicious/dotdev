@@ -3,7 +3,7 @@ moon = "1.24.4"
 # renovate: datasource=node-version depName=node versioning=node
 node = "20.13.1"
 # renovate: datasource=npm depName=pnpm
-pnpm = "9.1.0"
+pnpm = "9.1.1"
 
 [plugins]
 moon = "source:https://raw.githubusercontent.com/moonrepo/moon/master/proto-plugin.toml"
