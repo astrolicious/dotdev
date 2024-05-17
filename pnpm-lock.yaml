@@ -31,19 +31,19 @@ importers:
         version: 0.7.0(typescript@5.4.5)
       '@astrojs/cloudflare':
         specifier: 10.2.6
-        version: 10.2.6(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))
+        version: 10.2.6(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))
       '@astrojs/db':
-        specifier: 0.11.1
-        version: 0.11.1(@cloudflare/workers-types@4.20240502.0)
+        specifier: 0.11.3
+        version: 0.11.3(@cloudflare/workers-types@4.20240502.0)
       '@astrojs/starlight':
         specifier: 0.22.4
-        version: 0.22.4(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))
+        version: 0.22.4(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))
       '@astrojs/starlight-tailwind':
         specifier: 2.0.2
-        version: 2.0.2(@astrojs/starlight@0.22.4(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3))(tailwindcss@3.4.3)
+        version: 2.0.2(@astrojs/starlight@0.22.4(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3))(tailwindcss@3.4.3)
       '@astrojs/tailwind':
         specifier: 5.1.0
-        version: 5.1.0(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)
+        version: 5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)
       '@fontsource-variable/dosis':
         specifier: 5.0.20
         version: 5.0.20
@@ -63,8 +63,8 @@ importers:
         specifier: 0.5.13
         version: 0.5.13(tailwindcss@3.4.3)
       astro:
-        specifier: 4.8.3
-        version: 4.8.3(@types/node@20.12.12)(typescript@5.4.5)
+        specifier: 4.8.6
+        version: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
       astro-icon:
         specifier: 1.1.0
         version: 1.1.0
@@ -73,7 +73,7 @@ importers:
         version: 2.13.0
       simple-stack-form:
         specifier: 0.1.12
-        version: 0.1.12(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))(zod@3.23.8)
+        version: 0.1.12(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(zod@3.23.8)
       tailwindcss:
         specifier: 3.4.3
         version: 3.4.3
@@ -136,8 +136,8 @@ packages:
   '@astrojs/compiler@2.8.0':
     resolution: {integrity: sha512-yrpD1WRGqsJwANaDIdtHo+YVjvIOFAjC83lu5qENIgrafwZcJgSXDuwVMXOgok4tFzpeKLsFQ6c3FoUdloLWBQ==}
 
-  '@astrojs/db@0.11.1':
-    resolution: {integrity: sha512-3hFcSib3u7kBZyYlSzaJVCWBJBz8CKmh1RWndYFiAIi37aT69PGneSSyZ/8w3yy3ARiUOt4oJLvl9sRwwH7Tzg==}
+  '@astrojs/db@0.11.3':
+    resolution: {integrity: sha512-F4EofNw7QRBWzfNYmHKHlq1v5y9GrLjzGX8h2RkabH8gIhF7ZQKCU/movE//9WRURvouBS3KDzsqUgdHvMdJ5A==}
 
   '@astrojs/internal-helpers@0.3.0':
     resolution: {integrity: sha512-tGmHvrhpzuz0JBHaJX8GywN9g4rldVNHtkoVDC3m/DdzBO70jGoVuc0uuNVglRYnsdwkbG0K02Iw3nOOR3/Y4g==}
@@ -184,6 +184,9 @@ packages:
     resolution: {integrity: sha512-AgiVEVv2ZkGHkoJcjY0azXG2K7892i+z4FpKtasnESTciomO91I/X9vAfKfHxmTxdVP5BGPxBFVi0Bp2X4Lxvg==}
     peerDependencies:
       astro: ^4.2.7
+
+  '@astrojs/studio@0.1.0':
+    resolution: {integrity: sha512-pjggMFgtZHPem6RWall02DTa54VCQ4fjqj4bLV0CpQEi0ydgDlughb81PtLhpQPTV0IUtTFOnHbzx6rcKMBAzg==}
 
   '@astrojs/tailwind@5.1.0':
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
@@ -1649,8 +1652,8 @@ packages:
   astro-icon@1.1.0:
     resolution: {integrity: sha512-Nksc09p7UuHeMcPNS9w1pKqRw3+wEmmh0A3FJW+FNXvqaeWI4RLvD1MCWErpY3Z5Cvad317rvLdik/Hg8GEk8Q==}
 
-  astro@4.8.3:
-    resolution: {integrity: sha512-pgIKopkmAUXY3EJHdG7zQpudtBzYAsd94A1R7jmLpH2LFZvzHEkAdHnunmSVmgikJCNqtEo3bUCHgLnCPQaN1g==}
+  astro@4.8.6:
+    resolution: {integrity: sha512-psHIfK+e+bMPhRwghV9yCGH/uc1jvY4DHmDZdoEepax9yA7kzYH0wt3dpkqlcrO2zxl5jzSC3DmqZfkD6wnW9A==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3862,12 +3865,12 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@10.2.6(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))':
+  '@astrojs/cloudflare@10.2.6(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))':
     dependencies:
       '@astrojs/internal-helpers': 0.3.0
       '@astrojs/underscore-redirects': 0.3.3
       '@cloudflare/workers-types': 4.20240502.0
-      astro: 4.8.3(@types/node@20.12.12)(typescript@5.4.5)
+      astro: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
       esbuild: 0.19.12
       estree-walker: 3.0.3
       magic-string: 0.30.10
@@ -3881,8 +3884,9 @@ snapshots:
 
   '@astrojs/compiler@2.8.0': {}
 
-  '@astrojs/db@0.11.1(@cloudflare/workers-types@4.20240502.0)':
+  '@astrojs/db@0.11.3(@cloudflare/workers-types@4.20240502.0)':
     dependencies:
+      '@astrojs/studio': 0.1.0
       '@libsql/client': 0.6.0
       async-listen: 3.0.1
       ci-info: 4.0.0
@@ -3973,12 +3977,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@2.3.1(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))':
+  '@astrojs/mdx@2.3.1(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))':
     dependencies:
       '@astrojs/markdown-remark': 5.1.0
       '@mdx-js/mdx': 3.0.1
       acorn: 8.11.3
-      astro: 4.8.3(@types/node@20.12.12)(typescript@5.4.5)
+      astro: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
       es-module-lexer: 1.5.2
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -4004,21 +4008,21 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight-tailwind@2.0.2(@astrojs/starlight@0.22.4(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3))(tailwindcss@3.4.3)':
+  '@astrojs/starlight-tailwind@2.0.2(@astrojs/starlight@0.22.4(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3))(tailwindcss@3.4.3)':
     dependencies:
-      '@astrojs/starlight': 0.22.4(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))
-      '@astrojs/tailwind': 5.1.0(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)
+      '@astrojs/starlight': 0.22.4(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))
+      '@astrojs/tailwind': 5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)
       tailwindcss: 3.4.3
 
-  '@astrojs/starlight@0.22.4(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))':
+  '@astrojs/starlight@0.22.4(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))':
     dependencies:
-      '@astrojs/mdx': 2.3.1(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))
+      '@astrojs/mdx': 2.3.1(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))
       '@astrojs/sitemap': 3.1.4
       '@pagefind/default-ui': 1.1.0
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.3
-      astro: 4.8.3(@types/node@20.12.12)(typescript@5.4.5)
-      astro-expressive-code: 0.35.3(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))
+      astro: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
+      astro-expressive-code: 0.35.3(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))
       bcp-47: 2.1.0
       hast-util-from-html: 2.0.1
       hast-util-select: 6.0.2
@@ -4036,9 +4040,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/tailwind@5.1.0(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)':
+  '@astrojs/studio@0.1.0':
     dependencies:
-      astro: 4.8.3(@types/node@20.12.12)(typescript@5.4.5)
+      ci-info: 4.0.0
+      kleur: 4.1.5
+      ora: 8.0.1
+
+  '@astrojs/tailwind@5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)':
+    dependencies:
+      astro: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -5263,9 +5273,9 @@ snapshots:
 
   astring@1.8.6: {}
 
-  astro-expressive-code@0.35.3(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5)):
+  astro-expressive-code@0.35.3(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5)):
     dependencies:
-      astro: 4.8.3(@types/node@20.12.12)(typescript@5.4.5)
+      astro: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
       rehype-expressive-code: 0.35.3
 
   astro-icon@1.1.0:
@@ -5276,7 +5286,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5):
+  astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.8.0
       '@astrojs/internal-helpers': 0.4.0
@@ -7471,10 +7481,10 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
-  simple-stack-form@0.1.12(astro@4.8.3(@types/node@20.12.12)(typescript@5.4.5))(zod@3.23.8):
+  simple-stack-form@0.1.12(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(zod@3.23.8):
     dependencies:
       '@clack/prompts': 0.7.0
-      astro: 4.8.3(@types/node@20.12.12)(typescript@5.4.5)
+      astro: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
       fs-extra: 11.2.0
       just-map-values: 3.2.0
       kleur: 4.1.5
