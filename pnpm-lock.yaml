@@ -36,11 +36,11 @@ importers:
         specifier: 0.11.3
         version: 0.11.3(@cloudflare/workers-types@4.20240502.0)
       '@astrojs/starlight':
-        specifier: 0.23.0
-        version: 0.23.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))
+        specifier: 0.23.1
+        version: 0.23.1(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))
       '@astrojs/starlight-tailwind':
         specifier: 2.0.2
-        version: 2.0.2(@astrojs/starlight@0.23.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3))(tailwindcss@3.4.3)
+        version: 2.0.2(@astrojs/starlight@0.23.1(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3))(tailwindcss@3.4.3)
       '@astrojs/tailwind':
         specifier: 5.1.0
         version: 5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)
@@ -180,8 +180,8 @@ packages:
       '@astrojs/tailwind': ^5.0.0
       tailwindcss: ^3.3.3
 
-  '@astrojs/starlight@0.23.0':
-    resolution: {integrity: sha512-DV7OEWQDVwQNXxBAGwOKd7Fwa0yb0/WamuUcQYhCIIRjFstaJ1KDc2gNOO2m3nHoCwFx4R7hj/WEeXlgHKE1tg==}
+  '@astrojs/starlight@0.23.1':
+    resolution: {integrity: sha512-BMVRpM4suTq4K2plzcISs/t5W3Xw2fHGWhSmF7lg90nps595yHp3j4gFpeukRrynwEhoNu0Bds1zgOBebC3Egg==}
     peerDependencies:
       astro: ^4.8.6
 
@@ -4079,13 +4079,13 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight-tailwind@2.0.2(@astrojs/starlight@0.23.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3))(tailwindcss@3.4.3)':
+  '@astrojs/starlight-tailwind@2.0.2(@astrojs/starlight@0.23.1(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3))(tailwindcss@3.4.3)':
     dependencies:
-      '@astrojs/starlight': 0.23.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))
+      '@astrojs/starlight': 0.23.1(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))
       '@astrojs/tailwind': 5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)
       tailwindcss: 3.4.3
 
-  '@astrojs/starlight@0.23.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))':
+  '@astrojs/starlight@0.23.1(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))':
     dependencies:
       '@astrojs/mdx': 3.0.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))
       '@astrojs/sitemap': 3.1.4
