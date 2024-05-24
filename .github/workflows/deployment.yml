@@ -50,7 +50,7 @@ jobs:
           rm "$temp_file"
         env:
           ASTRO_STUDIO_APP_TOKEN: ${{ secrets.ASTRO_STUDIO_APP_TOKEN }}
-          # MOONBASE_SECRET_KEY: ${{ secrets.MOONBASE_SECRET_KEY }}
+          MOONBASE_SECRET_KEY: ${{ secrets.MOONBASE_SECRET_KEY }}
       - uses: moonrepo/run-report-action@49da5efa5e6f8afc564a14ad3686da3f77b45236 # v1.7.0
         if: ${{ steps.moon-build.outputs.skip != 'true' }}
         with:
