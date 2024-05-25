@@ -42,18 +42,15 @@ export default defineConfig({
 				// A link to the Ganymede moon page.
 				{ label: 'Welcome', link: '/docs' },
 				{
-					label: 'Governance',
-					link: '/docs/governance',
+					label: 'About Astrolicious',
+					badge: {
+						text: 'New',
+					},
+					link: '/docs/astrolicious',
 				},
 				{
-					label: 'Documentation',
-					badge: {
-						text: 'Coming Soon',
-					},
-					link: '/docs#',
-					attrs: {
-						style: 'opacity:0.75',
-					},
+					label: 'Governance',
+					link: '/docs/governance',
 				},
 				{
 					label: 'Guidebook',
