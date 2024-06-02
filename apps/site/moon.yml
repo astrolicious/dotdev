@@ -9,6 +9,8 @@ fileGroups:
     - "package.json"
     - "astro.config.ts"
     - "wrangler.toml"
+    - "/pnpm-lock.yaml"
+    - "/.prototools"
   tests:
     - "tests/**/*"
 
