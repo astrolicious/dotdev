@@ -28,6 +28,6 @@
     "@moonrepo/cli": "1.26.5",
     "@types/github-script": "github:actions/github-script",
     "@types/node": "20.14.9",
-    "typescript": "5.4.5"
+    "typescript": "5.5.3"
   }
 }
