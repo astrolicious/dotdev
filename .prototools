@@ -1,5 +1,5 @@
 # renovate: datasource=github-tags depName=moonrepo/moon
-moon = "1.25.6"
+moon = "1.26.5"
 # renovate: datasource=node-version depName=node versioning=node
 node = "20.15.0"
 # renovate: datasource=npm depName=pnpm
