@@ -29,7 +29,7 @@ jobs:
     outputs:
       skip: ${{ steps.moon-build.outputs.skip }}
     steps:
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.ref }}
@@ -50,12 +50,12 @@ jobs:
           rm "$temp_file"
         env:
           ASTRO_STUDIO_APP_TOKEN: ${{ secrets.ASTRO_STUDIO_APP_TOKEN }}
-          # MOONBASE_SECRET_KEY: ${{ secrets.MOONBASE_SECRET_KEY }}
-      - uses: moonrepo/run-report-action@49da5efa5e6f8afc564a14ad3686da3f77b45236 # v1.7.0
+          MOONBASE_SECRET_KEY: ${{ secrets.MOONBASE_SECRET_KEY }}
+      - uses: moonrepo/run-report-action@0e591adc3fbc65a5c9b2f4738368f378c2efaa79 # v1.8.0
         if: ${{ steps.moon-build.outputs.skip != 'true' }}
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
+      - uses: actions/upload-artifact@0b2256b8c012f0828dc542b3febcab082c67f72b # v4.3.4
         if: ${{ steps.moon-build.outputs.skip != 'true' }}
         id: artifact-upload
         with:
@@ -112,7 +112,7 @@ jobs:
       security-events: read
       statuses: read
     steps:
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
         with:
           ref: ${{ github.event.pull_request.head.ref }}
       - uses: moonrepo/setup-toolchain@abc36a5d744a0b6dff6fd87201c49917c145deb9 # v0.3.1
@@ -125,7 +125,7 @@ jobs:
           script: |
             const { default: script } = await import('${{ github.workspace }}/.github/scripts/create-deployment.js')
             await script({github, context, core})
-      - uses: actions/download-artifact@65a9edc5881444af0b9093a5e628f2fe47ea3b2e # v4.1.7
+      - uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
         with:
           # Name of the artifact to download.
           # If unspecified, all artifacts for the run are downloaded.
@@ -200,7 +200,7 @@ jobs:
       security-events: read
       statuses: read
     steps:
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
         with:
           ref: ${{ github.event.pull_request.head.ref }}
       - uses: moonrepo/setup-toolchain@abc36a5d744a0b6dff6fd87201c49917c145deb9 # v0.3.1
@@ -213,7 +213,7 @@ jobs:
           script: |
             const { default: script } = await import('${{ github.workspace }}/.github/scripts/create-deployment.js')
             await script({github, context, core})
-      - uses: actions/download-artifact@65a9edc5881444af0b9093a5e628f2fe47ea3b2e # v4.1.7
+      - uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
         with:
           # Name of the artifact to download.
           # If unspecified, all artifacts for the run are downloaded.
