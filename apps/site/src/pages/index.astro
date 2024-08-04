@@ -1,11 +1,11 @@
 ---
-import { getCollection } from "astro:content";
-import ProjectCard from "~/components/ProjectCard.astro";
-import FriendsCard from "~/components/FriendsCard.astro";
-import Layout from "~/layouts/Layout.astro";
+import { getCollection } from 'astro:content';
+import FriendsCard from '~/components/FriendsCard.astro';
+import ProjectCard from '~/components/ProjectCard.astro';
+import Layout from '~/layouts/Layout.astro';
 
-const projects = await getCollection("projects");
-const friends = await getCollection("friends");
+const projects = await getCollection('projects');
+const friends = await getCollection('friends');
 ---
 
 <Layout title="Astrolicious">

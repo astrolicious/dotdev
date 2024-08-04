@@ -1,9 +1,9 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-  friend: CollectionEntry<"friends">;
-  class?: string;
+	friend: CollectionEntry<'friends'>;
+	class?: string;
 }
 
 const { friend, class: className } = Astro.props;
