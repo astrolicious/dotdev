@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 
 import { resolve } from 'node:path';
 import cloudflare from '@astrojs/cloudflare';
-import db from '@astrojs/db';
 import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
 import icon from 'astro-icon';
@@ -27,7 +26,6 @@ export default defineConfig({
 		directRenderScript: true,
 	},
 	integrations: [
-		db(),
 		starlight({
 			title: 'Astrolicious',
 			customCss: ['./src/styles/starlight.css'],
@@ -39,7 +37,6 @@ export default defineConfig({
 				Footer: './src/components/starlight/StarlightFooter.astro',
 			},
 			sidebar: [
-				// A link to the Ganymede moon page.
 				{ label: 'Welcome', link: '/docs' },
 				{
 					label: 'Why Astrolicious?',
@@ -48,22 +45,22 @@ export default defineConfig({
 					},
 					link: '/blog/why-astrolicious',
 				},
-				{
-					label: 'Governance',
-					link: '/docs/governance',
-				},
-				{
-					label: 'Guidebook',
-					autogenerate: { directory: 'docs/guidebook' },
-				},
-				{
-					label: 'Workflows',
-					autogenerate: { directory: 'docs/workflows' },
-				},
-				{
-					label: 'Brand',
-					link: '/docs/brand',
-				},
+				// {
+				// 	label: 'Governance',
+				// 	link: '/docs/governance',
+				// },
+				// {
+				// 	label: 'Guidebook',
+				// 	autogenerate: { directory: 'docs/guidebook' },
+				// },
+				// {
+				// 	label: 'Workflows',
+				// 	autogenerate: { directory: 'docs/workflows' },
+				// },
+				// {
+				// 	label: 'Brand',
+				// 	link: '/docs/brand',
+				// },
 			],
 		}),
 		tailwind({
