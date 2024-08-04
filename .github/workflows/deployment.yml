@@ -52,6 +52,7 @@ jobs:
           ASTRO_STUDIO_APP_TOKEN: ${{ secrets.ASTRO_STUDIO_APP_TOKEN }}
           MOONBASE_SECRET_KEY: ${{ secrets.MOONBASE_SECRET_KEY }}
           PROTO_LOG: trace
+          PROTO_NPM_VERSION: "*"
       - uses: moonrepo/run-report-action@0e591adc3fbc65a5c9b2f4738368f378c2efaa79 # v1.8.0
         if: ${{ steps.moon-build.outputs.skip != 'true' }}
         with:
