@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  friend: CollectionEntry<"friends">;
+  class?: string;
+}
+
+const { friend, class: className } = Astro.props;
+const { name, logo, url, slogan } = friend.data;
+---
+
+<div
+  class:list={[
+    "bg-white p-4 rounded-2xl border border-gray-200 shadow-sm",
+    className,
+  ]}
+>
+  <a href={url}>
+    <div class="flex justify-center items-center">
+      <img class="w-12" src={logo} alt={name + "logo"} />
+    </div>
+    <h2
+      class="font-extrabold uppercase text-2xl text-primary-950 max-w-2xl font-heading"
+    >
+      {name}
+    </h2>
+    <div class="mt-2 text-gray-700">
+      {slogan ?? ""}
+    </div>
+  </a>
+</div>

@@ -37,8 +37,19 @@ const projectsCollection = defineCollection({
 	}),
 });
 
+const friendsCollection = defineCollection({
+	type: 'data',
+	schema: z.object({
+		name: z.string(),
+		logo: z.string().url(),
+		url: z.string().url(),
+		slogan: z.string().optional(),
+	}),
+});
+
 export const collections = {
 	blog: blogCollection,
 	docs: docsCollection,
 	projects: projectsCollection,
+	friends: friendsCollection,
 };

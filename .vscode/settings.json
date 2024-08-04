@@ -14,5 +14,11 @@
   },
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
-  }
+  },
+  "json.schemas": [
+    {
+      "fileMatch": ["/apps/site/src/content/friends/**"],
+      "url": "./apps/site/.astro/collections/friends.schema.json"
+    }
+  ]
 }
