@@ -48,7 +48,7 @@ const friends = await getCollection('friends');
       >
         Friends
       </h1>
-      <div class="mt-12 inline-flex items-center gap-4">
+      <div class="mt-12 grid sm:grid-cols-[repeat(2,1fr)] lg:grid-cols-[repeat(3,1fr)] items-center gap-4 items-stretch">
         {friends.map((friend) => <FriendsCard {friend} />)}
       </div>
     </div>
