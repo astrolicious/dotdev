@@ -1,11 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
-import FriendsCard from '~/components/FriendsCard.astro';
-import ProjectCard from '~/components/ProjectCard.astro';
-import Layout from '~/layouts/Layout.astro';
+import { getCollection } from "astro:content";
+import FriendsCard from "~/components/FriendCard.astro";
+import ProjectCard from "~/components/ProjectCard.astro";
+import Layout from "~/layouts/Layout.astro";
 
-const projects = await getCollection('projects');
-const friends = await getCollection('friends');
+const projects = await getCollection("projects");
+const friends = await getCollection("friends");
 ---
 
 <Layout title="Astrolicious">
@@ -48,7 +48,9 @@ const friends = await getCollection('friends');
       >
         Friends
       </h1>
-      <div class="mt-12 grid sm:grid-cols-[repeat(2,1fr)] lg:grid-cols-[repeat(3,1fr)] items-center gap-4 items-stretch">
+      <div
+        class="mt-12 grid sm:grid-cols-[repeat(2,1fr)] lg:grid-cols-[repeat(3,1fr)] items-center gap-4 items-stretch"
+      >
         {friends.map((friend) => <FriendsCard {friend} />)}
       </div>
     </div>
