@@ -40,10 +40,10 @@ importers:
         version: 0.25.4(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))
       '@astrojs/starlight-tailwind':
         specifier: 2.0.3
-        version: 2.0.3(@astrojs/starlight@0.25.4(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))(tailwindcss@3.4.6))(tailwindcss@3.4.6)
+        version: 2.0.3(@astrojs/starlight@0.25.4(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))(tailwindcss@3.4.7))(tailwindcss@3.4.7)
       '@astrojs/tailwind':
         specifier: 5.1.0
-        version: 5.1.0(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))(tailwindcss@3.4.6)
+        version: 5.1.0(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))(tailwindcss@3.4.7)
       '@fontsource-variable/dosis':
         specifier: 5.0.20
         version: 5.0.20
@@ -58,10 +58,10 @@ importers:
         version: 1.1.22
       '@tailwindcss/forms':
         specifier: 0.5.7
-        version: 0.5.7(tailwindcss@3.4.6)
+        version: 0.5.7(tailwindcss@3.4.7)
       '@tailwindcss/typography':
         specifier: 0.5.13
-        version: 0.5.13(tailwindcss@3.4.6)
+        version: 0.5.13(tailwindcss@3.4.7)
       astro:
         specifier: 4.11.6
         version: 4.11.6(@types/node@20.14.12)(typescript@5.4.5)
@@ -75,8 +75,8 @@ importers:
         specifier: 0.1.12
         version: 0.1.12(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))(zod@3.23.8)
       tailwindcss:
-        specifier: 3.4.6
-        version: 3.4.6
+        specifier: 3.4.7
+        version: 3.4.7
       zod:
         specifier: 3.23.8
         version: 3.23.8
@@ -3338,8 +3338,8 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  tailwindcss@3.4.6:
-    resolution: {integrity: sha512-1uRHzPB+Vzu57ocybfZ4jh5Q3SdlH7XW23J5sQoM9LhE9eIOlzxer/3XPSsycvih3rboRsvt0QCmzSrqyOYUIA==}
+  tailwindcss@3.4.7:
+    resolution: {integrity: sha512-rxWZbe87YJb4OcSopb7up2Ba4U82BoiSGUdoDr3Ydrg9ckxFS/YWsvhN323GMcddgU65QRy7JndC7ahhInhvlQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -3950,11 +3950,11 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight-tailwind@2.0.3(@astrojs/starlight@0.25.4(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))(tailwindcss@3.4.6))(tailwindcss@3.4.6)':
+  '@astrojs/starlight-tailwind@2.0.3(@astrojs/starlight@0.25.4(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5)))(@astrojs/tailwind@5.1.0(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))(tailwindcss@3.4.7))(tailwindcss@3.4.7)':
     dependencies:
       '@astrojs/starlight': 0.25.4(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))
-      '@astrojs/tailwind': 5.1.0(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))(tailwindcss@3.4.6)
-      tailwindcss: 3.4.6
+      '@astrojs/tailwind': 5.1.0(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))(tailwindcss@3.4.7)
+      tailwindcss: 3.4.7
 
   '@astrojs/starlight@0.25.4(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))':
     dependencies:
@@ -3989,13 +3989,13 @@ snapshots:
       kleur: 4.1.5
       ora: 8.0.1
 
-  '@astrojs/tailwind@5.1.0(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))(tailwindcss@3.4.6)':
+  '@astrojs/tailwind@5.1.0(astro@4.11.6(@types/node@20.14.12)(typescript@5.4.5))(tailwindcss@3.4.7)':
     dependencies:
       astro: 4.11.6(@types/node@20.14.12)(typescript@5.4.5)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
-      tailwindcss: 3.4.6
+      tailwindcss: 3.4.7
     transitivePeerDependencies:
       - ts-node
 
@@ -4943,18 +4943,18 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.4
 
-  '@tailwindcss/forms@0.5.7(tailwindcss@3.4.6)':
+  '@tailwindcss/forms@0.5.7(tailwindcss@3.4.7)':
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.4.6
+      tailwindcss: 3.4.7
 
-  '@tailwindcss/typography@0.5.13(tailwindcss@3.4.6)':
+  '@tailwindcss/typography@0.5.13(tailwindcss@3.4.7)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.6
+      tailwindcss: 3.4.7
 
   '@trysound/sax@0.2.0': {}
 
@@ -7531,7 +7531,7 @@ snapshots:
       csso: 5.0.5
       picocolors: 1.0.1
 
-  tailwindcss@3.4.6:
+  tailwindcss@3.4.7:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
