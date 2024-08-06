@@ -48,8 +48,8 @@ importers:
         specifier: 5.0.20
         version: 5.0.20
       '@fontsource-variable/inter':
-        specifier: 5.0.19
-        version: 5.0.19
+        specifier: 5.0.20
+        version: 5.0.20
       '@iconify-json/ph':
         specifier: 1.1.14
         version: 1.1.14
@@ -884,8 +884,8 @@ packages:
   '@fontsource-variable/dosis@5.0.20':
     resolution: {integrity: sha512-lx0Tuv+euHoD1IaaNIt7Pc3pL6YSrlRrNrIa3khBpUVCOMWykj1UuFvwO7hYOBvfBHl+5IARCw0e4qGHjY9+4w==}
 
-  '@fontsource-variable/inter@5.0.19':
-    resolution: {integrity: sha512-V5KPpF5o0sI1uNWAdFArC87NDOb/ZJDPXLomEiKmDCYMlDUCTn2flkuAZkyME2rtGOKO7vzCuDJAND0m/5PhDA==}
+  '@fontsource-variable/inter@5.0.20':
+    resolution: {integrity: sha512-dhzG4Zls/tIrf8h0FhTNi8jT/uFwNhdTY2vKe6DYqoXDYOfEcTVZDyh1hKml1rlLT44Y7OoKoGz8w7czDW7twQ==}
 
   '@iconify-json/ph@1.1.14':
     resolution: {integrity: sha512-s1hZVaxIpl40qLEhjqPRMcZl4A3M4fZ+77Fi+VuOb/eKkIHIMutAoBHIR+0a3l7psUweZQGj9hSyL2P5CIj6qA==}
@@ -4515,7 +4515,7 @@ snapshots:
 
   '@fontsource-variable/dosis@5.0.20': {}
 
-  '@fontsource-variable/inter@5.0.19': {}
+  '@fontsource-variable/inter@5.0.20': {}
 
   '@iconify-json/ph@1.1.14':
     dependencies:
