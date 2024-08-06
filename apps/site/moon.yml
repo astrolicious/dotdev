@@ -9,6 +9,8 @@ fileGroups:
     - "package.json"
     - "astro.config.ts"
     - "wrangler.toml"
+    - "/pnpm-lock.yaml"
+    - "/.prototools"
   tests:
     - "tests/**/*"
 
@@ -30,7 +32,7 @@ tasks:
       - "@group(sources)"
 
   imports:
-    command: "biome check --apply --formatter-enabled=false --linter-enabled=false ./"
+    command: "biome check --write --formatter-enabled=false --linter-enabled=false ./"
     inputs:
       - "@group(sources)"
 
@@ -44,7 +46,7 @@ tasks:
   lint:
     deps:
       - "~:format"
-    command: "biome lint --apply ./"
+    command: "biome lint --write ./"
     inputs:
       - "@group(sources)"
 

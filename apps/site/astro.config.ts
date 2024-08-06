@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 
 import { resolve } from 'node:path';
 import cloudflare from '@astrojs/cloudflare';
-import db from '@astrojs/db';
 import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
 import icon from 'astro-icon';
@@ -27,17 +26,42 @@ export default defineConfig({
 		directRenderScript: true,
 	},
 	integrations: [
-		db(),
 		starlight({
 			title: 'Astrolicious',
 			customCss: ['./src/styles/starlight.css'],
-			favicon: '/favicon.png',
+			favicon: '/favicon.svg',
 			components: {
 				Head: './src/components/starlight/StarlightHead.astro',
 				Header: './src/components/starlight/StarlightHeader.astro',
 				Sidebar: './src/components/starlight/StarlightSidebar.astro',
 				Footer: './src/components/starlight/StarlightFooter.astro',
 			},
+			sidebar: [
+				{ label: 'Welcome', link: '/docs' },
+				{
+					label: 'Why Astrolicious?',
+					badge: {
+						text: 'New',
+					},
+					link: '/blog/why-astrolicious',
+				},
+				// {
+				// 	label: 'Governance',
+				// 	link: '/docs/governance',
+				// },
+				// {
+				// 	label: 'Guidebook',
+				// 	autogenerate: { directory: 'docs/guidebook' },
+				// },
+				// {
+				// 	label: 'Workflows',
+				// 	autogenerate: { directory: 'docs/workflows' },
+				// },
+				// {
+				// 	label: 'Brand',
+				// 	link: '/docs/brand',
+				// },
+			],
 		}),
 		tailwind({
 			applyBaseStyles: false,

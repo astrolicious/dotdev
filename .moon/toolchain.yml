@@ -1,6 +1,6 @@
 node:
   packageManager: pnpm
-  addEnginesConstraint: true
+  addEnginesConstraint: false
   dedupeOnLockfileChange: true
   dependencyVersionFormat: workspace
   inferTasksFromScripts: false
