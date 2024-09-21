@@ -1,0 +1,87 @@
+name: Project Onboarding
+description: Please fill out the following details to onboard your project.
+title: "[Project Onboarding] <Project Name>"
+
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Project Name
+      description: The name of your project.
+      required: true
+
+  - type: checkbox
+    id: ifAuthor
+    attributes:
+      label: Are you the author of this project?
+      required: true
+
+  - type: input
+    id: repository_url
+    attributes:
+      label: Repository URL
+      description: The URL of the project's repository.
+      required: true
+
+  - type: input
+    id: website_url
+    attributes:
+      label: Website URL
+      description: The URL of the project's website (if any).
+      required: false
+
+  - type: input
+    id: docs_url
+    attributes:
+      label: Documentation URL
+      description: The URL of the project's documentation (if any).
+      required: false
+
+  - type: checkbox
+    id: has_contribution_guide
+    attributes:
+      label: Does the project have a contribution guide?
+      required: false
+
+  - type: checkbox
+    id: has_tests
+    attributes:
+      label: Does the project have tests?
+      required: false
+
+  - type: checkbox
+    id: has_automatic_dependency_updates
+    attributes:
+      label: Does the project have automatic dependency updates?
+      required: false
+
+  - type: checkbox
+    id: text_channel_wanted
+    attributes:
+      label: Do you want a text channel for the project?
+      required: false
+
+  - type: checkbox
+    id: support_channel_wanted
+    attributes:
+      label: Do you want a support channel for the project?
+      required: false
+
+  - type: checkbox
+    id: thread_channel_wanted
+    attributes:
+      label: Do you want a thread channel for the project?
+      required: false
+
+  - type: checkbox
+    id: astrolicious_subdomain_wanted
+    attributes:
+      label: Do you want an astrolicious subdomain for the project?
+      required: false
+
+  - type: textarea
+    id: guidance_needed
+    attributes:
+      label: Do you need guidance on specific topics?
+      description: Please specify any topics you need guidance on.
+      required: false
