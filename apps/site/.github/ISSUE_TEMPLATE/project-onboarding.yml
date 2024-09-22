@@ -11,7 +11,7 @@ body:
       required: true
 
   - type: checkbox
-    id: ifAuthor
+    id: is_author
     attributes:
       label: Are you the author of this project?
       required: true
