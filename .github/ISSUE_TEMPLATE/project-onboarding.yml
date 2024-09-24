@@ -1,0 +1,74 @@
+name: Project Submission
+description: Please fill out the following details to submit a project for onboarding.
+title: "[Project]: "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this submission form!
+  - type: input
+    id: projectname
+    attributes:
+      label: Project Name
+      description: What is the name of your Project?
+      placeholder: ex. Astro Tips
+    validations:
+      required: true
+  - type: input
+    id: projecturl
+    attributes:
+      label: Project Url
+      description: Where can we find the code of your project?
+      placeholder: ex. https://github.com/astrolicious/astro-tips.dev
+    validations:
+      required: true
+  - type: input
+    id: websiteurl
+    attributes:
+      label: Website Url
+      description: Does your project have a landingpage, where can we find it?
+      placeholder: ex. https://astro-tips.dev/
+    validations:
+      required: false
+  - type: input
+    id: docsurl
+    attributes:
+      label: Website Url
+      description: Does your project have documentation, where can we find it?
+      placeholder: ex. https://astro-tips.dev/
+    validations:
+      required: false
+  - type: textarea
+    id: projectguidance
+    attributes:
+      label: Do you need guidance on specific topics?
+      description: Please specify any topics you need guidance on.
+    validations:
+      required: false
+  - type: checkboxes
+    id: projectoptions
+    attributes:
+      label: Options
+      description: We would like to get some more details, please check the following options. By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/astrolicious/.github?tab=coc-ov-file).
+      options:
+        - label: I'm the author / creator of the project
+          required: false
+        - label: My project has a contribution guide
+          required: false
+        - label: My project has automated tests
+          required: false
+        - label: My project has automated dependency updates
+          required: false
+        - label: I want a text-style public channel in Discord
+          required: false
+        - label: I want a forum-style public channel in Discord
+          required: false
+        - label: I want an text-style support channel in Discord
+          required: false
+        - label: I want an forum-style support channel in Discord
+          required: false
+        - label: I want an Astrolicious subdomain, e.g. https://astrotips.astrolicious.dev/
+          required: false
+        - label: I agree to follow this project's Code of Conduct
+          required: true
