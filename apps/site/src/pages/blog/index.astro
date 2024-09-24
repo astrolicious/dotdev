@@ -1,11 +1,15 @@
 ---
-import { getCollection } from 'astro:content';
-import ArticleCard from '~/components/ArticleCard.astro';
-import Layout from '~/layouts/Layout.astro';
+import { getCollection } from "astro:content";
+import ArticleCard from "~/components/ArticleCard.astro";
+import Layout from "~/layouts/Layout.astro";
 
-const title = 'Articles';
-const articles = await getCollection('blog', ({ data }) => {
-	return import.meta.env.PROD ? data.draft !== true : true;
+const title = "Articles";
+const sortedArticles = (
+  await getCollection("blog", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  })
+).sort((a, b) => {
+  return b.data.publishDate.getTime() - a.data.publishDate.getTime();
 });
 ---
 
@@ -16,8 +20,8 @@ const articles = await getCollection('blog', ({ data }) => {
     >
       {title}
     </h1>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-8">
-      {articles.map((article) => <ArticleCard {article} />)}
+    <div class="grid grid-cols-1 gap-4 mt-8">
+      {sortedArticles.map((article) => <ArticleCard {article} />)}
     </div>
   </div>
 </Layout>
