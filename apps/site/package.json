@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@astrojs/check": "0.7.0",
+    "@astrojs/check": "0.9.5",
     "@astrojs/cloudflare": "11.0.4",
     "@astrojs/db": "0.14.3",
     "@astrojs/starlight": "0.25.4",
