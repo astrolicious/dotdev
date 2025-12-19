@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@astrojs/check": "0.9.6",
-    "@astrojs/cloudflare": "12.6.12",
-    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/check": "0.9.6-alpha.0",
+    "@astrojs/cloudflare": "13.0.0-alpha.3",
+    "@astrojs/mdx": "5.0.0-alpha.0",
     "@fontsource-variable/dosis": "5.0.20",
     "@fontsource-variable/inter": "5.0.20",
     "@iconify-json/ph": "1.1.14",
@@ -14,7 +14,7 @@
     "@tailwindcss/forms": "0.5.7",
     "@tailwindcss/typography": "0.5.13",
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "5.16.6",
+    "astro": "6.0.0-alpha.4",
     "sanitize-html": "2.13.0",
     "tailwindcss": "4.1.18",
     "zod": "3.25.76"
@@ -24,7 +24,7 @@
     "@types/node": "20.14.12",
     "@types/sanitize-html": "2.11.0",
     "typescript": "5.4.5",
-    "wrangler": "3.62.0"
+    "wrangler": "4.56.0"
   },
   "scripts": {
     "astro": "astro"
@@ -37,5 +37,10 @@
       "email": "alexander+astrolicious@nbhr.de",
       "url": "https://github.com/alexanderniebuhr"
     }
-  ]
+  ],
+  "pnpm": {
+    "overrides": {
+      "@astrojs/cloudflare>wrangler": "4.56.0"
+    }
+  }
 }
