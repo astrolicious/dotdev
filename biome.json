@@ -8,25 +8,31 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "ignore": ["submit.astro"]
+    "includes": ["**"]
   },
   "formatter": {
     "lineWidth": 100
   },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
-      "trailingComma": "es5"
+      "trailingCommas": "es5"
     }
+  },
+  "html": {
+    "experimentalFullSupportEnabled": true
   },
   "json": {
     "formatter": {
       "indentStyle": "space"
     }
   },
-  "organizeImports": {
-    "enabled": true
-  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": { "recommended": true }

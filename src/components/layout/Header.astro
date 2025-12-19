@@ -1,0 +1,102 @@
+---
+import type { HTMLTag } from "astro/types";
+import Logo from "./Logo.astro";
+
+interface Props {
+  tag?: HTMLTag;
+}
+
+const links = [
+  {
+    href: "/",
+    text: "Home",
+  },
+  {
+    href: "/projects",
+    text: "Projects",
+  },
+  {
+    href: "/blog",
+    text: "Articles",
+  },
+];
+
+const socialLinks = [
+  {
+    href: "https://twitter.com/astroliciousdev",
+    text: "Twitter (X)",
+    icon: "ri:twitter-x-fill",
+  },
+  {
+    href: "https://github.com/astrolicious",
+    text: "GitHub",
+    icon: "ri:github-fill",
+  },
+  {
+    href: "https://chat.astrolicious.dev",
+    text: "Discord",
+    icon: "ri:discord-fill",
+  },
+];
+
+const Tag = Astro.props.tag ?? "header";
+---
+
+<Tag class="bg-white sticky top-0 z-20 border-b border-b-gray-200 font-heading">
+  <div
+    class="p-2 max-w-7xl mx-auto flex justify-center relative items-center h-16"
+  >
+    <div class="absolute left-2">
+      <a
+        href="/"
+        class="font-extrabold uppercase text-3xl text-primary-950 flex items-center gap-1"
+      >
+        <Logo />
+        <div>
+          <span class="text-primary-600">Astro</span>licious
+        </div>
+      </a>
+    </div>
+    <div class="hidden lg:flex items-center justify-center">
+      {
+        links.map(({ href, text }) => (
+          <a
+            {href}
+            class="py-1.5 px-3 font-extrabold uppercase text-lg rounded-md hover:bg-primary-200 transition-colors text-primary-950"
+          >
+            {text}
+          </a>
+        ))
+      }
+    </div>
+    <div class="absolute right-2">
+      <div class="flex items-center justify-center gap-1">
+        {
+          socialLinks.map(({ href, text, icon }) => (
+            <a
+              {href}
+              target="_blank"
+              class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
+            >
+              <span class="sr-only">{text}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <div
+    class="lg:hidden border-t border-gray-200 flex items-center overflow-x-auto"
+  >
+    {
+      links.map(({ href, text }) => (
+        <a
+          {href}
+          class="py-1.5 px-3 font-extrabold uppercase text-lg rounded-md hover:bg-primary-200 transition-colors text-primary-950"
+        >
+          {text}
+        </a>
+      ))
+    }
+  </div>
+</Tag>
