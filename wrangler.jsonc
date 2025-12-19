@@ -1,0 +1,17 @@
+{
+  "name": "astrolicious",
+  "compatibility_date": "2025-12-17",
+  "compatibility_flags": ["global_fetch_strictly_public"],
+  "main": "@astrojs/cloudflare/entrypoints/server",
+  "assets": {
+    "binding": "ASSETS"
+  },
+  "images": {
+    "binding": "IMAGES"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SESSION"
+    }
+  ]
+}
