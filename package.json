@@ -25,7 +25,7 @@
   "devDependencies": {
     "@types/sanitize-html": "2.11.0",
     "wrangler": "3.62.0",
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "2.3.10",
     "@types/node": "20.14.12",
     "typescript": "5.4.5"
   },
