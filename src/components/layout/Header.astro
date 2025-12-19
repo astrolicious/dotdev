@@ -1,50 +1,49 @@
 ---
-import { Icon } from 'astro-icon/components';
-import type { HTMLTag } from 'astro/types';
-import Logo from './Logo.astro';
+import type { HTMLTag } from "astro/types";
+import Logo from "./Logo.astro";
 
 interface Props {
-	tag?: HTMLTag;
+  tag?: HTMLTag;
 }
 
 const links = [
-	{
-		href: '/',
-		text: 'Home',
-	},
-	{
-		href: '/projects',
-		text: 'Projects',
-	},
-	{
-		href: '/docs',
-		text: 'Documentation',
-	},
-	{
-		href: '/blog',
-		text: 'Articles',
-	},
+  {
+    href: "/",
+    text: "Home",
+  },
+  {
+    href: "/projects",
+    text: "Projects",
+  },
+  {
+    href: "/docs",
+    text: "Documentation",
+  },
+  {
+    href: "/blog",
+    text: "Articles",
+  },
 ];
 
 const socialLinks = [
-	{
-		href: 'https://twitter.com/astroliciousdev',
-		text: 'Twitter (X)',
-		icon: 'ri:twitter-x-fill',
-	},
-	{
-		href: 'https://github.com/astrolicious',
-		text: 'GitHub',
-		icon: 'ri:github-fill',
-	},
-	{
-		href: 'https://chat.astrolicious.dev',
-		text: 'Discord',
-		icon: 'ri:discord-fill',
-	},
+  {
+    href: "https://twitter.com/astroliciousdev",
+    text: "Twitter (X)",
+    icon: "ri:twitter-x-fill",
+  },
+  {
+    href: "https://github.com/astrolicious",
+    text: "GitHub",
+    icon: "ri:github-fill",
+  },
+  {
+    href: "https://chat.astrolicious.dev",
+    text: "Discord",
+    icon: "ri:discord-fill",
+  },
 ];
 
-const Tag = Astro.props.tag ?? 'header';
+const Tag = Astro.props.tag ?? "header";
 ---
 
 <Tag class="bg-white sticky top-0 z-20 border-b border-b-gray-200 font-heading">
@@ -83,7 +82,6 @@ const Tag = Astro.props.tag ?? 'header';
               target="_blank"
               class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
             >
-              <Icon name={icon} class="size-5" />
               <span class="sr-only">{text}</span>
             </a>
           ))

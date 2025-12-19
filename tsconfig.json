@@ -1,10 +1,5 @@
 {
-  "$schema": "http://json.schemastore.org/tsconfig",
-  "extends": "./.config/tsconfig.json",
-  "files": [],
-  "references": [
-    {
-      "path": "apps/site"
-    }
-  ]
+  "extends": "astro/tsconfigs/strictest",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"]
 }
