@@ -1,8 +1,9 @@
-import { defineCollection, z } from 'astro:content';
-import { docsSchema } from '@astrojs/starlight/schema';
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 const blogCollection = defineCollection({
-	type: 'content',
+	loader: glob({ pattern: '**/*.(md|mdx)', base: './src/data/blog' }),
 	schema: z.object({
 		title: z.string(),
 		draft: z.boolean(),
@@ -16,14 +17,8 @@ const blogCollection = defineCollection({
 	}),
 });
 
-const docsCollection = defineCollection({
-	type: 'content',
-	// biome-ignore lint/suspicious/noExplicitAny: https://github.com/withastro/starlight/issues/1612
-	schema: docsSchema() as any,
-});
-
 const projectsCollection = defineCollection({
-	type: 'content',
+	loader: glob({ pattern: '**/*.(md|mdx)', base: './src/data/projects' }),
 	schema: z.object({
 		name: z.string(),
 		kind: z.enum(['integration', 'component', 'misc', 'website', 'event']),
@@ -39,6 +34,5 @@ const projectsCollection = defineCollection({
 
 export const collections = {
 	blog: blogCollection,
-	docs: docsCollection,
 	projects: projectsCollection,
 };

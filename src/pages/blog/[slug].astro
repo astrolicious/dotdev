@@ -1,24 +1,25 @@
 ---
-import { getCollection } from 'astro:content';
-import type { GetStaticPaths } from 'astro';
-import CreativeCommons from '~/components/CreativeCommons.astro';
-import Layout from '~/layouts/Layout.astro';
+import { getCollection } from "astro:content";
+import type { GetStaticPaths } from "astro";
+import CreativeCommons from "../../components/CreativeCommons.astro";
+import Layout from "../../layouts/Layout.astro";
+import { render } from "astro:content";
 
 export const getStaticPaths = (async () => {
-	const articles = await getCollection('blog');
-	return articles.map((article) => ({
-		params: {
-			slug: article.slug,
-		},
-		props: {
-			article,
-		},
-	}));
+  const articles = await getCollection("blog");
+  return articles.map((article) => ({
+    params: {
+      slug: article.id,
+    },
+    props: {
+      article,
+    },
+  }));
 }) satisfies GetStaticPaths;
 
 const { article } = Astro.props;
 const { title, publishDate } = article.data;
-const { Content } = await article.render();
+const { Content } = await render(article);
 ---
 
 <Layout {title}>
@@ -27,7 +28,7 @@ const { Content } = await article.render();
       <p class="lead">
         Published on {
           new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
-            publishDate
+            publishDate,
           )
         }
       </p>

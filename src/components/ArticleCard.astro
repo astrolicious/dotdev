@@ -1,14 +1,15 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
 
 interface Props {
-	article: CollectionEntry<'blog'>;
-	class?: string;
+  article: CollectionEntry<"blog">;
+  class?: string;
 }
 
 const { article, class: className } = Astro.props;
 const { title, publishDate, authors } = article.data;
-const { Content } = await article.render();
+const { Content } = await render(article);
 ---
 
 <div
@@ -20,14 +21,14 @@ const { Content } = await article.render();
   <p class="inline-block text-sm text-gray-600">
     {
       new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
-        publishDate
+        publishDate,
       )
     } - {authors.map((author) => author.name).join(", ")}
   </p>
   <h2
     class="font-extrabold uppercase text-2xl text-primary-950 max-w-2xl font-heading"
   >
-    <a href={`/blog/${article.slug}`}>
+    <a href={`/blog/${article.id}`}>
       {title}
       <span class="absolute inset-0"></span>
     </a>

@@ -1,13 +1,13 @@
 ---
-import { getCollection } from 'astro:content';
-import ProjectCard from '~/components/ProjectCard.astro';
-import Layout from '~/layouts/Layout.astro';
+import { getCollection } from "astro:content";
+import ProjectCard from "../components/ProjectCard.astro";
+import Layout from "../layouts/Layout.astro";
 
-const projects = await getCollection('projects');
+const projects = await getCollection("projects");
 ---
 
 <Layout title="Astrolicious">
-  <section class="bg-gradient-to-tr from-primary-700 to-primary-600">
+  <section class="bg-linear-to-tr from-primary-700 to-primary-600">
     <div
       class="max-w-7xl px-2 mx-auto py-28 grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-12 lg:items-center"
     >
@@ -26,12 +26,6 @@ const projects = await getCollection('projects');
             class="bg-white shadow-xl shadow-primary-500 px-6 py-3 block font-heading uppercase text-primary-950 font-extrabold rounded-lg hover:bg-primary-100 hover:shadow-lg hover:shadow-primary-500 transition-all"
           >
             Explore projects
-          </a>
-          <a
-            href="/submit"
-            class="bg-white shadow-xl shadow-primary-500 px-6 py-3 block font-heading uppercase text-primary-950 font-extrabold rounded-lg hover:bg-primary-100 hover:shadow-lg hover:shadow-primary-500 transition-all"
-          >
-            Submit a project
           </a>
         </div>
       </div>

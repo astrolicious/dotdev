@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
 
 interface Props {
   project: CollectionEntry<"projects">;
@@ -8,7 +9,7 @@ interface Props {
 
 const { project, class: className } = Astro.props;
 const { name, kind, links } = project.data;
-const { Content } = await project.render();
+const { Content } = await render(project);
 
 const hasLinks = Object.keys(links).length > 0;
 ---
