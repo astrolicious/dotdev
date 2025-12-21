@@ -31,5 +31,6 @@
       "pattern": "www.astrolicious.dev",
       "custom_domain": true
     }
-  ]
+  ],
+  "preview_urls": true
 }
