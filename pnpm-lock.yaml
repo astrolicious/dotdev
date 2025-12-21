@@ -12,8 +12,8 @@ importers:
   .:
     dependencies:
       '@astrojs/check':
-        specifier: 0.9.6-alpha.0
-        version: 0.9.6-alpha.0(prettier@3.7.4)(typescript@5.9.3)
+        specifier: 0.9.6
+        version: 0.9.6(prettier@3.7.4)(typescript@5.9.3)
       '@astrojs/cloudflare':
         specifier: 13.0.0-alpha.3
         version: 13.0.0-alpha.3(@types/node@22.18.13)(astro@6.0.0-alpha.4(@types/node@22.18.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.5)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(lightningcss@1.30.2)(workerd@1.20251217.0)(yaml@2.8.2)
@@ -72,8 +72,8 @@ importers:
 
 packages:
 
-  '@astrojs/check@0.9.6-alpha.0':
-    resolution: {integrity: sha512-f88Hhe91Bzt/gqN0RvsLdKiXQrVZn+9ciA2GadQsUYHMDDYdWxNXkPzHK6wBpYvI2RF8BTfz3FWy7Q4Fvh44PQ==}
+  '@astrojs/check@0.9.6':
+    resolution: {integrity: sha512-jlaEu5SxvSgmfGIFfNgcn5/f+29H61NJzEMfAZ82Xopr4XBchXB1GVlcJsE+elUlsYSbXlptZLX+JMG3b/wZEA==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
@@ -2976,7 +2976,7 @@ packages:
 
 snapshots:
 
-  '@astrojs/check@0.9.6-alpha.0(prettier@3.7.4)(typescript@5.9.3)':
+  '@astrojs/check@0.9.6(prettier@3.7.4)(typescript@5.9.3)':
     dependencies:
       '@astrojs/language-server': 2.16.2(prettier@3.7.4)(typescript@5.9.3)
       chokidar: 4.0.3
