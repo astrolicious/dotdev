@@ -27,7 +27,9 @@
     "wrangler": "4.56.0"
   },
   "scripts": {
-    "astro": "astro"
+    "astro": "astro",
+    "wrangler": "wrangler",
+    "build": "astro build"
   },
   "license": "MIT",
   "packageManager": "pnpm@10.26.1",
