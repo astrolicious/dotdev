@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@astrojs/check": "0.9.6-alpha.0",
+    "@astrojs/check": "0.9.6",
     "@astrojs/cloudflare": "13.0.0-alpha.3",
     "@astrojs/mdx": "5.0.0-alpha.0",
     "@fontsource-variable/dosis": "5.2.8",
