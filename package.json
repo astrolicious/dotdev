@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@astrojs/check": "0.9.6",
-    "@astrojs/cloudflare": "13.0.0-alpha.3",
+    "@astrojs/cloudflare": "13.0.0-alpha.4",
     "@astrojs/mdx": "5.0.0-alpha.0",
     "@fontsource-variable/dosis": "5.2.8",
     "@fontsource-variable/inter": "5.2.8",
@@ -14,7 +14,7 @@
     "@tailwindcss/forms": "0.5.11",
     "@tailwindcss/typography": "0.5.19",
     "@tailwindcss/vite": "4.1.18",
-    "astro": "6.0.0-alpha.4",
+    "astro": "6.0.0-alpha.5",
     "sanitize-html": "2.17.0",
     "tailwindcss": "4.1.18",
     "zod": "4.2.1"
