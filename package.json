@@ -42,7 +42,7 @@
   ],
   "pnpm": {
     "overrides": {
-      "@astrojs/cloudflare>wrangler": "4.56.0"
+      "@astrojs/cloudflare>wrangler": "4.59.2"
     }
   }
 }
