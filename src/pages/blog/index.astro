@@ -1,27 +1,27 @@
 ---
-import { getCollection } from "astro:content";
-import ArticleCard from "../../components/ArticleCard.astro";
-import Layout from "../../layouts/Layout.astro";
+import { getCollection } from 'astro:content';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Layout from '../../layouts/Layout.astro';
 
-const title = "Articles";
+const title = 'Articles';
 const sortedArticles = (
-  await getCollection("blog", ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true;
-  })
+	await getCollection('blog', ({ data }) => {
+		return import.meta.env.PROD ? data.draft !== true : true;
+	})
 ).sort((a, b) => {
-  return b.data.publishDate.getTime() - a.data.publishDate.getTime();
+	return b.data.publishDate.getTime() - a.data.publishDate.getTime();
 });
 ---
 
 <Layout {title}>
-  <div class="max-w-7xl mx-auto px-2 py-12">
-    <h1
-      class="font-extrabold uppercase text-5xl sm:text-6xl text-primary-950 max-w-2xl font-heading"
-    >
-      {title}
-    </h1>
-    <div class="grid grid-cols-1 gap-4 mt-8">
-      {sortedArticles.map((article) => <ArticleCard {article} />)}
-    </div>
-  </div>
+	<div class="max-w-7xl mx-auto px-2 py-12">
+		<h1
+			class="font-extrabold uppercase text-5xl sm:text-6xl text-primary-950 max-w-2xl font-heading"
+		>
+			{title}
+		</h1>
+		<div class="grid grid-cols-1 gap-4 mt-8">
+			{sortedArticles.map((article) => <ArticleCard {article} />)}
+		</div>
+	</div>
 </Layout>

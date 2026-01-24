@@ -1,20 +1,19 @@
 ---
-import { getCollection } from "astro:content";
-import type { GetStaticPaths } from "astro";
-import CreativeCommons from "../../components/CreativeCommons.astro";
-import Layout from "../../layouts/Layout.astro";
-import { render } from "astro:content";
+import { getCollection, render } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import CreativeCommons from '../../components/CreativeCommons.astro';
+import Layout from '../../layouts/Layout.astro';
 
 export const getStaticPaths = (async () => {
-  const articles = await getCollection("blog");
-  return articles.map((article) => ({
-    params: {
-      slug: article.id,
-    },
-    props: {
-      article,
-    },
-  }));
+	const articles = await getCollection('blog');
+	return articles.map((article) => ({
+		params: {
+			slug: article.id,
+		},
+		props: {
+			article,
+		},
+	}));
 }) satisfies GetStaticPaths;
 
 const { article } = Astro.props;
@@ -23,24 +22,23 @@ const { Content } = await render(article);
 ---
 
 <Layout {title}>
-  <div class="max-w-7xl mx-auto px-2 py-12">
-    <div class="prose my-8">
-      <p class="lead">
-        Published on {
-          new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
+	<div class="max-w-7xl mx-auto px-2 py-12">
+		<div class="prose my-8">
+			<p class="lead">
+				Published on
+				{new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
             publishDate,
-          )
-        }
-      </p>
-      <h1
-        class="not-prose font-extrabold uppercase text-5xl sm:text-6xl text-primary-950 font-heading"
-      >
-        {title}
-      </h1>
-      <Content />
-      <blockquote>
-        <CreativeCommons {article} />
-      </blockquote>
-    </div>
-  </div>
+          )}
+			</p>
+			<h1
+				class="not-prose font-extrabold uppercase text-5xl sm:text-6xl text-primary-950 font-heading"
+			>
+				{title}
+			</h1>
+			<Content />
+			<blockquote>
+				<CreativeCommons {article} />
+			</blockquote>
+		</div>
+	</div>
 </Layout>

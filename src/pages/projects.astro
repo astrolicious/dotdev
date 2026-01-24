@@ -1,22 +1,23 @@
 ---
 export const prerender = false;
-import { getCollection } from "astro:content";
-import ProjectCard from "../components/ProjectCard.astro";
-import Layout from "../layouts/Layout.astro";
 
-const title = "Projects";
-const projects = await getCollection("projects");
+import { getCollection } from 'astro:content';
+import ProjectCard from '../components/ProjectCard.astro';
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Projects';
+const projects = await getCollection('projects');
 ---
 
 <Layout {title}>
-  <div class="max-w-7xl mx-auto px-2 py-12">
-    <h1
-      class="font-extrabold uppercase text-5xl sm:text-6xl text-primary-950 max-w-2xl font-heading"
-    >
-      {title}
-    </h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-8">
-      {projects.map((project) => <ProjectCard {project} />)}
-    </div>
-  </div>
+	<div class="max-w-7xl mx-auto px-2 py-12">
+		<h1
+			class="font-extrabold uppercase text-5xl sm:text-6xl text-primary-950 max-w-2xl font-heading"
+		>
+			{title}
+		</h1>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-8">
+			{projects.map((project) => <ProjectCard {project} />)}
+		</div>
+	</div>
 </Layout>

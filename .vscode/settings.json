@@ -13,6 +13,6 @@
     "editor.defaultFormatter": "biomejs.biome"
   },
   "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   }
 }

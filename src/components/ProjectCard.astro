@@ -1,10 +1,10 @@
 ---
-import type { CollectionEntry } from "astro:content";
-import { render } from "astro:content";
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
 
 interface Props {
-  project: CollectionEntry<"projects">;
-  class?: string;
+	project: CollectionEntry<'projects'>;
+	class?: string;
 }
 
 const { project, class: className } = Astro.props;
@@ -15,19 +15,18 @@ const hasLinks = Object.keys(links).length > 0;
 ---
 
 <div
-  class:list={[
+	class:list={[
     "bg-white p-4 rounded-2xl border border-gray-200 shadow-sm",
     className,
   ]}
 >
-  <div class="flex justify-between items-center">
-    <p
-      class="bg-primary-300 px-1.5 py-0.5 rounded-full text-sm capitalize leading-5 text-primary-950"
-    >
-      {kind}
-    </p>
-    {
-      hasLinks && (
+	<div class="flex justify-between items-center">
+		<p
+			class="bg-primary-300 px-1.5 py-0.5 rounded-full text-sm capitalize leading-5 text-primary-950"
+		>
+			{kind}
+		</p>
+		{hasLinks && (
         <div class="flex items-center gap-1">
           {links.github && (
             <a
@@ -48,15 +47,10 @@ const hasLinks = Object.keys(links).length > 0;
             </a>
           )}
         </div>
-      )
-    }
-  </div>
-  <h2
-    class="font-extrabold uppercase text-2xl text-primary-950 max-w-2xl font-heading"
-  >
-    {name}
-  </h2>
-  <div class="mt-2 text-gray-700">
-    <Content />
-  </div>
+      )}
+	</div>
+	<h2 class="font-extrabold uppercase text-2xl text-primary-950 max-w-2xl font-heading">{name}</h2>
+	<div class="mt-2 text-gray-700">
+		<Content />
+	</div>
 </div>
