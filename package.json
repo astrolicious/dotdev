@@ -20,7 +20,7 @@
     "zod": "4.2.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.11",
+    "@biomejs/biome": "2.3.12",
     "@types/node": "24.10.9",
     "@types/sanitize-html": "2.16.0",
     "typescript": "5.9.3",
