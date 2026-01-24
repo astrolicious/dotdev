@@ -24,7 +24,7 @@
     "@types/node": "24.10.9",
     "@types/sanitize-html": "2.16.0",
     "typescript": "5.9.3",
-    "wrangler": "4.56.0"
+    "wrangler": "4.59.1"
   },
   "scripts": {
     "astro": "astro",
