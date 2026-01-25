@@ -22,7 +22,8 @@ export default defineConfig({
 		clientPrerender: true,
 	},
 	integrations: [mdx()],
-	output: 'static',
+	// setting `server` as a workaround for https://github.com/withastro/astro/issues/15296
+	output: 'server',
 	adapter: cloudflare({
 		imageService: 'cloudflare-binding',
 	}),
