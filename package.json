@@ -33,7 +33,7 @@
     "preview": "astro preview"
   },
   "license": "MIT",
-  "packageManager": "pnpm@10.28.1",
+  "packageManager": "pnpm@10.28.2",
   "contributors": [
     {
       "name": "Alexander Niebuhr",
