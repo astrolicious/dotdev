@@ -5,8 +5,8 @@
   "private": true,
   "dependencies": {
     "@astrojs/check": "0.9.6",
-    "@astrojs/cloudflare": "13.0.0-beta.2",
-    "@astrojs/mdx": "5.0.0-beta.2",
+    "@astrojs/cloudflare": "13.0.0-beta.3",
+    "@astrojs/mdx": "5.0.0-beta.3",
     "@fontsource-variable/dosis": "5.2.8",
     "@fontsource-variable/inter": "5.2.8",
     "@iconify-json/ph": "1.2.2",
