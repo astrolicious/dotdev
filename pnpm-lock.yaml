@@ -12,11 +12,11 @@ importers:
         specifier: 0.9.6
         version: 0.9.6(prettier@3.8.1)(typescript@5.9.3)
       '@astrojs/cloudflare':
-        specifier: 13.0.0-beta.5
-        version: 13.0.0-beta.5(@types/node@24.10.12)(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.12)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(lightningcss@1.30.2)(workerd@1.20260120.0)(wrangler@4.60.0(@cloudflare/workers-types@4.20260124.0))(yaml@2.8.2)
+        specifier: 13.0.0-beta.6
+        version: 13.0.0-beta.6(@types/node@24.10.12)(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.12)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(lightningcss@1.30.2)(workerd@1.20260120.0)(wrangler@4.60.0(@cloudflare/workers-types@4.20260124.0))(yaml@2.8.2)
       '@astrojs/mdx':
-        specifier: 5.0.0-beta.5
-        version: 5.0.0-beta.5(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.12)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2))
+        specifier: 5.0.0-beta.6
+        version: 5.0.0-beta.6(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.12)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2))
       '@fontsource-variable/dosis':
         specifier: 5.2.8
         version: 5.2.8
@@ -75,9 +75,9 @@ packages:
     peerDependencies:
       typescript: ^5.0.0
 
-  '@astrojs/cloudflare@13.0.0-beta.5':
-    resolution: {integrity: sha512-eOgdjheK1pR/k7g2/UVc22h2/vJfRH3rgy94NgL+EpobnV7RBUAXOGMKvgzda2GhvfdUToMldg8TigdxokpdoA==}
-    version: 13.0.0-beta.5
+  '@astrojs/cloudflare@13.0.0-beta.6':
+    resolution: {integrity: sha512-5UkLwhi5naQ6T1dQn7pN/ai1Z1WPvos5F160Tpr+18ZQNNofZPdJI5QuYoY1DqiWPEI1hWRE4HEC6BCzKsFhFA==}
+    version: 13.0.0-beta.6
     peerDependencies:
       astro: ^6.0.0-alpha.0
       wrangler: ^4.61.1
@@ -91,8 +91,8 @@ packages:
   '@astrojs/internal-helpers@0.7.5':
     resolution: {integrity: sha512-vreGnYSSKhAjFJCWAwe/CNhONvoc5lokxtRoZims+0wa3KbHBdPHSSthJsKxPd8d/aic6lWKpRTYGY/hsgK6EA==}
 
-  '@astrojs/internal-helpers@0.8.0-beta.0':
-    resolution: {integrity: sha512-fP5ZSwFHsJu4NMHhvzfKLUIuXwQ0OdfKPkpQAxRNFIKpiwolTOdYEvP0RGAlnhRfVciUYZNnwc1dMIFvv1lUvw==}
+  '@astrojs/internal-helpers@0.8.0-beta.1':
+    resolution: {integrity: sha512-nX39HmVNrto0AwlGnk6Vj8fQ35v4VVIuSxsbvaANGeAIK7uAjOY3ca7xz+gejWeqGbY7vkGk6vsz3i0jTClCSQ==}
 
   '@astrojs/language-server@2.16.3':
     resolution: {integrity: sha512-yO5K7RYCMXUfeDlnU6UnmtnoXzpuQc0yhlaCNZ67k1C/MiwwwvMZz+LGa+H35c49w5QBfvtr4w4Zcf5PcH8uYA==}
@@ -109,12 +109,12 @@ packages:
   '@astrojs/markdown-remark@7.0.0-beta.2':
     resolution: {integrity: sha512-3WWCLbMkB/DtX3yckTuGjZu5MVuVfWVfszjMqyA6Rj2OUFy0wn8/dLa16cXC39fCi88yArfu0SQcJAWddedsIw==}
 
-  '@astrojs/markdown-remark@7.0.0-beta.5':
-    resolution: {integrity: sha512-WD2SdhgNWPxsgsHg4oN+imw4+BEDoJ3vJOIGowL0o4yDeyeZsfFOoMbffPKRqG2boFXqRMpauZO7Wfq9w/WfUA==}
+  '@astrojs/markdown-remark@7.0.0-beta.6':
+    resolution: {integrity: sha512-6SRUg3feMrLUyKdjPXrrzE1Gmb+x1jDKqoUmZZcbMzByipCZKAi82DmbuZmRqg7Bb49xGW+iS/F8urOPz8/L+A==}
 
-  '@astrojs/mdx@5.0.0-beta.5':
-    resolution: {integrity: sha512-yEhUGMUccfIeAXxvzHwZBtkZ5eV9ENll/AbxL9y+Ah6wpcA63MRcImJsWYAIEAEtGOKAeX/kdyDkYot/kMbCuQ==}
-    version: 5.0.0-beta.5
+  '@astrojs/mdx@5.0.0-beta.6':
+    resolution: {integrity: sha512-nAmOMKUqxjcJjtwInknZF+Vyjx6RoDP3420bMMZX5N318gANTgSNSOGcs9jdbGCCe0rocLmsNPyUtu5ehikkjQ==}
+    version: 5.0.0-beta.6
     engines: {node: ^20.19.1 || >=22.12.0}
     peerDependencies:
       astro: ^6.0.0-alpha.0
@@ -1608,10 +1608,6 @@ packages:
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
 
-  dotenv@17.2.3:
-    resolution: {integrity: sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w==}
-    engines: {node: '>=12'}
-
   dset@3.1.4:
     resolution: {integrity: sha512-2QF/g9/zTaPDc3BjNcVTGoBbXBgYfMTTceLaYcFJ/W9kggFUkhxD/hMEeuLKbugyef9SqAx8cpgwlIP/jinUTA==}
     engines: {node: '>=4'}
@@ -2883,13 +2879,12 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@13.0.0-beta.5(@types/node@24.10.12)(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.12)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(lightningcss@1.30.2)(workerd@1.20260120.0)(wrangler@4.60.0(@cloudflare/workers-types@4.20260124.0))(yaml@2.8.2)':
+  '@astrojs/cloudflare@13.0.0-beta.6(@types/node@24.10.12)(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.12)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(lightningcss@1.30.2)(workerd@1.20260120.0)(wrangler@4.60.0(@cloudflare/workers-types@4.20260124.0))(yaml@2.8.2)':
     dependencies:
-      '@astrojs/internal-helpers': 0.8.0-beta.0
+      '@astrojs/internal-helpers': 0.8.0-beta.1
       '@astrojs/underscore-redirects': 1.0.0
       '@cloudflare/vite-plugin': 1.23.1(vite@7.3.1(@types/node@24.10.12)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.2))(workerd@1.20260120.0)(wrangler@4.60.0(@cloudflare/workers-types@4.20260124.0))
       astro: https://pkg.pr.new/astro@15322(@types/node@24.10.12)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2)
-      dotenv: 17.2.3
       piccolore: 0.1.3
       tinyglobby: 0.2.15
       vite: 7.3.1(@types/node@24.10.12)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.2)
@@ -2916,7 +2911,7 @@ snapshots:
 
   '@astrojs/internal-helpers@0.7.5': {}
 
-  '@astrojs/internal-helpers@0.8.0-beta.0': {}
+  '@astrojs/internal-helpers@0.8.0-beta.1': {}
 
   '@astrojs/language-server@2.16.3(prettier@3.8.1)(typescript@5.9.3)':
     dependencies:
@@ -2968,9 +2963,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/markdown-remark@7.0.0-beta.5':
+  '@astrojs/markdown-remark@7.0.0-beta.6':
     dependencies:
-      '@astrojs/internal-helpers': 0.8.0-beta.0
+      '@astrojs/internal-helpers': 0.8.0-beta.1
       '@astrojs/prism': 4.0.0-beta.2
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.3
@@ -2993,9 +2988,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@5.0.0-beta.5(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.12)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2))':
+  '@astrojs/mdx@5.0.0-beta.6(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.12)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2))':
     dependencies:
-      '@astrojs/markdown-remark': 7.0.0-beta.5
+      '@astrojs/markdown-remark': 7.0.0-beta.6
       '@mdx-js/mdx': 3.1.1
       acorn: 8.15.0
       astro: https://pkg.pr.new/astro@15322(@types/node@24.10.12)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2)
@@ -4202,8 +4197,6 @@ snapshots:
       dom-serializer: 2.0.0
       domelementtype: 2.3.0
       domhandler: 5.0.3
-
-  dotenv@17.2.3: {}
 
   dset@3.1.4: {}
 
