@@ -23,7 +23,7 @@
     "@biomejs/biome": "2.4.10",
     "@types/node": "24.10.13",
     "@types/sanitize-html": "2.16.1",
-    "typescript": "5.9.3",
+    "typescript": "6.0.2",
     "wrangler": "4.60.0"
   },
   "scripts": {
