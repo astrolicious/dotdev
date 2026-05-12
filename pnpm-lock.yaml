@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@astrojs/check':
         specifier: 0.9.6
-        version: 0.9.6(prettier@3.8.1)(typescript@5.9.3)
+        version: 0.9.6(prettier@3.8.1)(typescript@6.0.3)
       '@astrojs/cloudflare':
         specifier: 13.0.0-beta.14
-        version: 13.0.0-beta.14(@types/node@24.10.13)(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(lightningcss@1.30.2)(workerd@1.20260120.0)(wrangler@4.60.0(@cloudflare/workers-types@4.20260124.0))(yaml@2.8.2)
+        version: 13.0.0-beta.14(@types/node@24.10.13)(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@6.0.3)(yaml@2.8.2))(jiti@2.6.1)(lightningcss@1.30.2)(workerd@1.20260120.0)(wrangler@4.60.0(@cloudflare/workers-types@4.20260124.0))(yaml@2.8.2)
       '@astrojs/mdx':
         specifier: 5.0.0-beta.12
-        version: 5.0.0-beta.12(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2))
+        version: 5.0.0-beta.12(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@6.0.3)(yaml@2.8.2))
       '@fontsource-variable/dosis':
         specifier: 5.2.8
         version: 5.2.8
@@ -40,7 +40,7 @@ importers:
         version: 4.1.18(vite@7.3.1(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.2))
       astro:
         specifier: https://pkg.pr.new/astro@15322
-        version: https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2)
+        version: https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@6.0.3)(yaml@2.8.2)
       sanitize-html:
         specifier: 2.17.3
         version: 2.17.3
@@ -61,8 +61,8 @@ importers:
         specifier: 2.16.1
         version: 2.16.1
       typescript:
-        specifier: 5.9.3
-        version: 5.9.3
+        specifier: 6.0.3
+        version: 6.0.3
       wrangler:
         specifier: 4.60.0
         version: 4.60.0(@cloudflare/workers-types@4.20260124.0)
@@ -1345,6 +1345,7 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
+    deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
   '@volar/kit@2.4.27':
     resolution: {integrity: sha512-ilZoQDMLzqmSsImJRWx4YiZ4FcvvPrPnFVmL6hSsIWB6Bn3qc7k88J9yP32dagrs5Y8EXIlvvD/mAFaiuEOACQ==}
@@ -1431,7 +1432,7 @@ packages:
     hasBin: true
 
   astro@https://pkg.pr.new/astro@15322:
-    resolution: {integrity: sha512-5YicGKti+9gEDYnEeWEab+1h5WDNpyhgBrJRcVfvGRRR/gNTmc1LtpwYQ+cT8q+tojVvlCS6+QgFM0uetjCnPA==, tarball: https://pkg.pr.new/astro@15322}
+    resolution: {tarball: https://pkg.pr.new/astro@15322}
     version: 6.0.0-beta.4
     engines: {node: ^20.19.1 || >=22.12.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
@@ -2496,8 +2497,8 @@ packages:
   typescript-auto-import-cache@0.3.6:
     resolution: {integrity: sha512-RpuHXrknHdVdK7wv/8ug3Fr0WNsNi5l5aB8MYYuXhq2UH5lnEB1htJ1smhtD5VeCsGr2p8mUDtd83LCQDFVgjQ==}
 
-  typescript@5.9.3:
-    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2883,23 +2884,23 @@ packages:
 
 snapshots:
 
-  '@astrojs/check@0.9.6(prettier@3.8.1)(typescript@5.9.3)':
+  '@astrojs/check@0.9.6(prettier@3.8.1)(typescript@6.0.3)':
     dependencies:
-      '@astrojs/language-server': 2.16.3(prettier@3.8.1)(typescript@5.9.3)
+      '@astrojs/language-server': 2.16.3(prettier@3.8.1)(typescript@6.0.3)
       chokidar: 4.0.3
       kleur: 4.1.5
-      typescript: 5.9.3
+      typescript: 6.0.3
       yargs: 17.7.2
     transitivePeerDependencies:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@13.0.0-beta.14(@types/node@24.10.13)(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(lightningcss@1.30.2)(workerd@1.20260120.0)(wrangler@4.60.0(@cloudflare/workers-types@4.20260124.0))(yaml@2.8.2)':
+  '@astrojs/cloudflare@13.0.0-beta.14(@types/node@24.10.13)(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@6.0.3)(yaml@2.8.2))(jiti@2.6.1)(lightningcss@1.30.2)(workerd@1.20260120.0)(wrangler@4.60.0(@cloudflare/workers-types@4.20260124.0))(yaml@2.8.2)':
     dependencies:
       '@astrojs/internal-helpers': 0.8.0-beta.3
       '@astrojs/underscore-redirects': 1.0.0
       '@cloudflare/vite-plugin': 1.26.1(vite@7.3.1(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.2))(workerd@1.20260120.0)(wrangler@4.60.0(@cloudflare/workers-types@4.20260124.0))
-      astro: https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2)
+      astro: https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@6.0.3)(yaml@2.8.2)
       piccolore: 0.1.3
       tinyglobby: 0.2.15
       vite: 7.3.1(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.2)
@@ -2930,12 +2931,12 @@ snapshots:
     dependencies:
       picomatch: 4.0.3
 
-  '@astrojs/language-server@2.16.3(prettier@3.8.1)(typescript@5.9.3)':
+  '@astrojs/language-server@2.16.3(prettier@3.8.1)(typescript@6.0.3)':
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/yaml2ts': 0.2.2
       '@jridgewell/sourcemap-codec': 1.5.5
-      '@volar/kit': 2.4.27(typescript@5.9.3)
+      '@volar/kit': 2.4.27(typescript@6.0.3)
       '@volar/language-core': 2.4.27
       '@volar/language-server': 2.4.27
       '@volar/language-service': 2.4.27
@@ -3005,12 +3006,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@5.0.0-beta.12(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2))':
+  '@astrojs/mdx@5.0.0-beta.12(astro@https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@6.0.3)(yaml@2.8.2))':
     dependencies:
       '@astrojs/markdown-remark': 7.0.0-beta.11
       '@mdx-js/mdx': 3.1.1
       acorn: 8.16.0
-      astro: https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2)
+      astro: https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@6.0.3)(yaml@2.8.2)
       es-module-lexer: 2.0.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -3878,12 +3879,12 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@volar/kit@2.4.27(typescript@5.9.3)':
+  '@volar/kit@2.4.27(typescript@6.0.3)':
     dependencies:
       '@volar/language-service': 2.4.27
       '@volar/typescript': 2.4.27
       typesafe-path: 0.2.2
-      typescript: 5.9.3
+      typescript: 6.0.3
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
 
@@ -3972,7 +3973,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2):
+  astro@https://pkg.pr.new/astro@15322(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@6.0.3)(yaml@2.8.2):
     dependencies:
       '@astrojs/compiler': 0.0.0-render-script-20251003120459
       '@astrojs/internal-helpers': 0.7.5
@@ -4020,7 +4021,7 @@ snapshots:
       svgo: 4.0.0
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
-      tsconfck: 3.1.6(typescript@5.9.3)
+      tsconfck: 3.1.6(typescript@6.0.3)
       ultrahtml: 1.6.0
       unifont: 0.7.3
       unist-util-visit: 5.1.0
@@ -5598,9 +5599,9 @@ snapshots:
 
   trough@2.2.0: {}
 
-  tsconfck@3.1.6(typescript@5.9.3):
+  tsconfck@3.1.6(typescript@6.0.3):
     optionalDependencies:
-      typescript: 5.9.3
+      typescript: 6.0.3
 
   tslib@2.8.1:
     optional: true
@@ -5613,7 +5614,7 @@ snapshots:
     dependencies:
       semver: 7.7.3
 
-  typescript@5.9.3: {}
+  typescript@6.0.3: {}
 
   ufo@1.6.3: {}
 
