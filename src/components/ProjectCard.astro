@@ -1,6 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { render } from 'astro:content';
+import GitHubIcon from '../icons/github.svg';
+import GlobeIcon from '../icons/globe.svg';
 
 interface Props {
 	project: CollectionEntry<'projects'>;
@@ -34,6 +36,7 @@ const hasLinks = Object.keys(links).length > 0;
               target="_blank"
               class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
             >
+              <GitHubIcon class="size-6" />
               <span class="sr-only">GitHub repository</span>
             </a>
           )}
@@ -43,6 +46,7 @@ const hasLinks = Object.keys(links).length > 0;
               target="_blank"
               class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
             >
+              <GlobeIcon class="size-6" />
               <span class="sr-only">Website</span>
             </a>
           )}

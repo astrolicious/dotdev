@@ -1,5 +1,8 @@
 ---
 import type { HTMLTag } from 'astro/types';
+import DiscordIcon from '../../icons/discord.svg';
+import GitHubIcon from '../../icons/github.svg';
+import XIcon from '../../icons/x.svg';
 import Logo from './Logo.astro';
 
 interface Props {
@@ -25,17 +28,17 @@ const socialLinks = [
 	{
 		href: 'https://twitter.com/astroliciousdev',
 		text: 'Twitter (X)',
-		icon: 'ri:twitter-x-fill',
+		icon: XIcon,
 	},
 	{
 		href: 'https://github.com/astrolicious',
 		text: 'GitHub',
-		icon: 'ri:github-fill',
+		icon: GitHubIcon,
 	},
 	{
 		href: 'https://chat.astrolicious.dev',
 		text: 'Discord',
-		icon: 'ri:discord-fill',
+		icon: DiscordIcon,
 	},
 ];
 
@@ -65,12 +68,13 @@ const Tag = Astro.props.tag ?? 'header';
 		</div>
 		<div class="absolute right-2">
 			<div class="flex items-center justify-center gap-1">
-				{socialLinks.map(({ href, text, icon }) => (
+				{socialLinks.map(({ href, text, icon: Icon }) => (
             <a
               {href}
               target="_blank"
               class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
             >
+              <Icon class="size-6" />
               <span class="sr-only">{text}</span>
             </a>
           ))}
