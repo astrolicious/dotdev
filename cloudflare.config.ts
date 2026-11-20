@@ -23,7 +23,6 @@ export default defineConfig({
 		},
 		domains: [
 			'astrolicious.dev',
-			'www.astrolicious.dev',
 			{ hostname: 'preview.astrolicious.dev', production: false, previews: true },
 		],
 		env: {
