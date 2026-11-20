@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@astrojs/check": "0.9.6",
-    "@astrojs/cloudflare": "14.4.9",
+    "@astrojs/cloudflare": "15.0.0-beta.6",
     "@astrojs/mdx": "8.1.6",
     "@fontsource-variable/dosis": "5.2.8",
     "@fontsource-variable/inter": "5.2.8",
@@ -17,13 +17,14 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.8",
+    "@cloudflare/vite-plugin": "2.0.0-rc.2",
     "@types/node": "26.6.6",
-    "typescript": "5.9.3",
-    "wrangler": "4.165.0"
+    "cf": "1.0.0-rc.1",
+    "typescript": "5.9.3"
   },
   "scripts": {
     "astro": "astro",
-    "wrangler": "wrangler",
+    "cf": "cf",
     "build": "astro build",
     "preview": "astro preview"
   },
