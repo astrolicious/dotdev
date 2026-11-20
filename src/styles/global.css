@@ -14,7 +14,9 @@
 	--color-primary-800: #8d1752;
 	--color-primary-900: #6e1240;
 	--color-primary-950: #4b0c2b;
+}
 
-	--font-sans: "Inter Variable";
-	--font-heading: "Dosis Variable";
+@theme inline {
+	--font-sans: var(--font-inter);
+	--font-heading: var(--font-dosis);
 }

@@ -2,7 +2,7 @@ import cloudflare from '@astrojs/cloudflare';
 import mdx from '@astrojs/mdx';
 
 import tailwindcss from '@tailwindcss/vite';
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 
 export default defineConfig({
 	build: {
@@ -14,6 +14,22 @@ export default defineConfig({
 		enabled: true,
 	},
 	site: 'https://astrolicious.dev/',
+	fonts: [
+		{
+			provider: fontProviders.fontsource(),
+			name: 'Inter',
+			cssVariable: '--font-inter',
+			weights: ['100 900'],
+			subsets: ['latin', 'latin-ext'],
+		},
+		{
+			provider: fontProviders.fontsource(),
+			name: 'Dosis',
+			cssVariable: '--font-dosis',
+			weights: ['200 800'],
+			subsets: ['latin', 'latin-ext'],
+		},
+	],
 	prefetch: {
 		prefetchAll: false,
 		defaultStrategy: 'hover',

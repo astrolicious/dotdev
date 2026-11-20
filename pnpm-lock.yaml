@@ -184,12 +184,6 @@ importers:
       '@astrojs/mdx':
         specifier: 8.1.6
         version: 8.1.6(@astrojs/markdown-satteri@0.4.10)(astro@7.4.13(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
-      '@fontsource-variable/dosis':
-        specifier: 5.2.8
-        version: 5.2.8
-      '@fontsource-variable/inter':
-        specifier: 5.2.8
-        version: 5.2.8
       '@tailwindcss/forms':
         specifier: 0.5.11
         version: 0.5.11(tailwindcss@4.3.5)
@@ -820,12 +814,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
-
-  '@fontsource-variable/dosis@5.2.8':
-    resolution: {integrity: sha512-okOdPR53jOinvcqbiCbCdruXlh6JK2bZ9uXu6JXkHdokb0bjFNPSpIBA31aAP8QYJO2c4QG9dPlGxWHBRVM6sg==}
-
-  '@fontsource-variable/inter@5.2.8':
-    resolution: {integrity: sha512-kOfP2D+ykbcX/P3IFnokOhVRNoTozo5/JxhAIVYLpea/UBmCQ/YWPBfWIDuBImXX/15KH+eKh4xpEUyS2sQQGQ==}
 
   '@img/colour@1.1.0':
     resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==}
@@ -3076,10 +3064,6 @@ snapshots:
 
   '@esbuild/win32-x64@0.28.2':
     optional: true
-
-  '@fontsource-variable/dosis@5.2.8': {}
-
-  '@fontsource-variable/inter@5.2.8': {}
 
   '@img/colour@1.1.0': {}
 
