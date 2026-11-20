@@ -3,7 +3,7 @@ import { bindings, defineConfig } from 'cf/config';
 export default defineConfig({
 	worker: {
 		name: 'website',
-		compatibilityDate: '2025-12-17',
+		compatibilityDate: '2026-11-18',
 		compatibilityFlags: ['global_fetch_strictly_public'],
 		entrypoint: '@astrojs/cloudflare/entrypoints/server',
 		previewUrls: true,
