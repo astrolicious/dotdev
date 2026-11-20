@@ -1,29 +1,46 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { render } from 'astro:content';
 
 interface Props {
 	article: CollectionEntry<'blog'>;
+	headingLevel?: 'h2' | 'h3';
 	class?: string;
 }
 
-const { article, class: className } = Astro.props;
-const { title, publishDate, authors } = article.data;
-const { Content } = await render(article);
+const { article, headingLevel = 'h2', class: className } = Astro.props;
+const { title, description, publishDate, authors } = article.data;
+const Heading = headingLevel;
+const formattedDate = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(publishDate);
+const isoDate = publishDate.toISOString().slice(0, 10);
 ---
 
-<div class:list={['relative rounded-2xl border border-gray-200 bg-white p-4 shadow-sm', className]}>
-	<p class="inline-block text-sm text-gray-600">
-		{new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(publishDate)}
-		{' '}- {authors.map((author) => author.name).join(', ')}
-	</p>
-	<h2 class="max-w-2xl font-heading text-2xl font-extrabold text-primary-950 uppercase">
-		<a href={`/blog/${article.id}`}>
-			{title}
-			<span class="absolute inset-0"></span>
-		</a>
-	</h2>
-	<div class="mt-3 line-clamp-3 text-gray-700">
-		<Content />
+<article
+	class:list={[
+		'group relative flex flex-col justify-between rounded-2xl border border-gray-200 bg-white p-6 shadow-xs transition hover:border-primary-300 hover:shadow-md has-[a:focus-visible]:ring-2 has-[a:focus-visible]:ring-primary-700 has-[a:focus-visible]:ring-offset-2',
+		className,
+	]}
+>
+	<div>
+		<p class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-600">
+			<time datetime={isoDate}>{formattedDate}</time>
+			<span aria-hidden="true">&middot;</span>
+			<span>{authors.map((author) => author.name).join(', ')}</span>
+		</p>
+		<Heading
+			class="mt-2 font-heading text-2xl font-extrabold text-primary-950 uppercase transition-colors group-hover:text-primary-700"
+		>
+			<a href={`/blog/${article.id}`} class="focus-visible:outline-none">
+				{title}
+				<span class="absolute inset-0" aria-hidden="true"></span>
+			</a>
+		</Heading>
+		<p class="mt-3 line-clamp-3 text-base leading-relaxed text-gray-700">{description}</p>
 	</div>
-</div>
+	<p
+		class="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary-700"
+		aria-hidden="true"
+	>
+		Read article
+		<span class="transition-transform group-hover:translate-x-0.5">&rarr;</span>
+	</p>
+</article>

@@ -20,3 +20,25 @@
 	--font-sans: var(--font-inter);
 	--font-heading: var(--font-dosis);
 }
+
+@layer base {
+	html {
+		color-scheme: light;
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--color-primary-700);
+		outline-offset: 2px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		scroll-behavior: auto;
+		transition-duration: 0.01ms;
+		animation-duration: 0.01ms;
+		animation-iteration-count: 1;
+	}
+}

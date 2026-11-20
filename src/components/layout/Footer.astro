@@ -1,22 +1,52 @@
 ---
 const year = new Date().getFullYear();
+
+const footerLinks = [
+	{ href: '/', text: 'Home', external: false },
+	{ href: '/blog', text: 'Articles', external: false },
+	{ href: 'https://chat.astrolicious.dev', text: 'Discord', external: true },
+	{ href: 'https://github.com/astrolicious', text: 'GitHub', external: true },
+	{ href: 'https://twitter.com/astroliciousdev', text: 'X', external: true },
+];
 ---
 
-<footer class="mt-auto border-t border-t-gray-200">
-	<div class="mx-auto max-w-7xl p-2">
+<footer class="mt-auto border-t border-gray-200 bg-gray-50/70">
+	<div
+		class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-8 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8"
+	>
 		<p>
-			&copy; <span id="footer-year">{year}</span> -{' '}
+			&copy; <span id="footer-year">{year}</span> Astrolicious &middot;{' '}
 			<a
 				href="https://github.com/astrolicious/dotdev/blob/main/LICENSE"
 				target="_blank"
-				class="underline"
+				rel="noopener noreferrer"
+				class="font-medium text-gray-700 underline decoration-gray-400 underline-offset-2 transition-colors hover:text-primary-800 hover:decoration-primary-700"
 			>
-				License
+				MIT License
 			</a>
 		</p>
+		<nav aria-label="Footer">
+			<ul class="flex flex-wrap items-center gap-x-5 gap-y-2">
+				{footerLinks.map(({ href, text, external }) => (
+					<li>
+						<a
+							{href}
+							target={external ? '_blank' : undefined}
+							rel={external ? 'noopener noreferrer' : undefined}
+							class="font-medium text-gray-700 transition-colors hover:text-primary-800 hover:underline hover:underline-offset-2"
+						>
+							{text}
+						</a>
+					</li>
+				))}
+			</ul>
+		</nav>
 	</div>
 </footer>
 
 <script is:inline>
-	document.getElementById('footer-year').textContent = new Date().getFullYear();
+	const el = document.getElementById('footer-year');
+	if (el) {
+		el.textContent = String(new Date().getFullYear());
+	}
 </script>

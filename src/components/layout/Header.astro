@@ -23,68 +23,76 @@ const links = [
 const socialLinks = [
 	{
 		href: 'https://twitter.com/astroliciousdev',
-		text: 'Twitter (X)',
+		text: 'Astrolicious on X',
 		icon: XIcon,
 	},
 	{
 		href: 'https://github.com/astrolicious',
-		text: 'GitHub',
+		text: 'Astrolicious on GitHub',
 		icon: GitHubIcon,
 	},
 	{
 		href: 'https://chat.astrolicious.dev',
-		text: 'Discord',
+		text: 'Join Astrolicious on Discord',
 		icon: DiscordIcon,
 	},
 ];
 
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isCurrentPath = (href: string) => {
+	if (href === '/') {
+		return pathname === '/';
+	}
+	return pathname === href || pathname.startsWith(`${href}/`);
+};
+
 const Tag = Astro.props.tag ?? 'header';
 ---
 
-<Tag class="sticky top-0 z-20 border-b border-b-gray-200 bg-white font-heading">
-	<div class="relative mx-auto flex h-16 max-w-7xl items-center justify-center p-2">
-		<div class="absolute left-2">
-			<a
-				href="/"
-				class="flex items-center gap-1 text-3xl font-extrabold text-primary-950 uppercase"
-			>
-				<Logo />
-				<div><span class="text-primary-600">Astro</span>licious</div>
-			</a>
-		</div>
-		<div class="hidden items-center justify-center lg:flex">
-			{links.map(({ href, text }) => (
+<Tag class="sticky top-0 z-20 border-b border-gray-200 bg-white/95 font-heading backdrop-blur-sm">
+	<div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+		<a
+			href="/"
+			class="inline-flex shrink-0 items-center gap-1.5 rounded-md py-1 text-2xl font-extrabold text-primary-950 uppercase sm:text-3xl"
+		>
+			<Logo class="size-7 shrink-0 sm:size-8" />
+			<span><span class="text-primary-700">Astro</span>licious</span>
+		</a>
+		<nav aria-label="Primary">
+			<ul class="flex items-center gap-1 sm:gap-2">
+				{links.map(({ href, text }) => {
+					const active = isCurrentPath(href);
+					return (
+						<li>
+							<a
+								{href}
+								aria-current={active ? 'page' : undefined}
+								class:list={[
+									'inline-flex min-h-10 items-center rounded-lg px-3 py-1.5 text-base font-extrabold uppercase transition-colors sm:text-lg',
+									active
+										? 'bg-primary-100 text-primary-950'
+										: 'text-primary-950 hover:bg-primary-100',
+								]}
+							>
+								{text}
+							</a>
+						</li>
+					);
+				})}
+			</ul>
+		</nav>
+		<div class="flex items-center gap-0.5 sm:gap-1">
+			{socialLinks.map(({ href, text, icon: Icon }) => (
 				<a
 					{href}
-					class="rounded-md px-3 py-1.5 text-lg font-extrabold text-primary-950 uppercase transition-colors hover:bg-primary-200"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex size-10 items-center justify-center rounded-full text-primary-950 transition-colors hover:bg-primary-100"
 				>
-					{text}
+					<Icon class="size-5" />
+					<span class="sr-only">{text}</span>
 				</a>
 			))}
 		</div>
-		<div class="absolute right-2">
-			<div class="flex items-center justify-center gap-1">
-				{socialLinks.map(({ href, text, icon: Icon }) => (
-					<a
-						{href}
-						target="_blank"
-						class="rounded-full p-1 text-lg font-extrabold text-primary-950 uppercase transition-colors hover:bg-primary-200"
-					>
-						<Icon class="size-6" />
-						<span class="sr-only">{text}</span>
-					</a>
-				))}
-			</div>
-		</div>
-	</div>
-	<div class="flex items-center overflow-x-auto border-t border-gray-200 lg:hidden">
-		{links.map(({ href, text }) => (
-			<a
-				{href}
-				class="rounded-md px-3 py-1.5 text-lg font-extrabold text-primary-950 uppercase transition-colors hover:bg-primary-200"
-			>
-				{text}
-			</a>
-		))}
 	</div>
 </Tag>
