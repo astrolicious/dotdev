@@ -1,0 +1,41 @@
+amends "package://github.com/jdx/hk/releases/download/v2.13.0/hk@2.13.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.13.0/hk@2.13.0#/Builtins.pkl"
+
+local linters = new Mapping<String, Step> {
+    ["biome"] = Builtins.biome
+    ["jactionlint"] = Builtins.jactionlint
+    ["pkl"] = Builtins.pkl
+    ["typos"] = Builtins.typos
+    ["check_merge_conflict"] = Builtins.check_merge_conflict
+    ["check_added_large_files"] = Builtins.check_added_large_files
+    ["newlines"] = Builtins.newlines
+    ["trailing_whitespace"] = Builtins.trailing_whitespace
+}
+
+local typecheck = new Mapping<String, Step> {
+    ["tsc"] = new Step {
+        glob = List("**/*.ts", "**/*.astro", "**/*.mdx", "tsconfig.json", "src/content.config.ts")
+        check = "astro sync && tsc --noEmit --runExternalCode"
+    }
+}
+
+hooks {
+    ["pre-commit"] {
+        fix = true
+        stash = "git"
+        steps = linters
+    }
+    ["pre-push"] {
+        steps = typecheck
+    }
+    ["check"] {
+        steps = new Mapping<String, Step> {
+            ...linters
+            ...typecheck
+        }
+    }
+    ["fix"] {
+        fix = true
+        steps = linters
+    }
+}
