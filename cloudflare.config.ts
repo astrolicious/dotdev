@@ -1,6 +1,7 @@
 import { bindings, defineConfig } from 'cf/config';
 
 export default defineConfig({
+	accountId: '69e5e09fd9c27bf9e7540c12be67ab9d',
 	worker: {
 		name: 'website',
 		compatibilityDate: '2026-11-18',
