@@ -16,9 +16,7 @@ const { Content } = await render(project);
 const hasLinks = Object.keys(links).length > 0;
 ---
 
-<div
-	class:list={['bg-white p-4 rounded-2xl border border-gray-200 shadow-sm', className]}
->
+<div class:list={['bg-white p-4 rounded-2xl border border-gray-200 shadow-sm', className]}>
 	<div class="flex justify-between items-center">
 		<p
 			class="bg-primary-300 px-1.5 py-0.5 rounded-full text-sm capitalize leading-5 text-primary-950"
@@ -32,6 +30,7 @@ const hasLinks = Object.keys(links).length > 0;
 						href={links.github}
 						target="_blank"
 						class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
+						rel="noopener"
 					>
 						<GitHubIcon class="size-6" />
 						<span class="sr-only">GitHub repository</span>
@@ -42,6 +41,7 @@ const hasLinks = Object.keys(links).length > 0;
 						href={links.website}
 						target="_blank"
 						class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
+						rel="noopener"
 					>
 						<GlobeIcon class="size-6" />
 						<span class="sr-only">Website</span>

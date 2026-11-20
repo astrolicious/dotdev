@@ -12,9 +12,7 @@ const { title, publishDate, authors } = article.data;
 const { Content } = await render(article);
 ---
 
-<div
-	class:list={['bg-white p-4 rounded-2xl border border-gray-200 shadow-sm relative', className]}
->
+<div class:list={['bg-white p-4 rounded-2xl border border-gray-200 shadow-sm relative', className]}>
 	<p class="inline-block text-sm text-gray-600">
 		{new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(publishDate)}
 		{' '}- {authors.map((author) => author.name).join(', ')}
