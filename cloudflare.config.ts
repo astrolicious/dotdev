@@ -12,6 +12,9 @@ export default defineConfig({
 			'temporal',
 		],
 		entrypoint: '@astrojs/cloudflare/entrypoints/server',
+		limits: {
+			cpuMs: 60000,
+		},
 		workersDev: false,
 		previewUrls: false,
 		observability: {
