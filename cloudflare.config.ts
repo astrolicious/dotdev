@@ -7,7 +7,8 @@ export default defineConfig({
 		compatibilityDate: '2026-11-18',
 		compatibilityFlags: ['global_fetch_strictly_public'],
 		entrypoint: '@astrojs/cloudflare/entrypoints/server',
-		previewUrls: true,
+		workersDev: false,
+		previewUrls: false,
 		observability: {
 			logs: {
 				enabled: true,
@@ -20,7 +21,11 @@ export default defineConfig({
 				headSamplingRate: 1,
 			},
 		},
-		domains: ['astrolicious.dev', 'www.astrolicious.dev'],
+		domains: [
+			'astrolicious.dev',
+			'www.astrolicious.dev',
+			{ hostname: 'preview.astrolicious.dev', production: false, previews: true },
+		],
 		env: {
 			IMAGES: bindings.images({}),
 			ASSETS: bindings.assets(),
