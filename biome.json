@@ -57,7 +57,21 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "preset": "recommended"
+      "preset": "recommended",
+      "nursery": {
+        "useTailwindSortedClasses": {
+          "level": "error",
+          "fix": "safe"
+        },
+        "useTailwindShorthandClasses": {
+          "level": "error",
+          "fix": "safe"
+        },
+        "noTailwindLegacyUtilities": "error"
+      }
     }
+  },
+  "tailwind": {
+    "stylesheet": "./src/styles/global.css"
   }
 }

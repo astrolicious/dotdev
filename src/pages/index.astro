@@ -9,26 +9,26 @@ const projects = await getCollection('projects');
 <Layout title="Astrolicious">
 	<section class="bg-linear-to-tr from-primary-700 to-primary-600">
 		<div
-			class="max-w-7xl px-2 mx-auto py-28 grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-12 lg:items-center"
+			class="mx-auto grid max-w-7xl grid-cols-1 gap-x-4 gap-y-12 px-2 py-28 lg:grid-cols-2 lg:items-center"
 		>
 			<div>
-				<h1 class="font-extrabold uppercase text-5xl sm:text-6xl text-white max-w-2xl font-heading">
+				<h1 class="max-w-2xl font-heading text-5xl font-extrabold text-white uppercase sm:text-6xl">
 					An Astro focused community
 				</h1>
-				<p class="text-xl text-primary-200 mt-4">
+				<p class="mt-4 text-xl text-primary-200">
 					Integrations, components, websites, events and more!
 				</p>
 				<div class="mt-12 inline-flex items-center gap-4">
 					<a
 						href="/projects"
-						class="bg-white shadow-xl shadow-primary-500 px-6 py-3 block font-heading uppercase text-primary-950 font-extrabold rounded-lg hover:bg-primary-100 hover:shadow-lg hover:shadow-primary-500 transition-all"
+						class="block rounded-lg bg-white px-6 py-3 font-heading font-extrabold text-primary-950 uppercase shadow-xl shadow-primary-500 transition-all hover:bg-primary-100 hover:shadow-lg hover:shadow-primary-500"
 					>
 						Explore projects
 					</a>
 				</div>
 			</div>
 			<div class="max-w-md lg:mx-auto">
-				<p class="text-xl text-primary-200 text-center mb-2">
+				<p class="mb-2 text-center text-xl text-primary-200">
 					A random project, refresh to view another!
 				</p>
 				<div class="contents" id="random-project-picker">

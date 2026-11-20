@@ -45,22 +45,22 @@ const socialLinks = [
 const Tag = Astro.props.tag ?? 'header';
 ---
 
-<Tag class="bg-white sticky top-0 z-20 border-b border-b-gray-200 font-heading">
-	<div class="p-2 max-w-7xl mx-auto flex justify-center relative items-center h-16">
+<Tag class="sticky top-0 z-20 border-b border-b-gray-200 bg-white font-heading">
+	<div class="relative mx-auto flex h-16 max-w-7xl items-center justify-center p-2">
 		<div class="absolute left-2">
 			<a
 				href="/"
-				class="font-extrabold uppercase text-3xl text-primary-950 flex items-center gap-1"
+				class="flex items-center gap-1 text-3xl font-extrabold text-primary-950 uppercase"
 			>
 				<Logo />
 				<div><span class="text-primary-600">Astro</span>licious</div>
 			</a>
 		</div>
-		<div class="hidden lg:flex items-center justify-center">
+		<div class="hidden items-center justify-center lg:flex">
 			{links.map(({ href, text }) => (
 				<a
 					{href}
-					class="py-1.5 px-3 font-extrabold uppercase text-lg rounded-md hover:bg-primary-200 transition-colors text-primary-950"
+					class="rounded-md px-3 py-1.5 text-lg font-extrabold text-primary-950 uppercase transition-colors hover:bg-primary-200"
 				>
 					{text}
 				</a>
@@ -72,7 +72,7 @@ const Tag = Astro.props.tag ?? 'header';
 					<a
 						{href}
 						target="_blank"
-						class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
+						class="rounded-full p-1 text-lg font-extrabold text-primary-950 uppercase transition-colors hover:bg-primary-200"
 					>
 						<Icon class="size-6" />
 						<span class="sr-only">{text}</span>
@@ -81,11 +81,11 @@ const Tag = Astro.props.tag ?? 'header';
 			</div>
 		</div>
 	</div>
-	<div class="lg:hidden border-t border-gray-200 flex items-center overflow-x-auto">
+	<div class="flex items-center overflow-x-auto border-t border-gray-200 lg:hidden">
 		{links.map(({ href, text }) => (
 			<a
 				{href}
-				class="py-1.5 px-3 font-extrabold uppercase text-lg rounded-md hover:bg-primary-200 transition-colors text-primary-950"
+				class="rounded-md px-3 py-1.5 text-lg font-extrabold text-primary-950 uppercase transition-colors hover:bg-primary-200"
 			>
 				{text}
 			</a>
