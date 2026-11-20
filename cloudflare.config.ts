@@ -5,7 +5,12 @@ export default defineConfig({
 	worker: {
 		name: 'website',
 		compatibilityDate: '2026-11-18',
-		compatibilityFlags: ['global_fetch_strictly_public'],
+		compatibilityFlags: [
+			'global_fetch_strictly_public',
+			'nodejs_compat',
+			'remove_nodejs_compat_eol',
+			'temporal',
+		],
 		entrypoint: '@astrojs/cloudflare/entrypoints/server',
 		workersDev: false,
 		previewUrls: false,
