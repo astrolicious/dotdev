@@ -25,10 +25,8 @@ const { Content } = await render(article);
 	<div class="max-w-7xl mx-auto px-2 py-12">
 		<div class="prose my-8">
 			<p class="lead">
-				Published on{" "}
-				{new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
-            publishDate,
-          )}
+				Published on{' '}
+				{new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(publishDate)}
 			</p>
 			<h1
 				class="not-prose font-extrabold uppercase text-5xl sm:text-6xl text-primary-950 font-heading"

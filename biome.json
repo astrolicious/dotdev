@@ -36,6 +36,17 @@
       "indentStyle": "space"
     }
   },
+  "markdown": {
+    "formatter": {
+      "enabled": true
+    }
+  },
+  "yaml": {
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "single"
+    }
+  },
   "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,

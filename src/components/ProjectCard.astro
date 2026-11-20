@@ -17,10 +17,7 @@ const hasLinks = Object.keys(links).length > 0;
 ---
 
 <div
-	class:list={[
-    "bg-white p-4 rounded-2xl border border-gray-200 shadow-sm",
-    className,
-  ]}
+	class:list={['bg-white p-4 rounded-2xl border border-gray-200 shadow-sm', className]}
 >
 	<div class="flex justify-between items-center">
 		<p
@@ -29,29 +26,29 @@ const hasLinks = Object.keys(links).length > 0;
 			{kind}
 		</p>
 		{hasLinks && (
-        <div class="flex items-center gap-1">
-          {links.github && (
-            <a
-              href={links.github}
-              target="_blank"
-              class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
-            >
-              <GitHubIcon class="size-6" />
-              <span class="sr-only">GitHub repository</span>
-            </a>
-          )}
-          {links.website && (
-            <a
-              href={links.website}
-              target="_blank"
-              class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
-            >
-              <GlobeIcon class="size-6" />
-              <span class="sr-only">Website</span>
-            </a>
-          )}
-        </div>
-      )}
+			<div class="flex items-center gap-1">
+				{links.github && (
+					<a
+						href={links.github}
+						target="_blank"
+						class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
+					>
+						<GitHubIcon class="size-6" />
+						<span class="sr-only">GitHub repository</span>
+					</a>
+				)}
+				{links.website && (
+					<a
+						href={links.website}
+						target="_blank"
+						class="p-1 font-extrabold uppercase text-lg rounded-full hover:bg-primary-200 transition-colors text-primary-950"
+					>
+						<GlobeIcon class="size-6" />
+						<span class="sr-only">Website</span>
+					</a>
+				)}
+			</div>
+		)}
 	</div>
 	<h2 class="font-extrabold uppercase text-2xl text-primary-950 max-w-2xl font-heading">{name}</h2>
 	<div class="mt-2 text-gray-700">

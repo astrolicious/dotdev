@@ -1,6 +1,6 @@
 name: Project Submission
 description: Please fill out the following details to submit a project for onboarding.
-title: "[Project]: "
+title: '[Project]: '
 
 body:
   - type: markdown
