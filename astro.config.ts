@@ -29,11 +29,6 @@ export default defineConfig({
 		imageService: { build: 'compile', runtime: 'cloudflare-binding' },
 	}),
 	vite: {
-		build: {
-			minify: false,
-			cssMinify: false,
-		},
-
 		plugins: [tailwindcss()],
 	},
 });
