@@ -1,2 +1,20 @@
 @import "tailwindcss";
-@config "../../tailwind.config.js";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+@theme {
+	--color-primary-50: #fef6fa;
+	--color-primary-100: #fcedf5;
+	--color-primary-200: #f9d7e8;
+	--color-primary-300: #f5c1db;
+	--color-primary-400: #f0a3c9;
+	--color-primary-500: #eb80b5;
+	--color-primary-600: #e34f99;
+	--color-primary-700: #ae1c66;
+	--color-primary-800: #8d1752;
+	--color-primary-900: #6e1240;
+	--color-primary-950: #4b0c2b;
+
+	--font-sans: "Inter Variable";
+	--font-heading: "Dosis Variable";
+}
