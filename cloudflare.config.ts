@@ -21,7 +21,6 @@ export default defineConfig({
 		},
 		domains: ['astrolicious.dev', 'www.astrolicious.dev'],
 		env: {
-			SESSION: bindings.kv({}),
 			IMAGES: bindings.images({}),
 			ASSETS: bindings.assets(),
 		},
