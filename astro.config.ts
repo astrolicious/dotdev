@@ -26,7 +26,7 @@ export default defineConfig({
 	// setting `server` as a workaround for https://github.com/withastro/astro/issues/15296
 	output: 'static',
 	adapter: cloudflare({
-		imageService: 'cloudflare-binding',
+		imageService: { build: 'compile', runtime: 'cloudflare-binding' },
 	}),
 	vite: {
 		build: {
