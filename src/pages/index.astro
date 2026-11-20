@@ -1,23 +1,318 @@
 ---
+import { getCollection } from 'astro:content';
+import ArticleCard from '../components/ArticleCard.astro';
+import Logo from '../components/layout/Logo.astro';
+import DiscordIcon from '../icons/discord.svg';
+import GitHubIcon from '../icons/github.svg';
+import XIcon from '../icons/x.svg';
 import Layout from '../layouts/Layout.astro';
+
+const latestArticles = (
+	await getCollection('blog', ({ data }) => {
+		return import.meta.env.PROD ? data.draft !== true : true;
+	})
+)
+	.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
+	.slice(0, 3);
+
+const channels = [
+	{
+		name: 'Discord Community',
+		description: 'Ask questions, share ideas, and collaborate with other Astro builders.',
+		href: 'https://chat.astrolicious.dev',
+		icon: DiscordIcon,
+	},
+	{
+		name: 'GitHub Organization',
+		description: 'Explore our open-source repositories, discussions, and community work.',
+		href: 'https://github.com/astrolicious',
+		icon: GitHubIcon,
+	},
+	{
+		name: 'Updates on X',
+		description: 'Follow @astroliciousdev for community highlights and announcements.',
+		href: 'https://twitter.com/astroliciousdev',
+		icon: XIcon,
+	},
+];
+
+const pillars = [
+	{
+		title: 'Community articles',
+		description:
+			'Announcements, deep dives, and honest reflections written by Astro maintainers and community contributors.',
+		icon: 'book',
+	},
+	{
+		title: 'Open discussions',
+		description:
+			'A welcoming space on Discord to exchange feedback, brainstorm content, and connect with fellow builders.',
+		icon: 'chat',
+	},
+	{
+		title: 'Ecosystem first',
+		description:
+			'Supporting integration authors, content creators, and initiatives that help the entire Astro ecosystem thrive.',
+		icon: 'sparkles',
+	},
+] as const;
 ---
 
-<Layout title="Astrolicious">
-	<section class="bg-linear-to-tr from-primary-700 to-primary-600">
-		<div class="mx-auto max-w-7xl px-2 py-28">
-			<div>
-				<h1 class="max-w-2xl font-heading text-5xl font-extrabold text-white uppercase sm:text-6xl">
-					An Astro focused community
-				</h1>
-				<p class="mt-4 text-xl text-primary-200">
-					Integrations, components, websites, events and more!
+<Layout
+	title="Astrolicious — An Astro-focused community"
+	description="Astrolicious connects Astro builders, integration authors, and content creators through open discussion, articles, and shared learnings."
+>
+	<section
+		aria-labelledby="hero-heading"
+		class="relative overflow-hidden bg-linear-to-br from-primary-950 via-primary-900 to-primary-700"
+	>
+		<div
+			aria-hidden="true"
+			class="pointer-events-none absolute -top-24 -right-24 size-96 rounded-full bg-primary-500/20 blur-3xl"
+		></div>
+		<div
+			aria-hidden="true"
+			class="pointer-events-none absolute -bottom-24 -left-24 size-80 rounded-full bg-primary-400/15 blur-3xl"
+		></div>
+		<div
+			class="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-12 lg:px-8 lg:py-28"
+		>
+			<div class="lg:col-span-7">
+				<p
+					class="inline-flex items-center gap-2 rounded-full border border-primary-300/30 bg-primary-950/60 px-3.5 py-1 text-sm font-medium text-primary-100"
+				>
+					<span class="size-2 rounded-full bg-primary-400" aria-hidden="true"></span>
+					Community for the Astro ecosystem
 				</p>
-				<div class="mt-12 inline-flex items-center gap-4">
+				<h1
+					id="hero-heading"
+					class="mt-6 font-heading text-5xl font-extrabold tracking-tight text-balance text-white uppercase sm:text-6xl lg:text-7xl"
+				>
+					An Astro-focused community
+				</h1>
+				<p class="mt-6 max-w-2xl text-lg leading-relaxed text-primary-100 sm:text-xl">
+					Connecting Astro builders, integration authors, and content creators through open
+					discussion, articles, and shared learnings.
+				</p>
+				<div class="mt-10 flex flex-wrap items-center gap-4">
 					<a
 						href="/blog"
-						class="block rounded-lg bg-white px-6 py-3 font-heading font-extrabold text-primary-950 uppercase shadow-xl shadow-primary-500 transition-all hover:bg-primary-100 hover:shadow-lg hover:shadow-primary-500"
+						class="inline-flex min-h-12 items-center gap-2 rounded-xl bg-white px-6 py-3 font-heading text-lg font-extrabold text-primary-950 uppercase shadow-lg shadow-primary-950/30 transition hover:bg-primary-100 focus-visible:outline-white"
 					>
 						Read articles
+						<span aria-hidden="true">&rarr;</span>
+					</a>
+					<a
+						href="https://chat.astrolicious.dev"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-flex min-h-12 items-center gap-2.5 rounded-xl border border-primary-200/40 bg-primary-950/50 px-6 py-3 font-heading text-lg font-extrabold text-white uppercase transition hover:bg-primary-950/75 focus-visible:outline-white"
+					>
+						<DiscordIcon class="size-5" />
+						Join Discord
+					</a>
+				</div>
+			</div>
+			<div class="lg:col-span-5">
+				<div
+					class="rounded-3xl border border-white/15 bg-primary-950/65 p-6 shadow-2xl shadow-primary-950/40 backdrop-blur-xs sm:p-8"
+				>
+					<div class="flex items-center gap-3">
+						<div
+							class="inline-flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white/10"
+						>
+							<Logo class="size-8" />
+						</div>
+						<div>
+							<h2 class="font-heading text-2xl font-extrabold text-white uppercase">
+								Community hub
+							</h2>
+							<p class="text-sm text-primary-100">Where Astro builders connect</p>
+						</div>
+					</div>
+					<ul class="mt-6 space-y-3">
+						{channels.map(({ name, description, href, icon: Icon }) => (
+							<li>
+								<a
+									{href}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="group flex items-start gap-3.5 rounded-2xl border border-white/10 bg-white/5 p-3.5 transition hover:border-white/25 hover:bg-white/10 focus-visible:outline-white"
+								>
+									<span class="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary-800/80 text-white">
+										<Icon class="size-5" />
+									</span>
+									<span class="min-w-0 flex-1">
+										<span class="flex items-center justify-between gap-2 font-heading text-lg font-extrabold text-white uppercase">
+											{name}
+											<span
+												aria-hidden="true"
+												class="text-primary-200 transition-transform group-hover:translate-x-0.5"
+											>
+												&rarr;
+											</span>
+										</span>
+										<span class="mt-0.5 block text-sm leading-relaxed text-primary-100">
+											{description}
+										</span>
+									</span>
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section aria-labelledby="about-heading" class="py-20 sm:py-24">
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+			<div class="max-w-2xl">
+				<p class="text-sm font-semibold tracking-wider text-primary-700 uppercase">What we do</p>
+				<h2
+					id="about-heading"
+					class="mt-2 font-heading text-3xl font-extrabold text-primary-950 uppercase sm:text-4xl"
+				>
+					Built by and for the Astro ecosystem
+				</h2>
+				<p class="mt-4 text-lg leading-relaxed text-gray-600">
+					Astrolicious brings together contributors, authors, and enthusiasts who care deeply about
+					making the Astro community stronger.
+				</p>
+			</div>
+			<div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+				{pillars.map(({ title, description, icon }) => (
+					<div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+						<div class="inline-flex size-11 items-center justify-center rounded-xl bg-primary-100 text-primary-800">
+							{icon === 'book' && (
+								<svg
+									aria-hidden="true"
+									class="size-5"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"></path>
+								</svg>
+							)}
+							{icon === 'chat' && (
+								<svg
+									aria-hidden="true"
+									class="size-5"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+								</svg>
+							)}
+							{icon === 'sparkles' && (
+								<svg
+									aria-hidden="true"
+									class="size-5"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+								</svg>
+							)}
+						</div>
+						<h3 class="mt-4 font-heading text-2xl font-extrabold text-primary-950 uppercase">
+							{title}
+						</h3>
+						<p class="mt-2 text-base leading-relaxed text-gray-700">{description}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section
+		aria-labelledby="articles-heading"
+		class="border-y border-primary-100 bg-primary-50/60 py-20 sm:py-24"
+	>
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+			<div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+				<div class="max-w-2xl">
+					<p class="text-sm font-semibold tracking-wider text-primary-700 uppercase">
+						From the blog
+					</p>
+					<h2
+						id="articles-heading"
+						class="mt-2 font-heading text-3xl font-extrabold text-primary-950 uppercase sm:text-4xl"
+					>
+						Latest articles
+					</h2>
+				</div>
+				<a
+					href="/blog"
+					class="inline-flex items-center gap-1.5 font-heading text-lg font-extrabold text-primary-800 uppercase underline-offset-4 transition-colors hover:text-primary-950 hover:underline"
+				>
+					View all articles
+					<span aria-hidden="true">&rarr;</span>
+				</a>
+			</div>
+			<div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+				{latestArticles.map((article) => <ArticleCard {article} headingLevel="h3" />)}
+			</div>
+		</div>
+	</section>
+
+	<section aria-labelledby="community-heading" class="py-20 sm:py-24">
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+			<div
+				class="rounded-3xl bg-linear-to-br from-primary-950 to-primary-800 px-6 py-12 text-center shadow-xl sm:px-12 sm:py-16"
+			>
+				<h2
+					id="community-heading"
+					class="font-heading text-3xl font-extrabold text-white uppercase sm:text-4xl"
+				>
+					Join the conversation
+				</h2>
+				<p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-primary-100">
+					Whether you build Astro integrations, write guides, or enjoy sharing what you learn, we
+					would love to welcome you in the Astrolicious community.
+				</p>
+				<div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+					<a
+						href="https://chat.astrolicious.dev"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-flex min-h-12 items-center gap-2.5 rounded-xl bg-white px-6 py-3 font-heading text-lg font-extrabold text-primary-950 uppercase transition hover:bg-primary-100 focus-visible:outline-white"
+					>
+						<DiscordIcon class="size-5" />
+						Join Discord
+					</a>
+					<a
+						href="https://github.com/astrolicious"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-flex min-h-12 items-center gap-2.5 rounded-xl border border-primary-200/40 bg-primary-950/50 px-6 py-3 font-heading text-lg font-extrabold text-white uppercase transition hover:bg-primary-950/75 focus-visible:outline-white"
+					>
+						<GitHubIcon class="size-5" />
+						GitHub
+					</a>
+					<a
+						href="https://twitter.com/astroliciousdev"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-flex min-h-12 items-center gap-2.5 rounded-xl border border-primary-200/40 bg-primary-950/50 px-6 py-3 font-heading text-lg font-extrabold text-white uppercase transition hover:bg-primary-950/75 focus-visible:outline-white"
+					>
+						<XIcon class="size-5" />
+						Follow on X
 					</a>
 				</div>
 			</div>
