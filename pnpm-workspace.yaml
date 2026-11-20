@@ -1,5 +1,9 @@
-onlyBuiltDependencies:
-  - '@biomejs/biome'
-  - esbuild
-  - sharp
-  - workerd
+allowBuilds:
+  '@biomejs/biome': true
+  esbuild: true
+  sharp: true
+  workerd: true
+engineStrict: true
+minimumReleaseAge: 1440
+saveExact: true
+shellEmulator: true
