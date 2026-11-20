@@ -10,6 +10,9 @@ export default defineConfig({
 		workersDev: false,
 		previewUrls: false,
 		observability: {
+			issues: {
+				enabled: true,
+			},
 			logs: {
 				enabled: true,
 				headSamplingRate: 1,
