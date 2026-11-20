@@ -1,16 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
-import ProjectCard from '../components/ProjectCard.astro';
 import Layout from '../layouts/Layout.astro';
-
-const projects = await getCollection('projects');
 ---
 
 <Layout title="Astrolicious">
 	<section class="bg-linear-to-tr from-primary-700 to-primary-600">
-		<div
-			class="mx-auto grid max-w-7xl grid-cols-1 gap-x-4 gap-y-12 px-2 py-28 lg:grid-cols-2 lg:items-center"
-		>
+		<div class="mx-auto max-w-7xl px-2 py-28">
 			<div>
 				<h1 class="max-w-2xl font-heading text-5xl font-extrabold text-white uppercase sm:text-6xl">
 					An Astro focused community
@@ -20,35 +14,13 @@ const projects = await getCollection('projects');
 				</p>
 				<div class="mt-12 inline-flex items-center gap-4">
 					<a
-						href="/projects"
+						href="/blog"
 						class="block rounded-lg bg-white px-6 py-3 font-heading font-extrabold text-primary-950 uppercase shadow-xl shadow-primary-500 transition-all hover:bg-primary-100 hover:shadow-lg hover:shadow-primary-500"
 					>
-						Explore projects
+						Read articles
 					</a>
-				</div>
-			</div>
-			<div class="max-w-md lg:mx-auto">
-				<p class="mb-2 text-center text-xl text-primary-200">
-					A random project, refresh to view another!
-				</p>
-				<div class="contents" id="random-project-picker">
-					{projects.map((project) => <ProjectCard {project} class="hidden" />)}
 				</div>
 			</div>
 		</div>
 	</section>
-	<script is:inline define:vars={{ amount: projects.length }}>
-		/**
-		 * @param {number} min
-		 * @param {number} max
-		 */
-		function randomInteger(min, max) {
-			return Math.floor(Math.random() * (max - min + 1)) + min;
-		}
-
-		const index = randomInteger(0, amount - 1);
-
-		const picker = document.getElementById('random-project-picker');
-		picker.children[index].classList.remove('hidden');
-	</script>
 </Layout>
