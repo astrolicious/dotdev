@@ -22,7 +22,7 @@ const { Content } = await render(article);
 		{new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
         publishDate,
       )}
-		- {authors.map((author) => author.name).join(", ")}
+		{" "}- {authors.map((author) => author.name).join(", ")}
 	</p>
 	<h2 class="font-extrabold uppercase text-2xl text-primary-950 max-w-2xl font-heading">
 		<a href={`/blog/${article.id}`}>
