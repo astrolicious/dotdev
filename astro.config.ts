@@ -38,6 +38,11 @@ export default defineConfig({
 		clientPrerender: true,
 	},
 	session: false,
+	markdown: {
+		shikiConfig: {
+			theme: 'github-dark-high-contrast',
+		},
+	},
 	integrations: [mdx()],
 	// setting `server` as a workaround for https://github.com/withastro/astro/issues/15296
 	output: 'static',
