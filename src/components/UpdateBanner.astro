@@ -1,0 +1,40 @@
+---
+interface Props {
+	title?: string;
+}
+
+const { title = 'Update' } = Astro.props;
+---
+
+<aside
+	aria-label={title}
+	class="not-prose my-6 rounded-xl border border-l-4 border-primary-200 border-l-primary-700 bg-primary-50 p-4 text-gray-800 sm:p-5"
+>
+	<div class="flex items-start gap-3">
+		<svg
+			aria-hidden="true"
+			class="mt-0.5 size-5 shrink-0 text-primary-700"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		>
+			<circle cx="12" cy="12" r="10"></circle>
+			<path d="M12 16v-4"></path>
+			<path d="M12 8h.01"></path>
+		</svg>
+		<div class="min-w-0 space-y-1 text-sm leading-relaxed sm:text-base">
+			<p class="font-heading text-base font-extrabold tracking-wide text-primary-800 uppercase">
+				{title}
+			</p>
+			<div
+				class="[&_a]:font-medium [&_a]:text-primary-800 [&_a]:underline [&_a]:decoration-primary-400 [&_a]:underline-offset-2 hover:[&_a]:text-primary-950 hover:[&_a]:decoration-primary-700 [&_p]:m-0"
+			>
+				<slot />
+			</div>
+		</div>
+	</div>
+</aside>
